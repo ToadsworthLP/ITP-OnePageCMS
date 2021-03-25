@@ -3,6 +3,7 @@ include_once "../gateway/DatabaseGateway.php";
 include_once "../utility/DB.php";
 include_once "../model/User.php";
 include_once "../gateway/RoleGateway.php";
+include_once "../utility/constants.php";
 
 /**
  * Database gateway class for User objects
@@ -17,11 +18,15 @@ class UserGateway extends DatabaseGateway
             ["id" => $id]
         )->fetch();
 
+        if($result === false) throw new InvalidArgumentException("No database entry exists for ID ".$id);
+
         $user = new User($id);
         $user->username = $result["username"];
         $user->password = $result["password"];
         $user->email = $result["email"];
-        $user->setRole(RoleGateway::fetch($result["role"]));
+
+        $role = $result["role"];
+        $user->setRole($role == NULL ? RoleGateway::fetch(DEFAULT_ROLE) : RoleGateway::fetch($role));
 
         return $user;
     }
