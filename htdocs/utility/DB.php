@@ -25,7 +25,7 @@ class DB
      * @return DB The instance of the DB class
      */
     public static function get() : DB {
-        if(self::$instance == null) {
+        if(!isset(self::$instance)) {
             self::$instance = new self();
 
             $dsn = "mysql:host=".self::$host.";port=".self::$port.";dbname=".self::$database.";charset=".self::$charset;
