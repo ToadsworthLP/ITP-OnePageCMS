@@ -10,9 +10,9 @@ class DB
     private static string $charset = "utf8mb4";
 
     private static array $pdoOptions = [
-        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES   => false,
+        PDO::ATTR_EMULATE_PREPARES => false,
     ];
 
     private static DB $instance;
@@ -24,11 +24,12 @@ class DB
      * If none exists, a new one will be created and then returned.
      * @return DB The instance of the DB class
      */
-    public static function get() : DB {
-        if(!isset(self::$instance)) {
+    public static function get(): DB
+    {
+        if (!isset(self::$instance)) {
             self::$instance = new self();
 
-            $dsn = "mysql:host=".self::$host.";port=".self::$port.";dbname=".self::$database.";charset=".self::$charset;
+            $dsn = "mysql:host=" . self::$host . ";port=" . self::$port . ";dbname=" . self::$database . ";charset=" . self::$charset;
             self::$instance->pdo = new PDO($dsn, self::$user, self::$password, self::$pdoOptions);
         }
 
@@ -39,7 +40,8 @@ class DB
      * Gets the instance of the PDO class.
      * @return PDO The PDO instance
      */
-    public function pdo() : PDO {
+    public function pdo(): PDO
+    {
         return $this->pdo;
     }
 
@@ -49,7 +51,8 @@ class DB
      * @param array|null $args Array of parameters to prepare the statement with
      * @return PDOStatement The result of the query
      */
-    public function run(string $sql, array $args = NULL) : PDOStatement {
+    public function run(string $sql, array $args = NULL): PDOStatement
+    {
         if (!$args) {
             return $this->pdo->query($sql);
         }
