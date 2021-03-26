@@ -12,7 +12,7 @@ abstract class DatabaseObject
      * DatabaseObject constructor.
      * @param int $id The ID of the object
      */
-    public function __construct(int $id)
+    public function __construct(int $id = -1)
     {
         $this->id = $id;
     }
