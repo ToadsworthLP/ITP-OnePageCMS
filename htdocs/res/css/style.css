@@ -1,0 +1,42 @@
+/* === USER === */
+.user-table-action-btn{
+    width: 100%;
+}
+
+.user-table-desktop{
+    display:block;
+}
+
+.user-table-mobile{
+    display: none;
+}
+
+@media(max-width: 853px){
+    .user-table-desktop{
+        display:none;
+    }
+    
+    .user-table-mobile{
+        display: block;
+    }
+}
+
+.table-start{
+    border-top-left-radius: .25rem !important;
+}
+
+.table-end{
+    border-top-right-radius: .25rem !important;
+}
+
+th{
+    border: none !important;
+}
+
+td{
+    border-top: none !important;
+}
+
+.user-save-btn{
+    width: 100%;
+}

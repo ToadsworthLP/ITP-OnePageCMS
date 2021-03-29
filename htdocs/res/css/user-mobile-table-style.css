@@ -1,0 +1,25 @@
+.table tr {
+    cursor: pointer;
+}
+
+.table{
+	background-color: #fff !important;
+}
+
+.hiddenRow {
+	padding: 0 4px !important;
+    background-color: rgba(0,0,0,.1);
+    font-size: 0.85rem;
+}
+
+.user-id{
+	font-weight: bold;
+}
+
+.user-row-odd{
+	background-color: rgba(0,0,0,.05);
+}
+
+.arrow-down{
+	color: gray;
+}
