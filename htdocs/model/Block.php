@@ -2,6 +2,9 @@
 include_once "../model/DatabaseObject.php";
 include_once "../gateway/BlockGateway.php";
 
+/**
+ * Representation of a block
+ */
 class Block extends DatabaseObject
 {
     public int $block_order;

@@ -2,9 +2,11 @@
 include_once "../model/DatabaseObject.php";
 include_once "../gateway/SiteGateway.php";
 
+/**
+ * Representation of a site
+ */
 class Site extends DatabaseObject
 {
-
     public string $name;
     public int $required_permissions;
     public int $published;
