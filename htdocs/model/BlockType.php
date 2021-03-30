@@ -7,7 +7,6 @@ include_once "../gateway/BlockTypeGateway.php";
  */
 class BlockType extends DatabaseObject
 {
-
     public string $filename;
 
     protected function getGatewayClass(): string
