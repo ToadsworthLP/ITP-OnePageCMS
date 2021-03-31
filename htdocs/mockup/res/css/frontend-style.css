@@ -1,0 +1,43 @@
+/* === NAVBAR === */
+
+.logo-left{
+    display: none;
+}
+
+.logo-center{
+    display: block;
+}
+
+@media(max-width: 992px){
+    .logo-left{
+        display: block;
+    }
+
+    .logo-center{
+        display: none;
+    }
+}
+
+/* === SECTION === */
+section{
+    padding: 2rem 0 2rem 0;
+}
+
+.my-section:nth-last-of-type(odd){
+    background-color: #f8f9fa;
+}
+
+/* === FOOTER === */
+
+.footer{
+    background-color: #6c757d;
+    padding: 2rem;
+    color: #f8f9fa;
+}
+
+.copyright{
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 1rem 0 .4rem 0;
+    bottom: 0;
+}
