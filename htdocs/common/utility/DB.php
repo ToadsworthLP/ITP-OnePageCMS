@@ -1,19 +1,8 @@
 <?php
+include_once "DBConfig.php";
 
 class DB
 {
-    private static string $host = "127.0.0.1";
-    private static int $port = 3306;
-    private static string $database = "de-press";
-    private static string $user = "de-press";
-    private static string $password = "17647d7db769f2d9ccbd418ace75f3e1";
-    private static string $charset = "utf8mb4";
-
-    private static array $pdoOptions = [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES => false,
-    ];
 
     private static DB $instance;
 
@@ -29,8 +18,8 @@ class DB
         if (!isset(self::$instance)) {
             self::$instance = new self();
 
-            $dsn = "mysql:host=" . self::$host . ";port=" . self::$port . ";dbname=" . self::$database . ";charset=" . self::$charset;
-            self::$instance->pdo = new PDO($dsn, self::$user, self::$password, self::$pdoOptions);
+            $dsn = "mysql:host=" . DBConfig::HOST . ";port=" . DBConfig::PORT . ";dbname=" . DBConfig::DATABASE . ";charset=" . DBConfig::CHARSET;
+            self::$instance->pdo = new PDO($dsn, DBConfig::USER, DBConfig::PASSWORD, DBConfig::PDO_OPTIONS);
         }
 
         return self::$instance;

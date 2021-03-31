@@ -1,5 +1,4 @@
 <?php
-include_once "../utility/constants.php";
 include_once "../model/DatabaseObject.php";
 include_once "../gateway/UserGateway.php";
 

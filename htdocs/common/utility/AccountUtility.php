@@ -36,7 +36,8 @@ class AccountUtility
      * Checks whether a user is currently logged in.
      * @return bool True if a user is logged in, false otherwise
      */
-    public static function isLoggedIn(): bool {
+    public static function isLoggedIn(): bool
+    {
         return (self::getCurrentUser() != null);
     }
 
@@ -52,7 +53,7 @@ class AccountUtility
 
         $result = DB::get()->run($sql, ["username" => $username])->fetch();
 
-        if(!$result){
+        if (!$result) {
             return null;
         }
 
@@ -72,7 +73,8 @@ class AccountUtility
      * @param User $user The user data to register an account with
      * @return User|null The newly registered user, or null if the registration failed
      */
-    public static function register(User $user) : ?User {
+    public static function register(User $user): ?User
+    {
         $user->password = self::hash($user->password);
 
         try {
@@ -86,7 +88,8 @@ class AccountUtility
     /**
      * Logs out the current user.
      */
-    public static function logout() {
+    public static function logout()
+    {
         unset($_SESSION[SESSION_CURRENT_USER_ID]);
     }
 
