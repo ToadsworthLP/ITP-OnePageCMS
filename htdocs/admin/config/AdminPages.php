@@ -1,5 +1,5 @@
 <?php
-include_once "common/utility/IIncludeSwitchConfig.php";
+include_once "admin/utility/IIncludeSwitchConfig.php";
 
 class AdminPages implements IIncludeSwitchConfig
 {

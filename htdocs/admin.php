@@ -1,5 +1,5 @@
 <?php
-include_once "common/utility/IncludeSwitch.php";
+include_once "admin/utility/IncludeSwitch.php";
 include_once "admin/config/AdminPages.php";
 
 $pageSwitch = new IncludeSwitch(new AdminPages());
