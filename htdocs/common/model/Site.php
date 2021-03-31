@@ -1,6 +1,6 @@
 <?php
-include_once "../model/DatabaseObject.php";
-include_once "../gateway/SiteGateway.php";
+include_once "common/model/DatabaseObject.php";
+include_once "common/gateway/SiteGateway.php";
 
 /**
  * Representation of a site

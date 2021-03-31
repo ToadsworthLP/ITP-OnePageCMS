@@ -3,12 +3,14 @@ include_once "admin/utility/IIncludeSwitchConfig.php";
 
 class AdminPages implements IIncludeSwitchConfig
 {
-    const HOME = 0;
+    const LOGIN = 0;
+    const DASHBOARD = 1;
 
     public function getMapping(): array
     {
         return [
-            AdminPages::HOME => "admin/page/dashboard.php"
+            AdminPages::LOGIN => "admin/page/LoginPage.php",
+            AdminPages::DASHBOARD => "admin/page/DashboardPage.php"
         ];
     }
 

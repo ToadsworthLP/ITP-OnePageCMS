@@ -1,5 +1,5 @@
 <?php
-include_once "../model/Role.php";
+include_once "common/model/Role.php";
 
 /**
  * Database gateway class for Role objects

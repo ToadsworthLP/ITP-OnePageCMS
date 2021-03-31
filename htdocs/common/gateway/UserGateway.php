@@ -1,8 +1,8 @@
 <?php
-include_once "../gateway/DatabaseGateway.php";
-include_once "../utility/DB.php";
-include_once "../model/User.php";
-include_once "../gateway/RoleGateway.php";
+include_once "common/gateway/DatabaseGateway.php";
+include_once "common/utility/DB.php";
+include_once "common/model/User.php";
+include_once "common/gateway/RoleGateway.php";
 
 /**
  * Database gateway class for User objects

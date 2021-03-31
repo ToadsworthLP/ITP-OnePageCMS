@@ -1,7 +1,11 @@
 <?php
 include_once "admin/utility/IncludeSwitch.php";
 include_once "admin/config/AdminPages.php";
+include_once "admin/config/AdminActions.php";
 
+session_start();
+
+$actionSwitch = new IncludeSwitch(new AdminActions());
 $pageSwitch = new IncludeSwitch(new AdminPages());
 ?>
 
@@ -30,9 +34,9 @@ $pageSwitch = new IncludeSwitch(new AdminPages());
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 </head>
 <body>
-<!-- Navbar should be its own block included in the pages -->
 <?php
-$pageSwitch->include(AdminPages::HOME); // Include page
+$actionSwitch->include(AdminActions::NONE); // Include action switch
+$pageSwitch->include(AdminPages::LOGIN); // Include page
 ?>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

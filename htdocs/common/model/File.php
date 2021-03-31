@@ -1,6 +1,6 @@
 <?php
-include_once "../model/DatabaseObject.php";
-include_once "../gateway/FileGateway.php";
+include_once "common/model/DatabaseObject.php";
+include_once "common/gateway/FileGateway.php";
 
 /**
  * Representation of a file

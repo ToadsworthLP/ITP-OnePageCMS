@@ -1,8 +1,8 @@
 <?php
-include_once "../gateway/DatabaseGateway.php";
-include_once "../utility/DB.php";
-include_once "../model/Attribute.php";
-include_once "../gateway/BlockGateway.php";
+include_once "common/gateway/DatabaseGateway.php";
+include_once "common/utility/DB.php";
+include_once "common/model/Attribute.php";
+include_once "common/gateway/BlockGateway.php";
 
 class AttributeGateway extends DatabaseGateway
 {

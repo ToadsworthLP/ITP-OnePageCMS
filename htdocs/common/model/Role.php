@@ -1,6 +1,6 @@
 <?php
-include_once "../model/DatabaseObject.php";
-include_once "../gateway/RoleGateway.php";
+include_once "common/model/DatabaseObject.php";
+include_once "common/gateway/RoleGateway.php";
 
 /**
  * Representation of a user role

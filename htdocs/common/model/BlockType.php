@@ -1,6 +1,6 @@
 <?php
-include_once "../model/DatabaseObject.php";
-include_once "../gateway/BlockTypeGateway.php";
+include_once "common/model/DatabaseObject.php";
+include_once "common/gateway/BlockTypeGateway.php";
 
 /**
  * Representation of a block type

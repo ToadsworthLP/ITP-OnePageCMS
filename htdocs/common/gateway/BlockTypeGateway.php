@@ -1,7 +1,7 @@
 <?php
-include_once "../gateway/DatabaseGateway.php";
-include_once "../model/BlockType.php";
-include_once "../utility/DB.php";
+include_once "common/gateway/DatabaseGateway.php";
+include_once "common/model/BlockType.php";
+include_once "common/utility/DB.php";
 
 class BlockTypeGateway extends DatabaseGateway
 {

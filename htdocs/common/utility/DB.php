@@ -1,5 +1,5 @@
 <?php
-include_once "DBConfig.php";
+include_once "common/config/DBConfig.php";
 
 class DB
 {

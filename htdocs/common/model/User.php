@@ -1,6 +1,6 @@
 <?php
-include_once "../model/DatabaseObject.php";
-include_once "../gateway/UserGateway.php";
+include_once "common/model/DatabaseObject.php";
+include_once "common/gateway/UserGateway.php";
 
 /**
  * Representation of a registered user

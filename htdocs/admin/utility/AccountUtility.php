@@ -1,13 +1,14 @@
 <?php
-include_once "../gateway/UserGateway.php";
-include_once "../utility/DB.php";
+include_once "admin/config/SessionConfig.php";
+include_once "common/gateway/UserGateway.php";
+include_once "common/utility/DB.php";
 
 /**
  * Utility class for managing user accounts
  */
 class AccountUtility
 {
-    private static User $currentUser; // Current user is cached to avoid unnecessary repeated database queries
+    private static ?User $currentUser; // Current user is cached to avoid unnecessary repeated database queries
 
     /**
      * Gets the user who is currently logged in. If no user is logged in, null is returned.
@@ -19,9 +20,9 @@ class AccountUtility
             return self::$currentUser;
         }
 
-        if (isset($_SESSION[SESSION_CURRENT_USER_ID])) {
+        if (isset($_SESSION[SessionConfig::CURRENT_USER_ID])) {
             try {
-                $user = UserGateway::fetch($_SESSION[SESSION_CURRENT_USER_ID]);
+                $user = UserGateway::fetch($_SESSION[SessionConfig::CURRENT_USER_ID]);
                 self::$currentUser = $user;
                 return $user;
             } catch (InvalidArgumentException $e) {
@@ -60,7 +61,7 @@ class AccountUtility
         $correctPassword = $result["password"];
 
         if (password_verify($password, $correctPassword)) {
-            $_SESSION[SESSION_CURRENT_USER_ID] = $result["id"];
+            $_SESSION[SessionConfig::CURRENT_USER_ID] = $result["id"];
             return UserGateway::fetch($result["id"]);
         } else {
             return null;
@@ -90,7 +91,8 @@ class AccountUtility
      */
     public static function logout()
     {
-        unset($_SESSION[SESSION_CURRENT_USER_ID]);
+        unset($_SESSION[SessionConfig::CURRENT_USER_ID]);
+        self::$currentUser = null;
     }
 
     /**
