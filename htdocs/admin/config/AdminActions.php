@@ -6,13 +6,15 @@ class AdminActions implements IIncludeSwitchConfig
     const NONE = 0;
     const LOGIN = 1;
     const LOGOUT = 2;
+    const DISMISS_ALERT = 3;
 
     public function getMapping(): array
     {
         return [
             AdminActions::NONE => "admin/action/NoAction.php",
             AdminActions::LOGIN => "admin/action/LoginAction.php",
-            AdminActions::LOGOUT => "admin/action/LogoutAction.php"
+            AdminActions::LOGOUT => "admin/action/LogoutAction.php",
+            AdminActions::DISMISS_ALERT => "admin/action/DismissAlertAction.php"
         ];
     }
 
