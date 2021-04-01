@@ -1,6 +1,6 @@
 <?php
 include_once "admin/config/AdminActions.php";
 
-function Login(string $redirectTarget) {
+function Login() {
     include "admin/template/LoginTemplate.php";
 }

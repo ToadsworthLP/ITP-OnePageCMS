@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <form method="post" action="<?="admin.php?page=".$redirectTarget."&action=".AdminActions::LOGIN?>">
+            <form method="post" action="admin.php?&action=<?=AdminActions::LOGIN?>">
                 <div class="form-group">
                     <input class="form-control" type="text" name="username" placeholder="Username...">
                 </div>

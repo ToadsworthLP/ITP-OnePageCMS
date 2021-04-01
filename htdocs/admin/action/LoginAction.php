@@ -1,5 +1,7 @@
 <?php
 include_once "admin/utility/AccountUtility.php";
+include_once "admin/utility/ReturnUtility.php";
+include_once "admin/config/AdminPages.php";
 
 if(isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
@@ -12,3 +14,5 @@ if(isset($_POST["username"]) && isset($_POST["password"])) {
         // TODO implement failure notification
     }
 }
+
+header("Location: admin.php?page=".AdminPages::DASHBOARD);

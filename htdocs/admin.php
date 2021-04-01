@@ -1,9 +1,12 @@
 <?php
+include_once "admin/utility/ReturnUtility.php";
 include_once "admin/utility/IncludeSwitch.php";
 include_once "admin/config/AdminPages.php";
 include_once "admin/config/AdminActions.php";
 
 session_start();
+
+ReturnUtility::update();
 
 $actionSwitch = new IncludeSwitch(new AdminActions());
 $pageSwitch = new IncludeSwitch(new AdminPages());
