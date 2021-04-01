@@ -4,11 +4,11 @@ include_once "admin/config/SessionConfig.php";
 /**
  * Represents an alert to be shown to the user.
  */
-class Alert implements JsonSerializable
+class Alert
 {
-    private string $type;
-    private string $text;
-    private bool $autoDismiss;
+    public string $type;
+    public string $text;
+    public bool $autoDismiss;
 
     /**
      * Creates an alert object with the given properties.
@@ -35,41 +35,5 @@ class Alert implements JsonSerializable
 
         array_push($currentAlerts, $this);
         $_SESSION[SessionConfig::CURRENT_ALERTS] = json_encode($currentAlerts);
-    }
-
-    /**
-     * Gets the type of this alert. The type name is also used as a CSS class in AlertTemplate.
-     * @return string The type name
-     */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    /**
-     * Gets the text of this alert.
-     * @return string The text to be shown
-     */
-    public function getText(): string
-    {
-        return $this->text;
-    }
-
-    /**
-     * Whether to dismiss this alert automatically after it has been shown to the user once.
-     * @return bool
-     */
-    public function isAutoDismiss(): bool
-    {
-        return $this->autoDismiss;
-    }
-
-    public function jsonSerialize(): array
-    {
-        return [
-            "type" => $this->type,
-            "text" => $this->text,
-            "autoDismiss" => $this->autoDismiss
-        ];
     }
 }
