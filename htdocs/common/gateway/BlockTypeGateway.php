@@ -5,16 +5,25 @@ include_once "common/utility/DB.php";
 
 class BlockTypeGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): BlockType
+    public static function fetchAll(?array $params = null): array
     {
-        $result = DB::get()->run("SELECT * FROM `blocktype` WHERE id = :id", ["id" => $id])->fetch();
+        $result = self::fetchFromTable("blocktype", $params);
 
-        if ($result === false) throw new InvalidArgumentException("No database entry exists for ID " . $id);
+        $instances = array();
+        foreach ($result as $entry) {
+            $blocktype = new BlockType($entry["id"]);
+            $blocktype->filename = $entry["filename"];
 
-        $blocktype = new BlockType($id);
-        $blocktype->filename = $result["filename"];
+            array_push($instances, $blocktype);
+        }
 
-        return $blocktype;
+        return $instances;
+    }
+
+    public static function fetch(?array $params = null): ?BlockType
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int

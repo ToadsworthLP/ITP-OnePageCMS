@@ -5,19 +5,28 @@ include_once "common/utility/DB.php";
 
 class SiteGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): Site
+    public static function fetchAll(?array $params = null): array
     {
-        $result = DB::get()->run("SELECT * FROM `site` WHERE id = :id", ["id" => $id])->fetch();
+        $result = self::fetchFromTable("site", $params);
 
-        if ($result === false) throw new InvalidArgumentException("No database entry exists for ID " . $id);
+        $instances = array();
+        foreach ($result as $entry) {
+            $site = new Site($entry["id"]);
+            $site->name = $entry["name"];
+            $site->requiredPermissions = $entry["required_permissions"];
+            $site->published = $entry["published"];
+            $site->menuOption = $entry["menu_option"];
 
-        $site = new Site($id);
-        $site->name = $result["name"];
-        $site->required_permissions = $result["required_permissions"];
-        $site->published = $result["published"];
-        $site->menu_option = $result["menu_option"];
+            array_push($instances, $site);
+        }
 
-        return $site;
+        return $instances;
+    }
+
+    public static function fetch(?array $params = null): ?Site
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int
@@ -29,9 +38,9 @@ class SiteGateway extends DatabaseGateway
                             VALUES (:name, :required_permissions, :published, :menu_option)",
             [
                 "name" => $site->name,
-                "required_permissions" => $site->required_permissions,
+                "required_permissions" => $site->requiredPermissions,
                 "published" => $site->published,
-                "menu_option" => $site->menu_option
+                "menu_option" => $site->menuOption
             ]);
 
         return DB::get()->pdo()->lastInsertId();
@@ -47,9 +56,9 @@ class SiteGateway extends DatabaseGateway
                             WHERE id = :id",
             [
                 "name" => $site->name,
-                "required_permissions" => $site->required_permissions,
+                "required_permissions" => $site->requiredPermissions,
                 "published" => $site->published,
-                "menu_option" => $site->menu_option,
+                "menu_option" => $site->menuOption,
                 "id" => $site->getID()
             ]);
     }

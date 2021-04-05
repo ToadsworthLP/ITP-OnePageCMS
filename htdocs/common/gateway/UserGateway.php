@@ -9,25 +9,33 @@ include_once "common/gateway/RoleGateway.php";
  */
 class UserGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): User
+    public static function fetchAll(?array $params = null): array
     {
-        $sql = "SELECT * FROM `user` WHERE `id` = :id";
+        $result = self::fetchFromTable("user", $params);
 
-        $result = DB::get()->run($sql,
-            ["id" => $id]
-        )->fetch();
+        $instances = array();
+        foreach ($result as $entry) {
+            $user = new User($entry["id"]);
+            $user->username = $entry["username"];
+            $user->password = $entry["password"];
+            $user->email = $entry["email"];
 
-        if ($result === false) throw new InvalidArgumentException("No database entry exists for ID " . $id);
+            if($entry["role"] == NULL) {
+                $user->forceRoleID(Role::DEFAULT_ROLE);
+            } else {
+                $user->forceRoleID($entry["role"]);
+            }
 
-        $user = new User($id);
-        $user->username = $result["username"];
-        $user->password = $result["password"];
-        $user->email = $result["email"];
+            array_push($instances, $user);
+        }
 
-        $role = $result["role"];
-        $user->setRole($role == NULL ? RoleGateway::fetch(Role::DEFAULT_ROLE) : RoleGateway::fetch($role));
+        return $instances;
+    }
 
-        return $user;
+    public static function fetch(?array $params = null): ?User
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int

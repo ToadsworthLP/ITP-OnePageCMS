@@ -7,18 +7,27 @@ include_once "common/gateway/SiteGateway.php";
 
 class BlockGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): Block
+    public static function fetchAll(?array $params = null): array
     {
-        $result = DB::get()->run("SELECT * FROM `block` WHERE id = :id", ["id" => $id])->fetch();
+        $result = self::fetchFromTable("block", $params);
 
-        if ($result === false) throw new InvalidArgumentException("No database entry exists for ID " . $id);
+        $instances = array();
+        foreach ($result as $entry) {
+            $block = new Block($entry["type"]);
+            $block->forceTypeID($entry["type"]);
+            $block->forceSiteID($entry["site"]);
+            $block->block_order = $entry["block_order"];
 
-        $block = new Block($id);
-        $block->setType(BlockTypeGateway::fetch($result["type"]));
-        $block->setSite(SiteGateway::fetch($result["site"]));
-        $block->block_order = $result["block_order"];
+            array_push($instances, $block);
+        }
 
-        return $block;
+        return $instances;
+    }
+
+    public static function fetch(?array $params = null): ?Block
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int

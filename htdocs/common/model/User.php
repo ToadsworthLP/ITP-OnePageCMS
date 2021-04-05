@@ -11,7 +11,7 @@ class User extends DatabaseObject
     public string $password;
     public string $email;
 
-    private int $roleId;
+    private int $roleID;
 
     /**
      * Gets the role assigned to this user.
@@ -19,7 +19,7 @@ class User extends DatabaseObject
      */
     public function getRole(): Role
     {
-        return RoleGateway::fetch($this->roleId);
+        return RoleGateway::fetch(["id" => $this->roleID]);
     }
 
     /**
@@ -28,7 +28,18 @@ class User extends DatabaseObject
      */
     public function setRole(Role $role): void
     {
-        $this->roleId = $role->getId();
+        $this->roleID = $role->getId();
+    }
+
+    /**
+     * Sets the role ID of this user with force.
+     * Do not use this unless you know what you are doing.
+     * No validation checks are done when this is used, so be careful.
+     * @param int $id The ID of the role to assign
+     */
+    public function forceRoleID(int $id): void
+    {
+        $this->roleID = $id;
     }
 
     protected function getGatewayClass(): string

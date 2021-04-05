@@ -6,17 +6,26 @@ include_once "common/model/Role.php";
  */
 class RoleGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): Role
+    public static function fetchAll(?array $params = null): array
     {
-        $result = DB::get()->run("SELECT * FROM `role` WHERE id = :id", ["id" => $id])->fetch();
+        $result = self::fetchFromTable("role", $params);
 
-        if($result === false) throw new InvalidArgumentException("No database entry exists for ID ".$id);
+        $instances = array();
+        foreach ($result as $entry) {
+            $role = new Role($entry["id"]);
+            $role->name = $entry["name"];
+            $role->permissions = $entry["permissions"];
 
-        $role = new Role($id);
-        $role->name = $result["name"];
-        $role->permissions = $result["permissions"];
+            array_push($instances, $role);
+        }
 
-        return $role;
+        return $instances;
+    }
+
+    public static function fetch(?array $params = null): ?Role
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int

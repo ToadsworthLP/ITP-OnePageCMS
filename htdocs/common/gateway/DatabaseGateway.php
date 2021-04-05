@@ -6,11 +6,21 @@
 abstract class DatabaseGateway
 {
     /**
-     * Fetches the object with the given ID from the database.
-     * @param int $id The ID of the desired entry
-     * @return mixed The instance of the object corresponding to the database row
+     * Fetches an array of objects that matches the given criteria from the database.
+     * @param array|null $params Array of query parameters or null if all entries should be returned,
+     *                          for example: ["id" => id, "other_column" => "some_value"]
+     * @return array An array of objects containing all objects that match the given criteria
      */
-    public static abstract function fetch(int $id);
+    public static abstract function fetchAll(?array $params = null): array;
+
+    /**
+     * Identical to fetchAll(), but only returns the first result.
+     * Useful when fetching an object by its ID.
+     * @param array|null $params Array of query parameters or null if all entries should be returned,
+     *                          for example: ["id" => id, "other_column" => "some_value"]
+     * @return object The first object that matches the given criteria, or null of none was found.
+     */
+    public static abstract function fetch(?array $params = null): ?object;
 
     /**
      * Creates a new entry in the database using the data from the given object.
@@ -31,4 +41,24 @@ abstract class DatabaseGateway
      * @param object $object The object to delete
      */
     public static abstract function delete(object $object): void;
+
+    protected static function fetchFromTable($tableName, &$params): array
+    {
+        $sql = "SELECT * FROM `".$tableName."`";
+
+        if($params != null) {
+            $sql .= " WHERE ";
+            $first = true;
+            foreach ($params as $key => $value){
+                $sql .= (!$first ? " AND " : "")."`".$key."` = :".$key;
+                $first = false;
+            }
+
+            $result = DB::get()->run($sql, $params)->fetchAll();
+        } else {
+            $result = DB::get()->run($sql)->fetchAll();
+        }
+
+        return $result;
+    }
 }

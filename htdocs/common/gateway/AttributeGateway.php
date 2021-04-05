@@ -1,27 +1,36 @@
 <?php
 include_once "common/gateway/DatabaseGateway.php";
 include_once "common/utility/DB.php";
-include_once "common/model/Attribute.php";
+include_once "common/model/BlockAttribute.php";
 include_once "common/gateway/BlockGateway.php";
 
 class AttributeGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): Attribute
+    public static function fetchAll(?array $params = null): array
     {
-        $result = DB::get()->run("SELECT * FROM `attribute` WHERE id = :id", ["id" => $id])->fetch();
+        $result = self::fetchFromTable("attribute", $params);
 
-        if ($result === false) throw new InvalidArgumentException("No database entry exists for ID " . $id);
+        $instances = array();
+        foreach ($result as $entry) {
+            $attribute = new BlockAttribute($entry["id"]);
+            $attribute->forceBlockID($entry["block"]);
+            $attribute->name = $entry["name"];
 
-        $attribute = new Attribute($id);
-        $attribute->setBlock(BlockGateway::fetch($result["block"]));
-        $attribute->name = $result["name"];
+            array_push($instances, $attribute);
+        }
 
-        return $attribute;
+        return $instances;
+    }
+
+    public static function fetch(?array $params = null): ?BlockAttribute
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int
     {
-        /** @var Attribute $attribute */
+        /** @var BlockAttribute $attribute */
         $attribute = $object;
 
         DB::get()->run("INSERT INTO `attribute` (`block`, `name`)
@@ -36,7 +45,7 @@ class AttributeGateway extends DatabaseGateway
 
     public static function update(object $object): void
     {
-        /** @var Attribute $attribute */
+        /** @var BlockAttribute $attribute */
         $attribute = $object;
 
         DB::get()->run("UPDATE `attribute`
@@ -51,7 +60,7 @@ class AttributeGateway extends DatabaseGateway
 
     public static function delete(object $object): void
     {
-        /** @var Attribute $attribute */
+        /** @var BlockAttribute $attribute */
         $attribute = $object;
 
         DB::get()->run("DELETE FROM `attribute` WHERE `id` = :id",

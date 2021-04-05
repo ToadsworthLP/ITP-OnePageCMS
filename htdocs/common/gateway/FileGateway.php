@@ -5,16 +5,25 @@ include_once "common/utility/DB.php";
 
 class FileGateway extends DatabaseGateway
 {
-    public static function fetch(int $id): File
+    public static function fetchAll(?array $params = null): array
     {
-        $result = DB::get()->run("SELECT * FROM `file` WHERE id = :id", ["id" => $id])->fetch();
+        $result = self::fetchFromTable("file", $params);
 
-        if ($result === false) throw new InvalidArgumentException("No database entry exists for ID " . $id);
+        $instances = array();
+        foreach ($result as $entry) {
+            $file = new File($entry["id"]);
+            $file->filename = $entry["filename"];
 
-        $file = new File($id);
-        $file->filename = $result["filename"];
+            array_push($instances, $file);
+        }
 
-        return $file;
+        return $instances;
+    }
+
+    public static function fetch(?array $params = null): ?File
+    {
+        $result = self::fetchAll($params);
+        return count($result) > 0 ? $result[0] : null;
     }
 
     public static function create(object $object): int

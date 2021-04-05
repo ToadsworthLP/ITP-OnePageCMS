@@ -22,7 +22,7 @@ class AccountUtility
 
         if (isset($_SESSION[SessionConfig::CURRENT_USER_ID])) {
             try {
-                $user = UserGateway::fetch($_SESSION[SessionConfig::CURRENT_USER_ID]);
+                $user = UserGateway::fetch(["id" => $_SESSION[SessionConfig::CURRENT_USER_ID]]);
                 self::$currentUser = $user;
                 return $user;
             } catch (InvalidArgumentException $e) {
@@ -50,19 +50,15 @@ class AccountUtility
      */
     public static function login(string $username, string $password): ?User
     {
-        $sql = "SELECT `username`, `password`, `id` FROM `user` WHERE `username` = :username";
-
-        $result = DB::get()->run($sql, ["username" => $username])->fetch();
+        $result = UserGateway::fetch(["username" => $username]);
 
         if (!$result) {
             return null;
         }
 
-        $correctPassword = $result["password"];
-
-        if (password_verify($password, $correctPassword)) {
-            $_SESSION[SessionConfig::CURRENT_USER_ID] = $result["id"];
-            return UserGateway::fetch($result["id"]);
+        if (password_verify($password, $result->password)) {
+            $_SESSION[SessionConfig::CURRENT_USER_ID] = $result->getID();
+            return UserGateway::fetch(["id" => $result->getID()]);
         } else {
             return null;
         }

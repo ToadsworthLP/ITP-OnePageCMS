@@ -8,9 +8,9 @@ include_once "common/gateway/SiteGateway.php";
 class Site extends DatabaseObject
 {
     public string $name;
-    public int $required_permissions;
-    public int $published;
-    public int $menu_option;
+    public int $requiredPermissions;
+    public bool $published;
+    public bool $menuOption;
 
     protected function getGatewayClass(): string
     {
