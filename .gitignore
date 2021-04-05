@@ -2,3 +2,5 @@
 .idea/
 htdocs/stephTest
 htdocs/debug/
+
+htdocs/debug.php

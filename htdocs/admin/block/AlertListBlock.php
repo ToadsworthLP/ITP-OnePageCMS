@@ -14,14 +14,16 @@ function AlertListBlock() {
 
         for ($i = 0; $i < sizeof($currentAlerts); $i++) {
             $alert = $currentAlerts[$i];
-            //$alert = new Alert($alertObj->type, $alertObj->text, $alertObj->autoDismiss);
 
-            if($alert->autoDismiss) { // Dismiss automatically
+            if($alert->lifetime > 0) { // Decrease alert lifetime
+                $alert->lifetime--;
+                $modified = true;
+            } elseif ($alert->lifetime == 0) { // Dismiss automatically
                 array_splice($currentAlerts, $i, 1);
                 $modified = true;
             }
 
-            AlertBlock($alert, $i, !$alert->autoDismiss);
+            AlertBlock($alert, $i, $alert->lifetime < 0);
         }
 
         if($modified) { // Reserialize the alert list only if it was changed

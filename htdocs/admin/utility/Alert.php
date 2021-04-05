@@ -8,7 +8,7 @@ class Alert
 {
     public string $type;
     public string $text;
-    public bool $autoDismiss;
+    public int $lifetime;
 
     /**
      * Creates an alert object with the given properties.
@@ -20,7 +20,7 @@ class Alert
     {
         $this->type = $type;
         $this->text = $text;
-        $this->autoDismiss = $autoDismiss;
+        $this->lifetime = $autoDismiss ? 1 : -1; // negative values make the alert stay until explicitly dismissed by the user
     }
 
     /**

@@ -2,17 +2,20 @@
 include_once "admin/utility/AccountUtility.php";
 include_once "admin/utility/ReturnUtility.php";
 include_once "admin/config/AdminPages.php";
+include_once "admin/utility/Alert.php";
+include_once "admin/utility/AlertType.php";
 
 if(isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
     $user = AccountUtility::login($username, $password);
-    if($user){
-        // TODO implement success notification
+    if(!$user){
+        $error = new Alert(AlertType::WARNING, "The entered login credentials are incorrect.", true);
+        $error->post();
+        header("Location: admin.php?page=".AdminPages::LOGIN);
     } else {
-        // TODO implement failure notification
+        header("Location: admin.php?page=".AdminPages::DASHBOARD);
     }
 }
 
-header("Location: admin.php?page=".AdminPages::DASHBOARD);
