@@ -12,7 +12,7 @@ function Navbar() {
     $dashboard = $linkBase.AdminPages::DASHBOARD;
     $editor = $linkBase.AdminPages::DASHBOARD;
     $footer = $linkBase.AdminPages::DASHBOARD;
-    $users = $linkBase.AdminPages::DASHBOARD;
+    $users = $linkBase.AdminPages::USER_MANAGEMENT;
     $media = $linkBase.AdminPages::DASHBOARD;
     $contact = $linkBase.AdminPages::DASHBOARD;
     $settings = $linkBase.AdminPages::DASHBOARD;

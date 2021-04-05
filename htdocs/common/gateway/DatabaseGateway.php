@@ -20,7 +20,7 @@ abstract class DatabaseGateway
      *                          for example: ["id" => id, "other_column" => "some_value"]
      * @return object The first object that matches the given criteria, or null of none was found.
      */
-    public static abstract function fetch(?array $params = null): ?object;
+    public static abstract function fetch(?array $params = null);
 
     /**
      * Creates a new entry in the database using the data from the given object.
