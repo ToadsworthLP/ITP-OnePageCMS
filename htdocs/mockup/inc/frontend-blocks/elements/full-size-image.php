@@ -1,1 +1,1 @@
-<img src="htdocs/mockup/media/bootstrap-solid.svg" class="img-fluid" alt="...">
+<img src="mockup\media\bootstrap-solid.svg" class="img-fluid" alt="...">

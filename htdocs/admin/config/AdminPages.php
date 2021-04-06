@@ -6,13 +6,15 @@ class AdminPages implements IIncludeSwitchConfig
     const LOGIN = 0;
     const DASHBOARD = 1;
     const USER_MANAGEMENT = 2;
+    const MEDIA = 3;
 
     public function getMapping(): array
     {
         return [
             AdminPages::LOGIN => "admin/page/LoginPage.php",
             AdminPages::DASHBOARD => "admin/page/DashboardPage.php",
-            AdminPages::USER_MANAGEMENT => "admin/page/UserManagementPage.php"
+            AdminPages::USER_MANAGEMENT => "admin/page/UserManagementPage.php",
+            AdminPages::MEDIA => "admin/page/MediaManagementPage.php"
         ];
     }
 
