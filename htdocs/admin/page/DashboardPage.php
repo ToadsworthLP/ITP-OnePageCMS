@@ -33,7 +33,7 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Allgemein
+                        Globale Einstellungen
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
@@ -48,7 +48,7 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Seite bearbeiten
+                        Menü
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>

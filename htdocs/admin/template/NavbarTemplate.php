@@ -71,15 +71,21 @@
             <!-- Submenu content -->
             <div id='submenu1' class="collapse sidebar-submenu">
                 <a href="<?=$dashboard?>" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed">Allgemein</span>
+                    <span class="menu-collapsed">Globale Einstellungen</span>
                 </a>
                 <a href="<?=$editor?>" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed">Seite bearbeiten</span>
+                    <span class="menu-collapsed">Menü</span>
                 </a>
                 <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Footer</span>
                 </a>
             </div>
+            <a href="<?=$editor?>" class="bg-dark list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-edit fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Seiteneditor</span>
+                </div>
+            </a>
             <a href="#submenu2" data-toggle="collapse" aria-expanded="false"
                class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">

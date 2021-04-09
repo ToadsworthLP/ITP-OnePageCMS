@@ -65,10 +65,10 @@
                 <!-- Submenu content -->
                 <div id='submenu1' class="collapse sidebar-submenu">
                     <a href="index.php?content=dashboard" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">Allgemein</span>
+                        <span class="menu-collapsed">Globale Einstellungen</span>
                     </a>
                     <a href="index.php?content=dashboard" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">Seite bearbeiten</span>
+                        <span class="menu-collapsed">Menü</span>
                     </a>
                     <a href="index.php?content=dashboard" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed">Footer</span>

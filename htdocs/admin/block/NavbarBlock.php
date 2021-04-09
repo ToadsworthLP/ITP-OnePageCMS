@@ -10,7 +10,7 @@ function Navbar() {
 
     // TODO set correct pages instead of these placeholder values
     $dashboard = $linkBase.AdminPages::DASHBOARD;
-    $editor = $linkBase.AdminPages::DASHBOARD;
+    $editor = $linkBase.AdminPages::EDITOR;
     $footer = $linkBase.AdminPages::DASHBOARD;
     $users = $linkBase.AdminPages::USER_MANAGEMENT;
     $media = $linkBase.AdminPages::MEDIA;
