@@ -5,8 +5,11 @@ include_once "admin/block/AddUserBlock.php";
 include_once "admin/block/EditUserBlock.php";
 include_once "admin/block/UserTableBlock.php";
 include_once "admin/utility/AccountUtility.php";
+include_once "admin/utility/RequirePermissions.php";
+include_once "admin/config/PermissionConfig.php";
 
 include "admin/utility/LoginRedirect.php";
+RequirePermissions(PermissionConfig::ADMIN, AdminPages::DASHBOARD);
 
 Navbar();
 ?>
