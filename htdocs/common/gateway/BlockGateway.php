@@ -13,7 +13,7 @@ class BlockGateway extends DatabaseGateway
 
         $instances = array();
         foreach ($result as $entry) {
-            $block = new Block($entry["type"]);
+            $block = new Block($entry["id"]);
             $block->forceTypeID($entry["type"]);
             $block->forceSiteID($entry["site"]);
             $block->block_order = $entry["block_order"];

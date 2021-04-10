@@ -5,7 +5,7 @@ include_once "common/gateway/AttributeGateway.php";
 /**
  * Representation of a attribute
  */
-class BlockAttribute extends DatabaseObject
+abstract class BlockAttribute extends DatabaseObject
 {
     public string $name;
 
