@@ -47,6 +47,7 @@ Navbar();
         </div>
         <?php if(isset($_GET["editSelf"])): ?>
             <!-- Edit user -->
+            <br>
             <div class="row">
                 <div class="col">
                     <div class="card">

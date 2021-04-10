@@ -44,6 +44,7 @@ $pageSwitch = new IncludeSwitch(new AdminPages());
     <!-- Modal -->
     <?php
         include 'admin\template\MediaModal.php';
+        include 'admin\template\MediaSelectionModal.php';
     ?>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>

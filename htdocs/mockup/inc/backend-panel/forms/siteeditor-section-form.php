@@ -29,9 +29,9 @@
             </div>
             <div class="col-8">
                 <div class="custom-file mb-3">
-                    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    <button type="button" class="btn btn-block btn-secondary" data-toggle="modal" data-target="#mediaSelectionModal">
+                        Hintergrundbild wählen
+                    </button>
                 </div>
             </div>
         </div>

@@ -41,7 +41,6 @@ Navbar();
             ?>
         </ul>
         <!-- ADD SECTION BUTTON -->
-        <br>
         <div class="row">
             <div class="col">
                 <button id="add" class="btn btn-lg btn-block btn-secondary">+</button>
