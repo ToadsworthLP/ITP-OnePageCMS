@@ -3,6 +3,10 @@ include_once "admin/utility/Alert.php";
 include_once "admin/utility/AlertType.php";
 include_once "common/model/User.php";
 include_once "common/gateway/UserGateway.php";
+include_once "admin/utility/RequirePermissions.php";
+include_once "admin/config/PermissionConfig.php";
+
+RequirePermissions(PermissionConfig::ADMIN);
 
 if(isset($_POST["targetUser"]) && isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["role"]) &&
     $_POST["username"] != "" && $_POST["email"] != "" && $_POST["role"] != "") {
