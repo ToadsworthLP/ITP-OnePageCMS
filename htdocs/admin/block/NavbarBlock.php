@@ -17,7 +17,7 @@ function Navbar() {
     $contact = $linkBase.AdminPages::DASHBOARD;
     $settings = $linkBase.AdminPages::DASHBOARD;
     $help = $linkBase.AdminPages::DASHBOARD;
-    $profile = $linkBase.AdminPages::DASHBOARD;
+    $profile = $linkBase.AdminPages::USER_MANAGEMENT."&editSelf=true";
     $logout = $linkBase.AdminPages::LOGIN."&action=".AdminActions::LOGOUT;
 
     include "admin/template/NavbarTemplate.php";

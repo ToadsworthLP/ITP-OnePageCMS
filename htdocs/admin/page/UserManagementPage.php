@@ -4,6 +4,7 @@ include_once "admin/block/AlertListBlock.php";
 include_once "admin/block/AddUserBlock.php";
 include_once "admin/block/EditUserBlock.php";
 include_once "admin/block/UserTableBlock.php";
+include_once "admin/utility/AccountUtility.php";
 
 include "admin/utility/LoginRedirect.php";
 
@@ -41,6 +42,21 @@ Navbar();
                 </div>
             </div>
         </div>
+        <?php if(isset($_GET["editSelf"])): ?>
+            <!-- Edit user -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            Eigenes Profil bearbeiten
+                        </div>
+                        <div class="card-body">
+                            <?= EditUserBlock(AccountUtility::getCurrentUser()); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
         <?php if(isset($_POST["targetUser"]) && $_POST["targetUser"] !== ""): ?>
         <!-- Edit user -->
         <div class="row">
