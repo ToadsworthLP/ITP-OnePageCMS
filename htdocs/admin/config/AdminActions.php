@@ -8,6 +8,9 @@ class AdminActions implements IIncludeSwitchConfig
     const LOGOUT = 2;
     const DISMISS_ALERT = 3;
     const ADD_USER = 4;
+    const EDIT_USER = 5;
+    const RESET_PASSWORD = 6;
+    const DELETE_USER = 7;
 
     public function getMapping(): array
     {
@@ -16,7 +19,10 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::LOGIN => "admin/action/LoginAction.php",
             AdminActions::LOGOUT => "admin/action/LogoutAction.php",
             AdminActions::DISMISS_ALERT => "admin/action/DismissAlertAction.php",
-            AdminActions::ADD_USER => "admin/action/AddUserAction.php"
+            AdminActions::ADD_USER => "admin/action/AddUserAction.php",
+            AdminActions::EDIT_USER => "admin/action/EditUserAction.php",
+            AdminActions::RESET_PASSWORD => "", // TODO add password reset
+            AdminActions::DELETE_USER => "" // TODO add user deletion
         ];
     }
 

@@ -2,6 +2,7 @@
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
 include_once "admin/block/AddUserBlock.php";
+include_once "admin/block/EditUserBlock.php";
 include_once "admin/block/UserTableBlock.php";
 
 include "admin/utility/LoginRedirect.php";
@@ -27,7 +28,7 @@ Navbar();
                 <?= AlertListBlock(); ?>
             </div>
         </div>
-        <!-- Content -->
+        <!-- Add user -->
         <div class="row">
             <div class="col">
                 <div class="card">
@@ -40,6 +41,21 @@ Navbar();
                 </div>
             </div>
         </div>
+        <?php if(isset($_POST["targetUser"]) && $_POST["targetUser"] !== ""): ?>
+        <!-- Edit user -->
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Benutzer bearbeiten
+                    </div>
+                    <div class="card-body">
+                        <?= EditUserBlock(UserGateway::fetch(["id" => $_POST["targetUser"]])); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
         <br>
         <div class="row user-table-desktop">
             <div class="col">
