@@ -22,7 +22,7 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::ADD_USER => "admin/action/AddUserAction.php",
             AdminActions::EDIT_USER => "admin/action/EditUserAction.php",
             AdminActions::RESET_PASSWORD => "", // TODO add password reset
-            AdminActions::DELETE_USER => "" // TODO add user deletion
+            AdminActions::DELETE_USER => "admin/action/DeleteUserAction.php"
         ];
     }
 

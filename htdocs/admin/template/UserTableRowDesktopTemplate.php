@@ -16,7 +16,7 @@
                     <button class="dropdown-item" type="submit">Passwort zurücksetzen</button>
                 </form>
                 <div class="dropdown-divider"></div>
-                <form method="post" action="admin.php?action="<?= AdminActions::DELETE_USER ?>>
+                <form method="post" action="admin.php?action=<?= AdminActions::DELETE_USER ?>">
                     <input type="hidden" name="targetUser" value="<?=$id?>">
                     <button class="dropdown-item" type="submit">Löschen</button>
                 </form>
