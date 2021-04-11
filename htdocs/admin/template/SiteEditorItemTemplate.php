@@ -5,18 +5,18 @@
                 <h2 class="mb-0">
                     <div class="row">
                         <div class="col-1">
-                                    <?php
-                                    include 'mockup/inc/backend-panel/icons/siteeditor-move-icon.php';
-                                    ?>
+                            <?php
+                            include 'mockup/inc/backend-panel/icons/siteeditor-move-icon.php';
+                            ?>
                         </div>
                         <div class="col">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                #1 - Sektionsname      
+                                #1 - Sektionsname
                             </button>
                         </div>
                         <div class="col-1">
                             <?php
-                                include 'mockup/inc/backend-panel/icons/siteeditor-delete-icon.php';
+                            include 'mockup/inc/backend-panel/icons/siteeditor-delete-icon.php';
                             ?>
                         </div>
                     </div>

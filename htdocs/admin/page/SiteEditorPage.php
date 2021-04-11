@@ -1,6 +1,7 @@
 <?php
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
+include_once "admin/block/SiteEditorItemBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
@@ -36,7 +37,7 @@ Navbar();
         <ul class="list-group">
             <?php
                 for($i = 0; $i < 6; $i ++){
-                    include 'admin/block/SiteEditorBlock.php';
+                    SiteEditorItemBlock();
                 }
             ?>
         </ul>

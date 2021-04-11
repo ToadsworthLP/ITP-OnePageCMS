@@ -1,6 +1,8 @@
 <?php
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
+include_once "admin/block/MediaListBlock.php";
+include_once "admin/block/MediaUploadBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
@@ -33,9 +35,7 @@ Navbar();
                         Datei hochladen
                     </div>
                     <div class="card-body">
-                        <?php
-                            include 'admin/template/MediaUploadTemplate.php';
-                        ?>
+                        <?= MediaUploadBlock(); ?>
                     </div>
                 </div>
             </div>
@@ -48,9 +48,9 @@ Navbar();
                         Medien-Bibliothek
                     </div>
                     <div class="card-body">
-                        <?php
-                            include 'admin/template/MediaBlock.php';
-                        ?>
+                        <div class="row text-center text-lg-left">
+                            <?= MediaListBlock(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
