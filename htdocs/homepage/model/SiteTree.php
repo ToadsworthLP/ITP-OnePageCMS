@@ -1,13 +1,16 @@
 <?php
 include_once "homepage/model/SiteTreeNode.php";
 
+/**
+ * Represents the content of a site, including all its blocks and attributes.
+ */
 class SiteTree
 {
     public array $nodes;
 
     /**
-     * SiteTree constructor.
-     * @param array $siteData
+     * Creates a new SiteTree from the given site data array.
+     * @param array $siteData The site data, as obtained using HomepageGateway::getSideData
      */
     public function __construct(array $siteData)
     {

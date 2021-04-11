@@ -2,7 +2,7 @@
 
 
 /**
- * Class SiteTreeNode
+ * Represents a single block in the site tree
  */
 class SiteTreeNode
 {
@@ -10,8 +10,8 @@ class SiteTreeNode
     private array $attributes;
 
     /**
-     * SiteTreeNode constructor.
-     * @param string $type
+     * Creates a new node of the given type.
+     * @param string $type File name of the template to be included
      */
     public function __construct(string $type)
     {
@@ -19,15 +19,17 @@ class SiteTreeNode
     }
 
     /**
-     * @param string $name
-     * @param string $value
+     * Adds an attribute to this node.
+     * @param string $name The name of the attribute
+     * @param string $value The value of the attribute
      */
     public function addAttribute(string $name, string $value) {
         $this->attributes[$name] = $value;
     }
 
     /**
-     * @return string
+     * Gets the type of this node.
+     * @return string The file name of the template to be included
      */
     public function getType(): string
     {
@@ -35,9 +37,10 @@ class SiteTreeNode
     }
 
     /**
-     * @param string $name
-     * @param string|null $default
-     * @return string|null
+     * Gets an attribute value by its name.
+     * @param string $name The name of the attribute
+     * @param string|null $default The default value, in case the attribute of the given name does not exist (defaults to null)
+     * @return string|null The attribute value or the default value if the attribute was not found
      */
     public function getAttribute(string $name, string $default = null): ?string
     {
