@@ -63,6 +63,7 @@ Navbar();
         <?php endif; ?>
         <?php if(isset($_POST["targetUser"]) && $_POST["targetUser"] !== ""): ?>
         <!-- Edit user -->
+        <br>
         <div class="row">
             <div class="col">
                 <div class="card">

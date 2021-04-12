@@ -37,17 +37,17 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionExample2">
                     <div class="card">
-                        <div class="card-header" id="headingOne">
+                        <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
                                     Überschrift
                                 </button>
                             </h2>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample2">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-4">
