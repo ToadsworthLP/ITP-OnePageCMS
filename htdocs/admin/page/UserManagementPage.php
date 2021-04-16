@@ -86,8 +86,7 @@ Navbar();
         <div class="row user-table-mobile">
             <div class="col">
                 <?php
-                // TODO ask why this is even necessary, and implement it if it really is
-                //include 'inc/backend-panel/elements/user-list-mobile.php';
+                    include 'mockup/inc/backend-panel/elements/user-list-mobile.php';
                 ?>
             </div>
         </div>

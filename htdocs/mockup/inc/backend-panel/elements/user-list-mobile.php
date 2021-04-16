@@ -10,9 +10,9 @@
 		<?php
             for($j = 1; $j < 11; $j++){
 				if($j % 2 == 1){
-					include 'inc/backend-panel/elements/user-row-mobile-odd.php';
+					include 'mockup/inc/backend-panel/elements/user-row-mobile-odd.php';
 				}else{
-					include 'inc/backend-panel/elements/user-row-mobile-even.php';
+					include 'mockup/inc/backend-panel/elements/user-row-mobile-even.php';
 				}
             }
         ?>

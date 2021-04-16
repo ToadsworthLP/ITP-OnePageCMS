@@ -3,7 +3,7 @@
 	<td>TestAdmin</td>
     <td>
         <?php
-            include 'inc/backend-panel/icons/user-arrow-icon.php';
+            include 'mockup/inc/backend-panel/icons/user-arrow-icon.php';
         ?>
     </td>
 </tr>
@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col">
                     <?php
-                        include 'inc/backend-panel/elements/user-actions-dropmenu.php';
+                        include 'mockup/inc/backend-panel/elements/user-actions-dropmenu.php';
                     ?>
                 </div>
             </div>
