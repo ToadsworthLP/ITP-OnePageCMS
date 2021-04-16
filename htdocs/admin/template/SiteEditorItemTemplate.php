@@ -1,7 +1,7 @@
 <li class="siteeditor-list-item">
-    <div class="accordion" id="accordionExample">
+    <div class="accordion" id="accordionSection">
         <div class="card">
-            <div class="card-header" id="headingOne">
+            <div class="card-header" id="heading<?php echo $i; ?>">
                 <h2 class="mb-0">
                     <div class="row">
                         <div class="col-1">
@@ -10,8 +10,8 @@
                             ?>
                         </div>
                         <div class="col">
-                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                #1 - Sektionsname
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>">
+                                #<?php echo $i; ?> - Sektionsname
                             </button>
                         </div>
                         <div class="col-1">
@@ -23,7 +23,7 @@
                 </h2>
             </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="collapse<?php echo $i; ?>" class="collapse show" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordionSection">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">

@@ -1,4 +1,5 @@
 // Change Order
 $(document).ready(
-    $("ul").sortable()
+    $("#siteeditor-item-list").sortable(),
+    $("#siteeditor-item-list").disableSelection()
 );

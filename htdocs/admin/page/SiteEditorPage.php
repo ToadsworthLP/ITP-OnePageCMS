@@ -34,10 +34,10 @@ Navbar();
         </div>
         <br>
         <!-- SECTIONB>LOCKS -->
-        <ul class="list-group">
+        <ul class="list-group" id="siteeditor-item-list">
             <?php
                 for($i = 0; $i < 6; $i ++){
-                    SiteEditorItemBlock();
+                    SiteEditorItemBlock($i);
                 }
             ?>
         </ul>
