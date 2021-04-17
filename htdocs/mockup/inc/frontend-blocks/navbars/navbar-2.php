@@ -1,5 +1,5 @@
 <!-- Remove sticky-top class if you dont want the menu to be fixed at the top -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
     <!-- To change the menu from full-width to in-grid simple change container-fluid to container -->
     <div class="container-fluid">
         <a class="navbar-brand logo-left" href="#">

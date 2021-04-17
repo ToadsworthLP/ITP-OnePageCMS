@@ -1,6 +1,6 @@
 <form>
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="name" hidden>Name</label>
                 <input id="name" class="form-control" type="text" placeholder="Name">
@@ -14,7 +14,7 @@
                 <input id="topic" class="form-control" type="text" placeholder="Betreff">
             </div>
         </div>
-        <div class="col-6">	
+        <div class="col-md-6">	
             <div class="form-group">
                 <label for="message" hidden>Example textarea</label>
                 <textarea class="form-control" id="message" rows="3"></textarea>

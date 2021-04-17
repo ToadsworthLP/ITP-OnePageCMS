@@ -1,7 +1,7 @@
 <section class="my-section">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col section-heading">
                 <!-- Heading -->
                 <?php
                     include 'htdocs/mockup/inc/frontend-blocks/elements/heading.php';
