@@ -62,3 +62,15 @@ td{
 .mediaSelectionImage{
     width: 100%;
 }
+
+/* === LOGIN === */
+.login-container{
+    width: 450px;
+    margin: 4rem auto;
+}
+
+.login-logo{
+    width: 180px !important;
+    height: auto;
+    margin: 0 auto 2rem;
+}

@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container login-container">
     <div class="row">
         <div class="col">
-            <img src="../htdocs/mockup/media/bootstrap-solid.svg" class="logo-login" alt="...">
+            <img src="../htdocs/mockup/media/bootstrap-solid.svg" class="mx-auto d-block login-logo" alt="...">
         </div>
     </div>
     <div class="row">
