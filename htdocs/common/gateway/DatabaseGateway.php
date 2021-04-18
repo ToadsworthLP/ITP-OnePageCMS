@@ -47,6 +47,15 @@ abstract class DatabaseGateway
         $sql = "SELECT * FROM `".$tableName."`";
 
         if($params != null) {
+            $orderSql = "";
+            if(isset($params["_ORDER_ASC"])) { // Now with result sorting!
+                $orderSql .= " ORDER BY `".$params["_ORDER_ASC"]."` ASC ";
+                unset($params["_ORDER_ASC"]);
+            } elseif (isset($params["_ORDER_DESC"])) {
+                $orderSql .= " ORDER BY `".$params["_ORDER_DESC"]."` DESC ";
+                unset($params["_ORDER_DESC"]);
+            }
+
             $sql .= " WHERE ";
             $first = true;
             foreach ($params as $key => $value){
@@ -54,10 +63,10 @@ abstract class DatabaseGateway
                 $first = false;
             }
 
-            $result = DB::get()->run($sql, $params)->fetchAll();
-        } else {
-            $result = DB::get()->run($sql)->fetchAll();
+            $sql .= $orderSql;
         }
+
+        $result = DB::get()->run($sql, $params)->fetchAll();
 
         return $result;
     }
