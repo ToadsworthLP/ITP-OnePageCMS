@@ -9,7 +9,7 @@
                         </div>
                         <div class="col">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>">
-                                #<?php echo $i; ?> - Sektionsname
+                                <?=$attributes->get("title", "Unbenannte Sektion")?>
                             </button>
                         </div>
                         <div class="col-1">

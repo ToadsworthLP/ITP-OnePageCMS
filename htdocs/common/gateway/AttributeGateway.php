@@ -63,7 +63,6 @@ class AttributeGateway extends DatabaseGateway
     {
         /** @var BlockAttribute $attribute */
         $attribute = $object;
-        var_dump($attribute->getBlock());
 
         DB::get()->run("INSERT INTO `attribute` (`block`, `name`)
                             VALUES (:block, :name)",
@@ -75,14 +74,14 @@ class AttributeGateway extends DatabaseGateway
         $newID = DB::get()->pdo()->lastInsertId();
 
         if($attribute instanceof TextAttribute) {
-            DB::get()->run("INSERT INTO `text_attribute` (`id`, `text`)
+            DB::get()->run("INSERT INTO `text_attribute` (`parent`, `text`)
                             VALUES (:id, :text)",
                 [
                     "id" => $newID,
                     "text" => $attribute->text
                 ]);
         } elseif($attribute instanceof FileAttribute) {
-            DB::get()->run("INSERT INTO `file_attribute` (`id`, `file`)
+            DB::get()->run("INSERT INTO `file_attribute` (`parent`, `file`)
                             VALUES (:id, :file)",
                 [
                     "id" => $newID,
