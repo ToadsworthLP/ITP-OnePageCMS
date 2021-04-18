@@ -1,11 +1,14 @@
 <?php
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
-include_once "admin/block/SiteEditorItemBlock.php";
+include_once "admin/block/SiteEditorBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
 Navbar();
+
+$site = 1;
+
 ?>
 
 <div class="col">
@@ -33,18 +36,17 @@ Navbar();
             </div>
         </div>
         <br>
-        <!-- SECTIONB>LOCKS -->
+        <!-- SECTION BLOCKS -->
         <ul class="list-group" id="siteeditor-item-list">
-            <?php
-                for($i = 0; $i < 6; $i ++){
-                    SiteEditorItemBlock($i);
-                }
-            ?>
+            <?= SiteEditorBlock() ?>
         </ul>
         <!-- ADD SECTION BUTTON -->
         <div class="row">
             <div class="col">
-                <button id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                <form method="post" action="admin.php?action=<?= AdminActions::ADD_BLOCK ?>">
+                    <input type="hidden" name="targetSite" value="<?= $site ?>">
+                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                </form>
             </div>
         </div>
     </div>

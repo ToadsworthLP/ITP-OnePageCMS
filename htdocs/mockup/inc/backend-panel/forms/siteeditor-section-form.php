@@ -1,4 +1,4 @@
-<form action="">
+<form method="post" action="admin.php?&action=<?=AdminActions::EDIT_BLOCK?>">
     <div class="card-header">
         <div class="row">
             <div class="col-6">

@@ -11,6 +11,10 @@ class AdminActions implements IIncludeSwitchConfig
     const EDIT_USER = 5;
     const RESET_PASSWORD = 6;
     const DELETE_USER = 7;
+    const ADD_BLOCK = 8;
+    const EDIT_BLOCK = 9;
+    const DELETE_BLOCK = 10;
+    const CHANGE_BLOCK_ORDER = 11;
 
     public function getMapping(): array
     {
@@ -22,7 +26,11 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::ADD_USER => "admin/action/AddUserAction.php",
             AdminActions::EDIT_USER => "admin/action/EditUserAction.php",
             AdminActions::RESET_PASSWORD => "", // TODO add password reset
-            AdminActions::DELETE_USER => "admin/action/DeleteUserAction.php"
+            AdminActions::DELETE_USER => "admin/action/DeleteUserAction.php",
+            AdminActions::ADD_BLOCK => "admin/action/AddBlockAction.php",
+            AdminActions::EDIT_BLOCK => "admin/action/EditBlockAction.php",
+            AdminActions::DELETE_BLOCK => "admin/action/DeleteBlockAction.php",
+            AdminActions::CHANGE_BLOCK_ORDER => "" // TODO modify block display order on the site
         ];
     }
 

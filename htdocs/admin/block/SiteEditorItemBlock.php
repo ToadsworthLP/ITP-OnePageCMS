@@ -1,6 +1,9 @@
 <?php
+include_once "common/model/Block.php";
 
-// TODO Ich hab jetzt der einfachheithalber mal die Schleifenvariable mit übergeben
-function SiteEditorItemBlock($i) {
+function SiteEditorItemBlock(Block $block) {
+    $i = $block->getID();
+    $id = $block->getID();
+
     include "admin/template/SiteEditorItemTemplate.php";
 }
