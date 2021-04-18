@@ -73,8 +73,11 @@
                 <a href="<?=$dashboard?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Globale Einstellungen</span>
                 </a>
-                <a href="<?=$editor?>" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Menü</span>
+                </a>
+                <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Slider</span>
                 </a>
                 <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Footer</span>

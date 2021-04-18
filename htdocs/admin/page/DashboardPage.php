@@ -36,9 +36,9 @@ Navbar();
                         Globale Einstellungen
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <?php
+                            include 'admin/template/DashboardGlobalSettingsForm.php';
+                        ?>
                     </div>
                 </div>
             </div>
@@ -51,9 +51,20 @@ Navbar();
                         Menü
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p>Coming Soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Slider
+                    </div>
+                    <div class="card-body">
+                        <p>Coming Soon!</p>
                     </div>
                 </div>
             </div>
@@ -66,9 +77,9 @@ Navbar();
                         Footer
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <?php
+                            include 'admin/template/DashboardFooterSettingsForm.php';
+                        ?>
                     </div>
                 </div>
             </div>
