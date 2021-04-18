@@ -80,14 +80,12 @@ Navbar();
         <br>
         <div class="row user-table-desktop">
             <div class="col">
-                <?= UserTable(); ?>
+                <?= UserTable(false); ?>
             </div>
         </div>
         <div class="row user-table-mobile">
             <div class="col">
-                <?php
-                    include 'mockup/inc/backend-panel/elements/user-list-mobile.php';
-                ?>
+                <?= UserTable(true); ?>
             </div>
         </div>
     </div>
