@@ -4,7 +4,3 @@ $(document).ready(
     $("#siteeditor-item-list").sortable(),
     $("#siteeditor-item-list").disableSelection()
 );
-
-// Append
-
-// Delete
