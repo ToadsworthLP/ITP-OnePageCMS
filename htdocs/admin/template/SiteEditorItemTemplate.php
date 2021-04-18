@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-1">
                             <?php
-                            include 'mockup/inc/backend-panel/icons/siteeditor-move-icon.php';
+                            include 'admin/icon/MoveIcon.php';
                             ?>
                         </div>
                         <div class="col">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-1">
                             <?php
-                            include 'mockup/inc/backend-panel/icons/siteeditor-delete-icon.php';
+                            include 'admin/icon/DeleteIcon.php';
                             ?>
                         </div>
                     </div>
