@@ -63,6 +63,23 @@ td{
     width: 100%;
 }
 
+.siteeditor-move-icon{
+    margin-top: .6rem;
+    display: block;
+}
+
+.siteeditor-delete-button{
+    border: none;
+    margin-top: .2rem;
+    float: right;
+}
+
+@media(max-width: 374px){
+    .siteeditor-move-icon{
+        display: none;
+    }
+}
+
 /* === LOGIN === */
 .login-container{
     width: 450px;
