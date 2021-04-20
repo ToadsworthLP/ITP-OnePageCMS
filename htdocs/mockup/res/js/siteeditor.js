@@ -1,6 +1,7 @@
 // Change Order
-// Sortable hat eine Update Funktion mit der man über ajax die Reihenfolge übertragen könnte
-$(document).ready(
-    $("#siteeditor-item-list").sortable(),
-    $("#siteeditor-item-list").disableSelection()
-);
+$('#siteeditor-item-list').sortable({
+    update: function(event, ui){
+    var postData = $(this).sortable('serialize');
+        console.log(postData);
+    }
+});

@@ -1,4 +1,4 @@
-<li class="siteeditor-list-item" id="<?=$id?>">
+<li id="item_<?=$id?>" class="siteeditor-list-item">
     <div class="accordion" id="accordionSection">
         <div class="card">
             <div class="card-header" id="heading<?php echo $i; ?>">
