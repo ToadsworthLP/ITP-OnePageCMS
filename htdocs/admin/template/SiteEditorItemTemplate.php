@@ -1,5 +1,5 @@
 <li id="item_<?=$id?>" class="siteeditor-list-item">
-    <div class="accordion" id="accordionSection">
+    <div class="accordion" id="accordionSection<?=$id?>">
         <div class="card">
             <div class="card-header" id="heading<?php echo $i; ?>">
                 <div class="row">
@@ -23,7 +23,7 @@
                     </div>
                 </div>       
             </div>
-            <div id="collapse<?php echo $i; ?>" class="collapse show" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordionSection">
+            <div id="collapse<?php echo $i; ?>" class="collapse show" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordionSection<?=$id?>">
                 <?php include "admin/template/SiteEditorSectionFormTemplate.php"?>
             </div>
         </div>

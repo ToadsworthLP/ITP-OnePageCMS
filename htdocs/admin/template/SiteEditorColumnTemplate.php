@@ -1,14 +1,14 @@
 <div class="form-group">
-    <label for="exampleInputText">Überschrift</label>
-    <input type="text" class="form-control" id="exampleInputText">
+    <label>Überschrift</label>
+    <input type="text" class="form-control">
 </div>
 <div class="form-group">
-    <label for="exampleInputText">Unterüberschrift</label>
-    <input type="text" class="form-control" id="exampleInputText">
+    <label>Unterüberschrift</label>
+    <input type="text" class="form-control">
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
+  <input class="form-check-input" type="checkbox" value="">
+  <label class="form-check-label">
     Trennlinie
   </label>
 </div>
@@ -19,15 +19,15 @@
     </button>
 </div>
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Text</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label>Text</label>
+    <textarea class="form-control" rows="3"></textarea>
 </div>
 <hr>
 <div class="form-group">
-    <label for="exampleInputText">Buttonlink</label>
-    <input type="text" class="form-control" id="exampleInputText">
+    <label>Buttonlink</label>
+    <input type="text" class="form-control">
 </div>
 <div class="form-group">
-    <label for="exampleInputText">Buttontext</label>
-    <input type="text" class="form-control" id="exampleInputText">
+    <label>Buttontext</label>
+    <input type="text" class="form-control">
 </div>
