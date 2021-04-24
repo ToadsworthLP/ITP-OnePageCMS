@@ -8,15 +8,31 @@ if ($list != null) {
     $output = "";
     parse_str($list, $output);
 
+    $permsCheck = true;
     $verified = false;
+
     foreach ($output["item"] as $pos => $id) {
         $block = BlockGateway::fetch(["id" => $id]);
 
-        if(!$verified) {
-            RequirePermissions($block->getSite()->requiredPermissions);
+        if($permsCheck) { // Only check once instead of once for each block
+            $verified = checkPermissions($block->getSite()->requiredPermissions);
+            $permsCheck = false;
         }
 
-        $block->block_order = $pos;
-        $block->update();
+        if($verified) {
+            $block->block_order = $pos;
+            $block->update();
+        }
     }
+
+    if($verified) { // Report proper HTTP status
+        http_response_code(200);
+        die();
+    } else {
+        http_response_code(403);
+        die();
+    }
+} else {
+    http_response_code(400);
+    die();
 }

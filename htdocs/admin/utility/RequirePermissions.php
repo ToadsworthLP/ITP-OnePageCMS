@@ -22,3 +22,13 @@ function RequirePermissions(int $permissionLevel, int $redirectTarget = -1) {
         }
     }
 }
+
+/**
+ * Checks whether the current user has at least the given permission level.
+ * @param int $permissionLevel The permission level to check against
+ * @return bool Whether the user has the required permissions
+ */
+function checkPermissions(int $permissionLevel) : bool {
+    $currentUserPerms = AccountUtility::getCurrentUser()->getRole()->permissions;
+    return $currentUserPerms >= $permissionLevel;
+}
