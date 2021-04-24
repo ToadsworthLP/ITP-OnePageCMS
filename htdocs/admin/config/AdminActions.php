@@ -30,7 +30,7 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::ADD_BLOCK => "admin/action/AddBlockAction.php",
             AdminActions::EDIT_BLOCK => "admin/action/EditBlockAction.php",
             AdminActions::DELETE_BLOCK => "admin/action/DeleteBlockAction.php",
-            AdminActions::CHANGE_BLOCK_ORDER => "" // TODO modify block display order on the site
+            AdminActions::CHANGE_BLOCK_ORDER => "admin/action/ChangeBlockOrderAction.php"
         ];
     }
 

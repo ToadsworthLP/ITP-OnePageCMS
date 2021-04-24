@@ -2,5 +2,9 @@
 
 $list = isset($_POST['list']) ? $_POST['list'] : null;
 
-parse_str($list, $output);
+if($list != null) {
+    $output = "";
+    parse_str($list, $output);
 
+    var_dump($output);
+}

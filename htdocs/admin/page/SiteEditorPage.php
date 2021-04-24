@@ -30,11 +30,6 @@ $site = 1;
             </div>
         </div>
         <!-- Content -->
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-lg btn-block btn-primary" type="submit">Reihenfolge speichern</button>
-            </div>
-        </div>
         <br>
         <!-- SECTION BLOCKS -->
         <ul class="list-group" id="siteeditor-item-list">
