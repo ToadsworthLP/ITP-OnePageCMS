@@ -21,7 +21,7 @@ class SiteTree
 
         foreach ($siteData as $entry) {
             if($lastId != $entry["block_id"]) {
-                array_push($this->nodes, new SiteTreeNode($entry["block_type"]));
+                array_push($this->nodes, new SiteTreeNode($entry["block_type"], $entry["block_id"]));
                 $lastId = $entry["block_id"];
                 $uniqueIndex++;
             }

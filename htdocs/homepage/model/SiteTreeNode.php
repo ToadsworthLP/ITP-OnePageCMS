@@ -6,16 +6,19 @@
  */
 class SiteTreeNode
 {
+    private int $id;
     private string $type;
     private array $attributes;
 
     /**
      * Creates a new node of the given type.
      * @param string $type File name of the template to be included
+     * @param int $id The ID of the block, as saved in the DB
      */
-    public function __construct(string $type)
+    public function __construct(string $type, int $id)
     {
         $this->type = $type;
+        $this->id = $id;
     }
 
     /**
@@ -34,6 +37,15 @@ class SiteTreeNode
     public function getType(): string
     {
         return $this->type;
+    }
+
+    /**
+     * Gets the type of this node.
+     * @return string The file name of the template to be included
+     */
+    public function getID(): string
+    {
+        return $this->id;
     }
 
     /**
