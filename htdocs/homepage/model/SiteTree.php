@@ -26,7 +26,9 @@ class SiteTree
                 $uniqueIndex++;
             }
 
-            $this->nodes[$uniqueIndex]->addAttribute($entry["attribute"], $entry["text"].$entry["file"]);
+            if($entry["attribute"] !== null) {
+                $this->nodes[$uniqueIndex]->addAttribute($entry["attribute"], $entry["text"].$entry["file"]);
+            }
         }
     }
 }

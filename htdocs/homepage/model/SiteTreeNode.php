@@ -8,7 +8,7 @@ class SiteTreeNode
 {
     private int $id;
     private string $type;
-    private array $attributes;
+    private array $attributes = [];
 
     /**
      * Creates a new node of the given type.

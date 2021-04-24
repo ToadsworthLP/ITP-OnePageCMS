@@ -33,7 +33,7 @@ class HomepageGateway
     public static function getSiteData(int $id) : array {
         $sql = "SELECT b.id AS 'block_id', block_order, bt.filename AS 'block_type', a.name AS 'attribute', ta.text AS 'text', f.id AS 'file' FROM block b
                 JOIN blocktype bt on b.type = bt.id
-                JOIN attribute a ON b.id = a.block
+                LEFT JOIN attribute a ON b.id = a.block
                 LEFT JOIN text_attribute ta on a.id = ta.parent
                 LEFT JOIN file_attribute fa on a.id = fa.parent
                 LEFT JOIN file f on fa.file = f.id
