@@ -108,7 +108,9 @@
                                                                 Überschrift</label>
                                                             <textarea class="form-control"
                                                                       id="headingParagraph<?=$id?>"
-                                                                      rows="3"></textarea>
+                                                                      rows="3" 
+                                                                      name="textarea"
+                                                                      value="<?=$attributes->get("textarea")?>"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
