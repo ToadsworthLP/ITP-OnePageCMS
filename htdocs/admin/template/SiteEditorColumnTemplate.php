@@ -1,6 +1,6 @@
 <div class="form-group">
     <label>Überschrift</label>
-    <input type="text" class="form-control">
+    <input name="<?=$prefix?>-title" type="text" class="form-control" value="<?=$attributes->get($prefix . "-title")?>">
 </div>
 <div class="form-group">
     <label>Unterüberschrift</label>

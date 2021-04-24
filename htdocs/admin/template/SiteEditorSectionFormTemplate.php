@@ -147,6 +147,7 @@
                                                 <!-- kleines Formular mit Titel, Text, Button und Bild  -->
                                                 <p>1/1</p>
                                                 <?php
+                                                    $prefix = "1-1";
                                                     include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
@@ -158,13 +159,15 @@
                                             <div class="col-lg-6 column-background">
                                                 <p>1/2</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "2-1";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-6 column-background">
                                                 <p>1/2</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "2-2";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                         </div>
@@ -175,19 +178,22 @@
                                             <div class="col-lg-4 column-background">
                                                 <p>1/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "3-1";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-4 column-background">
                                                 <p>1/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "3-2";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-4 column-background">
                                                 <p>1/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "3-3";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                         </div>
@@ -198,25 +204,29 @@
                                             <div class="col-lg-3 column-background">
                                                 <p>1/4</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "4-1";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-3 column-background">
                                                 <p>1/4</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "4-2";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-3 column-background">
                                                 <p>1/4</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "4-3";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-3 column-background">
                                                 <p>1/4</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "4-4";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                         </div>
@@ -227,13 +237,15 @@
                                             <div class="col-lg-9 column-background">
                                                 <p>2/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "5-1";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-3 column-background">
                                                 <p>1/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "5-2";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                         </div>
@@ -244,13 +256,15 @@
                                             <div class="col-lg-3 column-background">
                                                 <p>1/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "6-1";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                             <div class="col-lg-9 column-background">
                                                 <p>2/3</p>
                                                 <?php
-                                                include 'admin/template/SiteEditorColumnTemplate.php';
+                                                    $prefix = "6-2";
+                                                    include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
                                         </div>
