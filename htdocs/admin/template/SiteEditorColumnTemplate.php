@@ -20,7 +20,7 @@
 </div>
 <div class="form-group">
     <label>Text</label>
-    <textarea name="<?= $prefix ?>-textarea" class="form-control" rows="3" value="<?= $attributes->get($prefix . "-textarea") ?>"></textarea>
+    <textarea name="<?= $prefix ?>-textarea" class="form-control" rows="3"><?= $attributes->get($prefix . "-textarea") ?></textarea>
 </div>
 <hr>
 <div class="form-group">

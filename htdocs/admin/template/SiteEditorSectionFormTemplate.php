@@ -109,8 +109,7 @@
                                                             <textarea class="form-control"
                                                                       id="headingParagraph<?=$id?>"
                                                                       rows="3" 
-                                                                      name="textarea"
-                                                                      value="<?=$attributes->get("textarea")?>"></textarea>
+                                                                      name="textarea"><?=$attributes->get("textarea")?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
