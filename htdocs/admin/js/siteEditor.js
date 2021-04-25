@@ -5,3 +5,8 @@ $('#siteeditor-item-list').sortable({
         $.post('admin.php?action=11', {'list': postData});
     }
 });
+
+// Write selected tab to hidden field
+function setTemplate(id) {
+    $("#selectedTemplate").val(id.toString());
+}

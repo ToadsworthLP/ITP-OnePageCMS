@@ -1,6 +1,6 @@
 <form method="post" action="admin.php?&action=<?= AdminActions::EDIT_BLOCK ?>">
     <input type="hidden" name="_targetBlock" value="<?=$id?>">
-    <input type="hidden" name="_template" value="<?=$attributes->get("template", 1)?>"> <!-- TODO Put selected layout here -->
+    <input type="hidden" name="_template" id="selectedTemplate" value="<?= $type ?>">
     <div class="card-body">
         <div class="row">
             <div class="col">
@@ -126,22 +126,22 @@
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <!-- TODO Symbole statt Zahlen -->
-                                        <a class="nav-link active" id="nav-column-1-<?=$id?>" data-toggle="tab" href="#column-1-<?=$id?>"
-                                           role="tab" aria-controls="nav-home" aria-selected="true">1</a>
-                                        <a class="nav-link" id="nav-column-2-<?=$id?>" data-toggle="tab" href="#column-2-<?=$id?>"
-                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false">2</a>
-                                        <a class="nav-link" id="nav-column-3-<?=$id?>" data-toggle="tab" href="#column-3-<?=$id?>"
-                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false">3</a>
-                                        <a class="nav-link" id="nav-column-4-<?=$id?>" data-toggle="tab" href="#column-4-<?=$id?>"
-                                           role="tab" aria-controls="nav-home-<?=$id?>" aria-selected="false">4</a>
-                                        <a class="nav-link" id="nav-column-5-<?=$id?>" data-toggle="tab" href="#column-5-<?=$id?>"
-                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false">5</a>
-                                        <a class="nav-link" id="nav-column-6-<?=$id?>" data-toggle="tab" href="#column-6-<?=$id?>"
-                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false">6</a>
+                                        <a class="nav-link <?= $type === 1 ? "active" : "" ?>" id="nav-column-1-<?=$id?>" data-toggle="tab" href="#column-1-<?=$id?>"
+                                           role="tab" aria-controls="nav-home" aria-selected="true" onclick="setTemplate(1)">1</a>
+                                        <a class="nav-link <?= $type === 2 ? "active" : "" ?>" id="nav-column-2-<?=$id?>" data-toggle="tab" href="#column-2-<?=$id?>"
+                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(2)">2</a>
+                                        <a class="nav-link <?= $type === 3 ? "active" : "" ?>" id="nav-column-3-<?=$id?>" data-toggle="tab" href="#column-3-<?=$id?>"
+                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(3)">3</a>
+                                        <a class="nav-link <?= $type === 4 ? "active" : "" ?>" id="nav-column-4-<?=$id?>" data-toggle="tab" href="#column-4-<?=$id?>"
+                                           role="tab" aria-controls="nav-home-<?=$id?>" aria-selected="false" onclick="setTemplate(4)">4</a>
+                                        <a class="nav-link <?= $type === 5 ? "active" : "" ?>" id="nav-column-5-<?=$id?>" data-toggle="tab" href="#column-5-<?=$id?>"
+                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(5)">5</a>
+                                        <a class="nav-link <?= $type === 6 ? "active" : "" ?>" id="nav-column-6-<?=$id?>" data-toggle="tab" href="#column-6-<?=$id?>"
+                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(6)">6</a>
                                     </div>
                                 </nav>
                                 <div class="tab-content col" id="nav-tabContent-<?=$id?>">
-                                    <div class="tab-pane fade show active" id="column-1<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 1 ? "show active" : "" ?>" id="column-1<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-home-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-12 column-background">
@@ -154,7 +154,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="column-2-<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 2 ? "show active" : "" ?>" id="column-2-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-profile-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-lg-6 column-background">
@@ -173,7 +173,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="column-3-<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 3 ? "show active" : "" ?>" id="column-3-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-contact-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-lg-4 column-background">
@@ -199,7 +199,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="column-4-<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 4 ? "show active" : "" ?>" id="column-4-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-profile-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-lg-3 column-background">
@@ -232,7 +232,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="column-5-<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 5 ? "show active" : "" ?>" id="column-5-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-contact-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-lg-9 column-background">
@@ -251,7 +251,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="column-6-<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 6 ? "show active" : "" ?>" id="column-6-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-profile-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-lg-3 column-background">
