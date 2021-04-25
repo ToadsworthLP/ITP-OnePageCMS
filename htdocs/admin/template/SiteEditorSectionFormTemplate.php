@@ -1,6 +1,6 @@
 <form method="post" action="admin.php?&action=<?= AdminActions::EDIT_BLOCK ?>">
     <input type="hidden" name="_targetBlock" value="<?=$id?>">
-    <input type="hidden" name="_template" id="selectedTemplate" value="<?= $type ?>">
+    <input type="hidden" name="_template" id="selectedTemplate-<?=$id?>" value="<?= $type ?>">
     <div class="card-body">
         <div class="row">
             <div class="col">
@@ -127,17 +127,17 @@
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <!-- TODO Symbole statt Zahlen -->
                                         <a class="nav-link <?= $type === 1 ? "active" : "" ?>" id="nav-column-1-<?=$id?>" data-toggle="tab" href="#column-1-<?=$id?>"
-                                           role="tab" aria-controls="nav-home" aria-selected="true" onclick="setTemplate(1)">1</a>
+                                           role="tab" aria-controls="nav-home" aria-selected="true" onclick="setTemplate(<?=$id?>, 1)">1</a>
                                         <a class="nav-link <?= $type === 2 ? "active" : "" ?>" id="nav-column-2-<?=$id?>" data-toggle="tab" href="#column-2-<?=$id?>"
-                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(2)">2</a>
+                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 2)">2</a>
                                         <a class="nav-link <?= $type === 3 ? "active" : "" ?>" id="nav-column-3-<?=$id?>" data-toggle="tab" href="#column-3-<?=$id?>"
-                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(3)">3</a>
+                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 3)">3</a>
                                         <a class="nav-link <?= $type === 4 ? "active" : "" ?>" id="nav-column-4-<?=$id?>" data-toggle="tab" href="#column-4-<?=$id?>"
-                                           role="tab" aria-controls="nav-home-<?=$id?>" aria-selected="false" onclick="setTemplate(4)">4</a>
+                                           role="tab" aria-controls="nav-home-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 4)">4</a>
                                         <a class="nav-link <?= $type === 5 ? "active" : "" ?>" id="nav-column-5-<?=$id?>" data-toggle="tab" href="#column-5-<?=$id?>"
-                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(5)">5</a>
+                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 5)">5</a>
                                         <a class="nav-link <?= $type === 6 ? "active" : "" ?>" id="nav-column-6-<?=$id?>" data-toggle="tab" href="#column-6-<?=$id?>"
-                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(6)">6</a>
+                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 6)">6</a>
                                     </div>
                                 </nav>
                                 <div class="tab-content col" id="nav-tabContent-<?=$id?>">

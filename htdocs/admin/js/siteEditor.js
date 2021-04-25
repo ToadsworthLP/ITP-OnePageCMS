@@ -7,6 +7,6 @@ $('#siteeditor-item-list').sortable({
 });
 
 // Write selected tab to hidden field
-function setTemplate(id) {
-    $("#selectedTemplate").val(id.toString());
+function setTemplate(block, id) {
+    $("#selectedTemplate-" + block).val(id.toString());
 }
