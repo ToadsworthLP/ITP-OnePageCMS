@@ -3,7 +3,7 @@
     <!-- To change the menu from full-width to in-grid simple change container-fluid to container -->
     <div class="container-fluid">
         <a class="navbar-brand logo-left" href="#">
-            <img src="htdocs\mockup\media\bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="mockup\media\bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             <!-- Seitenname -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

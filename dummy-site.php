@@ -22,26 +22,26 @@
     <?php
         // Navbars
         // Navbar Left
-        include 'htdocs/mockup/inc/frontend-blocks/navbars/navbar-1.php';
+        include 'htdocs/homepage/blocktype/navbars/navbar-1.php';
 
         // Navbar Centered
-        // include 'htdocs/mockup/inc/frontend-blocks/navbars/navbar-2.php';
+        // include 'htdocs/homepage/blocktype/navbars/navbar-2.php';
         
         // Slider
-        include 'htdocs/mockup/inc/frontend-blocks/elements/slider.php';
+        include 'htdocs/homepage/blocktype/elements/slider.php';
 
         // Sectiontypes
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-col-2.php';
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-col-3.php';
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-col-4.php';
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-col-1-3.php';
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-col-3-1.php';
+        include 'htdocs/homepage/blocktype/sections/section-col-2.php';
+        include 'htdocs/homepage/blocktype/sections/section-col-3.php';
+        include 'htdocs/homepage/blocktype/sections/section-col-4.php';
+        include 'htdocs/homepage/blocktype/sections/section-col-1-3.php';
+        include 'htdocs/homepage/blocktype/sections/section-col-3-1.php';
 
         // Contact-Form
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-col-1.php';
+        include 'htdocs/homepage/blocktype/sections/section-col-1.php';
 
         // Footer
-        include 'htdocs/mockup/inc/frontend-blocks/sections/section-footer.php';
+        include 'htdocs/homepage/blocktype/sections/section-footer.php';
     ?>
 
     <!-- Optional JavaScript; choose one of the two! -->

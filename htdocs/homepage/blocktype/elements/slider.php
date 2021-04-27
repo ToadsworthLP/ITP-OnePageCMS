@@ -23,7 +23,7 @@
             }else{
                 ?> <div class="carousel-item"> <?php
             }
-            include 'htdocs/mockup/inc/frontend-blocks/elements/slider-img.php'; ?>
+            include 'homepage/blocktype/elements/slider-img.php'; ?>
             </div>
             <?php
         }

@@ -10,7 +10,7 @@ class SiteTree
 
     /**
      * Creates a new SiteTree from the given site data array.
-     * @param array $siteData The site data, as obtained using HomepageGateway::getSideData
+     * @param array $siteData The site data, as obtained using HomepageGateway::getSiteData
      */
     public function __construct(array $siteData)
     {
