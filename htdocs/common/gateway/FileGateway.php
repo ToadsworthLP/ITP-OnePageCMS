@@ -13,6 +13,7 @@ class FileGateway extends DatabaseGateway
         foreach ($result as $entry) {
             $file = new File($entry["id"]);
             $file->filename = $entry["filename"];
+            $file->size = $entry["size"];
 
             array_push($instances, $file);
         }
@@ -31,8 +32,8 @@ class FileGateway extends DatabaseGateway
         /** @var File $file */
         $file = $object;
 
-        DB::get()->run("INSERT INTO `file` (`filename`) VALUES (:filename)",
-            ["filename" => $file->filename]);
+        DB::get()->run("INSERT INTO `file` (`filename`, `size`) VALUES (:filename, :size)",
+            ["filename" => $file->filename, "size" => $file->size]);
 
         return DB::get()->pdo()->lastInsertId();
     }
@@ -43,7 +44,7 @@ class FileGateway extends DatabaseGateway
         $file = $object;
 
         DB::get()->run("UPDATE `file` SET filename = :filename WHERE id = :id",
-            ["filename" => $file->filename, "id" => $file->getID()]);
+            ["filename" => $file->filename, "size" => $file->size, "id" => $file->getID()]);
     }
 
     public static function delete(object $object): void

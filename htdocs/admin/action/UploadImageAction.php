@@ -13,6 +13,7 @@ RequirePermissions(PermissionConfig::STAFF);
 if(isset($_FILES["upload"]) && $_FILES["upload"]["error"] === UPLOAD_ERR_OK) {
     $file = new File();
     $file->filename = $_FILES["upload"]["name"];
+    $file->size = $_FILES["upload"]["size"];
     $file->create();
 
     $imgUtil = new ImageUploadUtility($_FILES["upload"]["tmp_name"], $file->getID());

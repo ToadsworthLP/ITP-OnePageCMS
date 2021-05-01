@@ -8,6 +8,7 @@ include_once "common/gateway/FileGateway.php";
 class File extends DatabaseObject
 {
     public string $filename;
+    public int $size;
 
     protected function getGatewayClass(): string
     {
