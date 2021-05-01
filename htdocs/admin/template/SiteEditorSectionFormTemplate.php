@@ -39,7 +39,7 @@
                                     <label for="backGroundColors<?=$id?>">Hintergrundfarbe</label>
                                     <input type="color" class="form-control" id="backGroundColors<?=$id?>"
                                            name="background-color"
-                                           placeholder="">
+                                           value="<?=$attributes->get("background-color", "#ffffff")?>">
                                 </div>
                             </div>
                             <div class="col-8">
