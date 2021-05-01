@@ -15,6 +15,7 @@ class AdminActions implements IIncludeSwitchConfig
     const EDIT_BLOCK = 9;
     const DELETE_BLOCK = 10;
     const CHANGE_BLOCK_ORDER = 11;
+    const UPLOAD_IMAGE = 12;
 
     public function getMapping(): array
     {
@@ -30,7 +31,8 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::ADD_BLOCK => "admin/action/AddBlockAction.php",
             AdminActions::EDIT_BLOCK => "admin/action/EditBlockAction.php",
             AdminActions::DELETE_BLOCK => "admin/action/DeleteBlockAction.php",
-            AdminActions::CHANGE_BLOCK_ORDER => "admin/action/ChangeBlockOrderAction.php"
+            AdminActions::CHANGE_BLOCK_ORDER => "admin/action/ChangeBlockOrderAction.php",
+            AdminActions::UPLOAD_IMAGE => "admin/action/UploadImageAction.php"
         ];
     }
 

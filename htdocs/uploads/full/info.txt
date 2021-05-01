@@ -1,0 +1,1 @@
+Full-resolution images are saved here. The filename corresponds to the unique ID of the database entry of this file.

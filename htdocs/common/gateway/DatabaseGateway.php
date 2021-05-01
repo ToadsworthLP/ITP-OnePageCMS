@@ -56,11 +56,13 @@ abstract class DatabaseGateway
                 unset($params["_ORDER_DESC"]);
             }
 
-            $sql .= " WHERE ";
-            $first = true;
-            foreach ($params as $key => $value){
-                $sql .= (!$first ? " AND " : "")."`".$key."` = :".$key;
-                $first = false;
+            if(count($params) > 0) {
+                $sql .= " WHERE ";
+                $first = true;
+                foreach ($params as $key => $value){
+                    $sql .= (!$first ? " AND " : "")."`".$key."` = :".$key;
+                    $first = false;
+                }
             }
 
             $sql .= $orderSql;

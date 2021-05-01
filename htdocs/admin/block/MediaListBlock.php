@@ -1,8 +1,12 @@
 <?php
 include_once "admin/block/MediaListEntryBlock.php";
+include_once "common/model/File.php";
+include_once "common/gateway/FileGateway.php";
 
 function MediaListBlock() {
-    for($i = 0; $i < 30; $i++){
-        MediaListEntryBlock();
+    $files = FileGateway::fetchAll(["_ORDER_DESC" => "timestamp"]);
+
+    foreach ($files as $file) {
+        MediaListEntryBlock($file);
     }
 }
