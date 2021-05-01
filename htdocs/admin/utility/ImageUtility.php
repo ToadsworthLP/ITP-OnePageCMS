@@ -37,8 +37,8 @@ class ImageUtility
 
     private function generateThumbnail(int $thumbnailWidth = -1, int $thumbnailHeight = -1) : bool
     {
-        $targetPath = realpath(PathConfig::IMAGE_PATH_THUMBNAIL)."\\".$this->filename;
-        $sourcePath = realpath(PathConfig::IMAGE_PATH_FULL)."\\".$this->filename;
+        $targetPath = realpath(PathConfig::IMAGE_PATH_THUMBNAIL)."/".$this->filename;
+        $sourcePath = realpath(PathConfig::IMAGE_PATH_FULL)."/".$this->filename;
 
         $phpThumb = new phpThumb();
         $phpThumb->setSourceFilename($sourcePath);
