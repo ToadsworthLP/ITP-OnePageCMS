@@ -15,7 +15,7 @@
 <br>
 <div class="custom-file mb-3">
     <button type="button" class="btn btn-block btn-secondary" data-toggle="modal" data-target="#mediaSelectionModal">
-        Hintergrundbild wählen
+        Bild wählen
     </button>
 </div>
 <div class="form-group">

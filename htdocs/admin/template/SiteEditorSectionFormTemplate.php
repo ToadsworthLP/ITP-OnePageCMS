@@ -127,17 +127,17 @@
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <!-- TODO Symbole statt Zahlen -->
                                         <a class="nav-link <?= $type === 1 ? "active" : "" ?>" id="nav-column-1-<?=$id?>" data-toggle="tab" href="#column-1-<?=$id?>"
-                                           role="tab" aria-controls="nav-home" aria-selected="true" onclick="setTemplate(<?=$id?>, 1)">1</a>
+                                           role="tab" aria-controls="nav-home" aria-selected="true" onclick="setTemplate(<?=$id?>, 1)"><img class="column-layout-icon" src="mockup/media/Column-Icons-01.svg"></a>
                                         <a class="nav-link <?= $type === 2 ? "active" : "" ?>" id="nav-column-2-<?=$id?>" data-toggle="tab" href="#column-2-<?=$id?>"
-                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 2)">2</a>
+                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 2)"><img class="column-layout-icon" src="mockup/media/Column-Icons-02.svg"></a>
                                         <a class="nav-link <?= $type === 3 ? "active" : "" ?>" id="nav-column-3-<?=$id?>" data-toggle="tab" href="#column-3-<?=$id?>"
-                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 3)">3</a>
+                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 3)"><img class="column-layout-icon" src="mockup/media/Column-Icons-03.svg"></a>
                                         <a class="nav-link <?= $type === 4 ? "active" : "" ?>" id="nav-column-4-<?=$id?>" data-toggle="tab" href="#column-4-<?=$id?>"
-                                           role="tab" aria-controls="nav-home-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 4)">4</a>
+                                           role="tab" aria-controls="nav-home-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 4)"><img class="column-layout-icon" src="mockup/media/Column-Icons-04.svg"></a>
                                         <a class="nav-link <?= $type === 5 ? "active" : "" ?>" id="nav-column-5-<?=$id?>" data-toggle="tab" href="#column-5-<?=$id?>"
-                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 5)">5</a>
+                                           role="tab" aria-controls="nav-profile-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 5)"><img class="column-layout-icon" src="mockup/media/Column-Icons-05.svg"></a>
                                         <a class="nav-link <?= $type === 6 ? "active" : "" ?>" id="nav-column-6-<?=$id?>" data-toggle="tab" href="#column-6-<?=$id?>"
-                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 6)">6</a>
+                                           role="tab" aria-controls="nav-contact-<?=$id?>" aria-selected="false" onclick="setTemplate(<?=$id?>, 6)"><img class="column-layout-icon" src="mockup/media/Column-Icons-06.svg"></a>
                                     </div>
                                 </nav>
                                 <div class="tab-content col" id="nav-tabContent-<?=$id?>">
@@ -235,14 +235,14 @@
                                     <div class="tab-pane fade <?= $type === 5 ? "show active" : "" ?>" id="column-5-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-contact-tab-<?=$id?>">
                                         <div class="row">
-                                            <div class="col-lg-9 column-background">
+                                            <div class="col-lg-8 column-background">
                                                 <p>2/3</p>
                                                 <?php
                                                     $prefix = "5-1";
                                                     include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
-                                            <div class="col-lg-3 column-background">
+                                            <div class="col-lg-4 column-background">
                                                 <p>1/3</p>
                                                 <?php
                                                     $prefix = "5-2";
@@ -254,14 +254,14 @@
                                     <div class="tab-pane fade <?= $type === 6 ? "show active" : "" ?>" id="column-6-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-profile-tab-<?=$id?>">
                                         <div class="row">
-                                            <div class="col-lg-3 column-background">
+                                            <div class="col-lg-4 column-background">
                                                 <p>1/3</p>
                                                 <?php
                                                     $prefix = "6-1";
                                                     include 'admin/template/SiteEditorColumnTemplate.php';
                                                 ?>
                                             </div>
-                                            <div class="col-lg-9 column-background">
+                                            <div class="col-lg-8 column-background">
                                                 <p>2/3</p>
                                                 <?php
                                                     $prefix = "6-2";
