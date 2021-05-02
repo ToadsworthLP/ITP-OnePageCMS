@@ -36,7 +36,7 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::CHANGE_BLOCK_ORDER => "admin/action/ChangeBlockOrderAction.php",
             AdminActions::UPLOAD_IMAGE => "admin/action/UploadImageAction.php",
             AdminActions::DELETE_IMAGE => "admin/action/DeleteImageAction.php",
-            AdminActions::RENAME_IMAGE => "admin/action/RenameImageAction.php"
+            AdminActions::RENAME_IMAGE => "admin/action/RenameImageAction.php",
         ];
     }
 

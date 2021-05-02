@@ -1,18 +1,5 @@
-// Save sortable order change to DB
-$('#siteeditor-item-list').sortable({
-    update: function(event, ui){
-        let postData = $(this).sortable('serialize');
-        $.post('admin.php?action=11', {'list': postData});
-    }
-});
-
-// Write selected tab to hidden field
-function setTemplate(block, id) {
-    $("#selectedTemplate-" + block).val(id.toString());
-}
-
 // Update modal fields
-function updateModal(source) {
+function updateInfoModal(source) {
     let id = $(source).attr("data-id");
     let fileUrl = $(source).attr("data-fileurl");
     let filename = $(source).attr("data-filename");
@@ -32,10 +19,10 @@ function updateModal(source) {
     let thisIndex = allEntries.indexOf(source);
 
     $("#media-modal-previous").off("click").on("click", function () {
-        if(thisIndex > 0) updateModal(allEntries[thisIndex - 1]);
+        if(thisIndex > 0) updateInfoModal(allEntries[thisIndex - 1]);
     })
 
     $("#media-modal-next").off("click").on("click", function () {
-        if(thisIndex < allEntries.length - 1) updateModal(allEntries[thisIndex + 1]);
+        if(thisIndex < allEntries.length - 1) updateInfoModal(allEntries[thisIndex + 1]);
     })
 }

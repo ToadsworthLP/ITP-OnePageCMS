@@ -44,9 +44,9 @@
                             </div>
                             <div class="col-8">
                                 <div class="custom-file mb-3">
-                                    <input type="hidden" name="@background-image" value="<?=$attributes->get("background-image")?>">
-                                    <button type="button" class="btn btn-block btn-secondary" data-toggle="modal"
-                                            data-target="#mediaSelectionModal">
+                                    <input id="<?=$id?>-background-image" type="hidden" name="@background-image" value="<?=$attributes->get("background-image")?>">
+                                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
+                                            data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
                                         Hintergrundbild wählen
                                     </button>
                                 </div>

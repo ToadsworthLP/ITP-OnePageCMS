@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-4">
                             <?php
-                                include 'admin\template\MediaModalForm.php';
+                                include 'admin\template\MediaModalFormTemplate.php';
                             ?>
                         </div>
                     </div>

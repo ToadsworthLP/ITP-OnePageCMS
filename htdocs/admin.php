@@ -37,23 +37,16 @@ $pageSwitch = new IncludeSwitch(new AdminPages());
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 </head>
 <body>
+<!-- JQuery -->
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <?php
         $actionSwitch->include(AdminActions::NONE); // Include action switch
         $pageSwitch->include(AdminPages::LOGIN); // Include page
     ?>
-    <!-- Modal -->
-    <?php
-        include 'admin\template\MediaModal.php';
-        include 'admin\template\MediaSelectionModal.php';
-    ?>
-    </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Javascript -->
     <script src="admin/js/navbar.js"></script>
-    <script src="admin/js/app.js"></script>
 </body>
 </html>
