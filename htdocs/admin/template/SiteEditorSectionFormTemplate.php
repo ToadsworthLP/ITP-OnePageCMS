@@ -141,7 +141,7 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content col" id="nav-tabContent-<?=$id?>">
-                                    <div class="tab-pane fade <?= $type === 1 ? "show active" : "" ?>" id="column-1<?=$id?>" role="tabpanel"
+                                    <div class="tab-pane fade <?= $type === 1 ? "show active" : "" ?>" id="column-1-<?=$id?>" role="tabpanel"
                                          aria-labelledby="nav-home-tab-<?=$id?>">
                                         <div class="row">
                                             <div class="col-12 column-background">
