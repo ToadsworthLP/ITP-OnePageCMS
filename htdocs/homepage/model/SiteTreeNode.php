@@ -1,5 +1,5 @@
 <?php
-
+include_once "common/config/PathConfig.php";
 
 /**
  * Represents a single block in the site tree
@@ -58,6 +58,21 @@ class SiteTreeNode
     {
         if(isset($this->attributes[$name])) {
             return $this->attributes[$name];
+        } else {
+            return $default;
+        }
+    }
+
+    /**
+     * Gets an attribute value by its name and interprets it as a file reference.
+     * @param string $name The name of the attribute
+     * @param string|null $default The default value, in case the attribute of the given name does not exist (defaults to null)
+     * @return string|null The path to the file referenced by the attribute
+     */
+    public function getAttributeFilePath(string $name, string $default = null): ?string
+    {
+        if(isset($this->attributes[$name])) {
+            return PathConfig::IMAGE_PATH_FULL.$this->attributes[$name];
         } else {
             return $default;
         }

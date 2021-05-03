@@ -26,7 +26,12 @@ if(isset($_POST["_targetBlock"])) {
     foreach ($_POST as $key => $value) {
         echo $key." ".$value."<br>";
 
-        $currentValue = $current->get($key);
+        if($key[0] == "@") {
+            $currentValue = $current->get(substr($key, 1)); // The @ isn't part of the attribute name
+        } else {
+            $currentValue = $current->get($key);
+        }
+
         if($currentValue == "" && $value != "") { // Attribute doesn't exist and the new value isn't empty, create it
             if($key[0] == "@") { // Treat value as file reference
                 $newAttribute = new FileAttribute();
@@ -42,6 +47,8 @@ if(isset($_POST["_targetBlock"])) {
                 $newAttribute->create();
             }
         } else if($currentValue != "") { // Attribute already exists
+            if($key[0] == "@") $key = substr($key, 1); // Remove @ if necessary
+
             if($value == "") { // New value is empty, delete it
                 $target = AttributeGateway::fetch(["block" => $block->getID(), "name" => $key]);
                 $target->delete();

@@ -9,6 +9,7 @@ class File extends DatabaseObject
 {
     public string $filename;
     public int $size;
+    public DateTime $timestamp;
 
     protected function getGatewayClass(): string
     {

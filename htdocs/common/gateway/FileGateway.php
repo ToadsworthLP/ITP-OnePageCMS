@@ -14,6 +14,7 @@ class FileGateway extends DatabaseGateway
             $file = new File($entry["id"]);
             $file->filename = $entry["filename"];
             $file->size = $entry["size"];
+            $file->timestamp = new DateTime($entry["timestamp"]);
 
             array_push($instances, $file);
         }
@@ -31,9 +32,10 @@ class FileGateway extends DatabaseGateway
     {
         /** @var File $file */
         $file = $object;
+        $ts = new DateTime("now");
 
-        DB::get()->run("INSERT INTO `file` (`filename`, `size`) VALUES (:filename, :size)",
-            ["filename" => $file->filename, "size" => $file->size]);
+        DB::get()->run("INSERT INTO `file` (`filename`, `size`, `timestamp`) VALUES (:filename, :size, FROM_UNIXTIME(:timestamp) )",
+            ["filename" => $file->filename, "size" => $file->size, "timestamp" => $ts->getTimestamp()]);
 
         return DB::get()->pdo()->lastInsertId();
     }
@@ -43,8 +45,8 @@ class FileGateway extends DatabaseGateway
         /** @var File $file */
         $file = $object;
 
-        DB::get()->run("UPDATE `file` SET filename = :filename WHERE id = :id",
-            ["filename" => $file->filename, "size" => $file->size, "id" => $file->getID()]);
+        DB::get()->run("UPDATE `file` SET filename = :filename, size = :size, timestamp = FROM_UNIXTIME(:timestamp) WHERE id = :id",
+            ["filename" => $file->filename, "size" => $file->size, "timestamp" => $file->timestamp->getTimestamp(), "id" => $file->getID()]);
     }
 
     public static function delete(object $object): void

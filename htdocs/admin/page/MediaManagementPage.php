@@ -3,10 +3,13 @@ include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
 include_once "admin/block/MediaListBlock.php";
 include_once "admin/block/MediaUploadBlock.php";
+include_once "admin/block/MediaInfoModalBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
 Navbar();
+MediaInfoModalBlock();
+
 ?>
 
 <div class="col">
@@ -57,3 +60,4 @@ Navbar();
         </div>
     </div>
 </div>
+<script src="admin/js/mediaPage.js"></script>

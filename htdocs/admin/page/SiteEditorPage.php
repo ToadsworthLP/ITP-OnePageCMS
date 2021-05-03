@@ -2,10 +2,12 @@
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
 include_once "admin/block/SiteEditorBlock.php";
+include_once "admin/block/MediaSelectionModalBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
 Navbar();
+MediaSelectionModalBlock();
 
 $site = 1;
 
@@ -46,3 +48,4 @@ $site = 1;
         </div>
     </div>
 </div>
+<script src="admin/js/siteEditor.js"></script>
