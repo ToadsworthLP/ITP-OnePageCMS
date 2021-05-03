@@ -80,6 +80,11 @@ td{
     }
 }
 
+.column-layout-icon{
+    width: 32px;
+    height: auto;
+}
+
 /* === LOGIN === */
 .login-container{
     width: 450px;
