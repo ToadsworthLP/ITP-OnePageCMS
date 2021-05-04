@@ -1,4 +1,4 @@
-<section id="<?=$node->getID()?>" class="my-section" style="background-color: <?=$node->getAttribute("background-color", "")?>">
+<section id="<?=$node->getID()?>" class="my-section" style="background: <?=$node->getAttribute("background-color", "")?> url('') no-repeat cover">
     <div class="container">
         <div class="row">
             <div class="col section-heading">

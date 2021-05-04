@@ -1,5 +1,5 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-  <!-- Delete this ordered list if no indicators needed -->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <!-- Set this ordered list to hidden if no indicators needed -->
   <ol class="carousel-indicators">
     <?php
         $firstIndicator = true;
@@ -29,7 +29,7 @@
         }
     ?>
   </div>
-  <!-- Delete these two links if no arrwos are needed -->
+  <!-- Set these two links to hidden if no arrwos are needed -->
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

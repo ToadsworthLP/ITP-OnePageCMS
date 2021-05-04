@@ -39,11 +39,22 @@ $site = 1;
                         Slider
                     </div>
                     <div class="card-body">
+                        <div class="row">
+                            <?php include 'admin/template/SliderMainSettingsForm.php'; ?>
+                        </div>
                         <ul class="list-group" id="slider-item-list">
                             <?php 
                                 include 'admin/template/SiteEditorSliderItemTemplate.php';
                             ?>
                         </ul>
+                        <div class="row">
+                            <div class="col">
+                                <form method="post" action="">
+                                    <input type="hidden" name="targetSite" value="">
+                                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
