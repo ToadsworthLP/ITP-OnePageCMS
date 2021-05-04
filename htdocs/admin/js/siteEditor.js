@@ -1,10 +1,20 @@
 let currentInputID = "";
 
-// Save sortable order change to DB
+// Save Editor-Sections sortable order change to DB
 $('#siteeditor-item-list').sortable({
     update: function(event, ui){
         let postData = $(this).sortable('serialize');
         $.post('admin.php?action=11', {'list': postData});
+    }
+});
+
+// Save Slider sortable order to DB
+$('#slider-item-list').sortable({
+    update: function(event, ui){
+    let postData = $(this).sortable('serialize');
+        console.log(postData);
+
+        //$.post('moveBlockHandler.php', {'list': postData});
     }
 });
 

@@ -61,19 +61,6 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Slider
-                    </div>
-                    <div class="card-body">
-                        <p>Coming Soon!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
                         Footer
                     </div>
                     <div class="card-body">

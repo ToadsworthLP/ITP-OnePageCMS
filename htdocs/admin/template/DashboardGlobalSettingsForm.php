@@ -27,26 +27,26 @@
     <div class="row">
         <div class="col-sm">
             <div class="form-group">
-                <label for="exampleInputEmail1">Primärfarbe</label>
                 <input class="form-control" type="color" value="#5bd6b5">
+                <label for="exampleInputEmail1">Primärfarbe</label>
             </div>
         </div>
         <div class="col-sm">
             <div class="form-group">
-                <label for="exampleInputEmail1">Sekundärfarbe</label>
                 <input class="form-control" type="color" value="#39C19B">
+                <label for="exampleInputEmail1">Sekundärfarbe</label>
             </div>
         </div>
         <div class="col-sm">
             <div class="form-group">
-                <label for="exampleInputEmail1">Heller Hintergrund</label>
                 <input class="form-control" type="color" value="#f8f9fa">
+                <label for="exampleInputEmail1">Heller Hintergrund</label>
             </div>
         </div>
         <div class="col-sm">
             <div class="form-group">
-                <label for="exampleInputEmail1">Dunkler Hintergrund</label>
                 <input class="form-control" type="color" value="#2D3331">
+                <label for="exampleInputEmail1">Dunkler Hintergrund</label>
             </div>
         </div>
         <div class="col-sm">
@@ -60,57 +60,43 @@
             <label>Menü-Logo</label>
         </div>
         <div class="col-xl-10">
-            <div class="input-group is-invalid">
+            <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile">
-                    <label class="custom-file-label media-upload" for="validatedInputGroupCustomFile">Datei wählen...</label>
+                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
+                        data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
+                        Hintergrundbild wählen
+                    </button>                    
                 </div>
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Hochladen</button>
-                </div>
-            </div>
-            <div class="invalid-feedback">
-                Example invalid input group feedback
             </div>
         </div>
     </div>
-    <br>
     <div class="row">
         <div class="col">
             <label>Footer-Logo</label>
         </div>
         <div class="col-xl-10">
-            <div class="input-group is-invalid">
+            <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile">
-                    <label class="custom-file-label media-upload" for="validatedInputGroupCustomFile">Datei wählen...</label>
+                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
+                        data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
+                        Hintergrundbild wählen
+                    </button>                    
                 </div>
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Hochladen</button>
-                </div>
-            </div>
-            <div class="invalid-feedback">
-                Example invalid input group feedback
             </div>
         </div>
     </div>
-    <br>
     <div class="row">
         <div class="col">
             <label>Favicon</label>
         </div>
         <div class="col-xl-10">
-            <div class="input-group is-invalid">
+            <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile">
-                    <label class="custom-file-label media-upload" for="validatedInputGroupCustomFile">Datei wählen...</label>
+                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
+                        data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
+                        Hintergrundbild wählen
+                    </button>                    
                 </div>
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Hochladen</button>
-                </div>
-            </div>
-            <div class="invalid-feedback">
-                Example invalid input group feedback
             </div>
         </div>
     </div>

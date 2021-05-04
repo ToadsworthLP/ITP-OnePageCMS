@@ -32,20 +32,48 @@ $site = 1;
             </div>
         </div>
         <!-- Content -->
-        <br>
-        <!-- SECTION BLOCKS -->
-        <ul class="list-group" id="siteeditor-item-list">
-            <?= SiteEditorBlock() ?>
-        </ul>
-        <!-- ADD SECTION BUTTON -->
         <div class="row">
             <div class="col">
-                <form method="post" action="admin.php?action=<?= AdminActions::ADD_BLOCK ?>">
-                    <input type="hidden" name="targetSite" value="<?= $site ?>">
-                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
-                </form>
+                <div class="card">
+                    <div class="card-header">
+                        Slider
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group" id="slider-item-list">
+                            <?php 
+                                include 'admin/template/SiteEditorSliderItemTemplate.php';
+                            ?>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Seiteninhalt
+                    </div>
+                    <div class="card-body">
+                        <!-- SECTION BLOCKS -->
+                        <ul class="list-group" id="siteeditor-item-list">
+                            <?= SiteEditorBlock() ?>
+                        </ul>
+                        <!-- ADD SECTION BUTTON -->
+                        <div class="row">
+                            <div class="col">
+                                <form method="post" action="admin.php?action=<?= AdminActions::ADD_BLOCK ?>">
+                                    <input type="hidden" name="targetSite" value="<?= $site ?>">
+                                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>   
     </div>
 </div>
 <script src="admin/js/siteEditor.js"></script>
