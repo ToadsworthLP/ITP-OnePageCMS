@@ -3,5 +3,6 @@
     <h2>Sliderüberschrift</h2>
     <hr class="heading-hairline">
     <h4>Some representative placeholder content for the first slide.</h4>
-    <a class="btn btn-primary" href="#" role="button">Link</a>
+    <!-- color: Schriftfarbe, onMouseover: buttonhoverfarbe, onMouseOut: buttonhintergrundfarbe -->
+    <a class="btn btn-primary" href="#" role="button" style="color: #000;" onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''">Link</a>
 </div>

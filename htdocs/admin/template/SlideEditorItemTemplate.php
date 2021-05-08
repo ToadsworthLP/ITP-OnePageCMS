@@ -1,4 +1,4 @@
-<li id="item-<?=$id?>" class="siteeditor-list-item">
+<li id="item-<?=$id?>" class="slider-list-item">
     <div class="accordion" id="slide-accordion-<?=$id?>">
         <div class="card">
             <div class="card-header" id="heading_1">

@@ -16,6 +16,14 @@ $('#slider-item-list').sortable({
     }
 });
 
+// Save Socialmedialinks sortable order to DB
+$('#socialmedia-item-list').sortable({
+    /*update: function(event, ui){
+    let postData = $(this).sortable('serialize');
+        $.post('admin.php?action=18', {'list': postData});
+    }*/
+});
+
 // Write selected tab to hidden field
 function setTemplate(block, id) {
     $("#selectedTemplate-" + block).val(id.toString());

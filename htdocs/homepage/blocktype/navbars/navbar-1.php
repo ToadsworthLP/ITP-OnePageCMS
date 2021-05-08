@@ -21,6 +21,21 @@
                         <?php endif;
                     }
                 ?>
+                <li class="nav-item">
+                    <a class="nav-link socialmedia-icon-link" href="#">
+                        <?php include 'mockup/inc/backend-panel/icons/facebook-icon.php'; ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link socialmedia-icon-link" href="#">
+                        <?php include 'mockup/inc/backend-panel/icons/instagram-icon.php'; ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link socialmedia-icon-link" href="#">
+                        <?php include 'mockup/inc/backend-panel/icons/twitter-icon.php'; ?>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

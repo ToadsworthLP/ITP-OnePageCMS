@@ -95,10 +95,13 @@ a:hover{
     border-bottom: 2px solid rgba(0,0,0,.3);
 }
 
-
 .navbar .nav-link:focus{
     color: #39C19B !important;
     border-color: #39C19B !important; 
+}
+
+.navbar .socialmedia-icon-link{
+    border-bottom: none;
 }
 
 /* === SLIDER === */
@@ -177,7 +180,7 @@ section{
     }
 }
 
-/* === FORM = */
+/* === FORM === */
 input{
     height: 40px !important;
     border-radius: 20px !important;

@@ -7,7 +7,7 @@ include "admin/utility/LoginRedirect.php";
 Navbar();
 ?>
 
-<div class="col">
+<div class="col content-container">
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -51,7 +51,20 @@ Navbar();
                         Menü
                     </div>
                     <div class="card-body">
-                        <p>Coming Soon!</p>
+                        <ul class="list-group" id="socialmedia-item-list">
+                            <!-- Social Media Icon Liste -->
+                            <?php
+                                include 'admin/template/MenuItemTemplate.php';
+                            ?>
+                        </ul>
+                        <div class="row">
+                            <div class="col">
+                                <form method="post" action="admin.php?action=">
+                                    <input type="hidden" name="id" value="">
+                                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
