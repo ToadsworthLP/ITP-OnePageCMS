@@ -46,4 +46,20 @@ class HomepageGateway
 
         return $result->fetchAll();
     }
+
+    /**
+     * Gets all data associated with the slider.
+     * @return array Associative array
+     */
+    public static function getSliderData() : array {
+        $sql = "SELECT slides.id AS 'slide_id', title AS 'title', text AS 'text', button_text AS 'button_text',
+                button_link AS 'button_link', button_color AS 'button_color', button_hover_color AS 'button_hover_color', button_text_color AS 'button_text_color', f.id AS 'file'
+                FROM slides LEFT JOIN file f on f.id = slides.image
+                ORDER BY slide_order
+        ";
+
+        $result = DB::get()->run($sql);
+
+        return $result->fetchAll();
+    }
 }

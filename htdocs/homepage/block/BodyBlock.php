@@ -1,9 +1,16 @@
 <?php
+    include_once "common/gateway/SiteGateway.php";
     include_once "homepage/model/SiteTree.php";
     include_once "homepage/gateway/HomepageGateway.php";
 
-    $siteData = HomepageGateway::getSiteData(1);
-    $siteTree = new SiteTree($siteData);
+    $site = SiteGateway::fetch(["id" => 1]);
+    $siteData = HomepageGateway::getSiteData($site->getID());
+
+    $sliderData = null;
+    if($site->showSlider) $sliderData = HomepageGateway::getSliderData();
+
+    $siteTree = new SiteTree($siteData, $sliderData);
+    var_dump($siteTree);
 
     foreach($siteTree->nodes as $id => $node) {
         include "homepage/blocktype/sections/" . $node->getType();

@@ -11,6 +11,7 @@ class Site extends DatabaseObject
     public int $requiredPermissions;
     public bool $published;
     public bool $menuOption;
+    public bool $showSlider;
 
     protected function getGatewayClass(): string
     {

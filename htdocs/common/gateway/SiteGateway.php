@@ -16,6 +16,7 @@ class SiteGateway extends DatabaseGateway
             $site->requiredPermissions = $entry["required_permissions"];
             $site->published = $entry["published"];
             $site->menuOption = $entry["menu_option"];
+            $site->showSlider = $entry["show_slider"];
 
             array_push($instances, $site);
         }
@@ -34,13 +35,14 @@ class SiteGateway extends DatabaseGateway
         /** @var Site $site */
         $site = $object;
 
-        DB::get()->run("INSERT INTO `site` (`name`, `required_permissions`, `published`, `menu_option`)
-                            VALUES (:name, :required_permissions, :published, :menu_option)",
+        DB::get()->run("INSERT INTO `site` (`name`, `required_permissions`, `published`, `menu_option`, `show_slider`)
+                            VALUES (:name, :required_permissions, :published, :menu_option, :show_slider)",
             [
                 "name" => $site->name,
                 "required_permissions" => $site->requiredPermissions,
                 "published" => $site->published,
-                "menu_option" => $site->menuOption
+                "menu_option" => $site->menuOption,
+                "show_slider" => $site->showSlider
             ]);
 
         return DB::get()->pdo()->lastInsertId();
@@ -52,13 +54,14 @@ class SiteGateway extends DatabaseGateway
         $site = $object;
 
         DB::get()->run("UPDATE `site`
-                            SET name = :name, required_permissions = :required_permissions, published = :published, menu_option = :menu_option
+                            SET name = :name, required_permissions = :required_permissions, published = :published, menu_option = :menu_option, show_slider = :show_slider
                             WHERE id = :id",
             [
                 "name" => $site->name,
                 "required_permissions" => $site->requiredPermissions,
                 "published" => $site->published,
                 "menu_option" => $site->menuOption,
+                "show_slider" => $site->showSlider,
                 "id" => $site->getID()
             ]);
     }
