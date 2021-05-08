@@ -2,6 +2,7 @@
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
 include_once "admin/block/SiteEditorBlock.php";
+include_once "admin/block/SlideEditorBlock.php";
 include_once "admin/block/MediaSelectionModalBlock.php";
 
 include "admin/utility/LoginRedirect.php";
@@ -40,17 +41,15 @@ $site = 1;
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <?php include 'admin/template/SliderMainSettingsForm.php'; ?>
+                            <?php include 'admin/template/SlideEditorMainSettingsForm.php'; ?>
                         </div>
                         <ul class="list-group" id="slider-item-list">
-                            <?php 
-                                include 'admin/template/SiteEditorSliderItemTemplate.php';
-                            ?>
+                            <?= SlideEditorBlock() ?>
                         </ul>
                         <div class="row">
                             <div class="col">
-                                <form method="post" action="">
-                                    <input type="hidden" name="targetSite" value="">
+                                <form method="post" action="admin.php?action=<?= AdminActions::ADD_SLIDE ?>">
+                                    <input type="hidden" name="id" value="<?= $site ?>">
                                     <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
                                 </form>
                             </div>

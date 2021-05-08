@@ -12,9 +12,7 @@ $('#siteeditor-item-list').sortable({
 $('#slider-item-list').sortable({
     update: function(event, ui){
     let postData = $(this).sortable('serialize');
-        console.log(postData);
-
-        //$.post('moveBlockHandler.php', {'list': postData});
+        $.post('admin.php?action=18', {'list': postData});
     }
 });
 
