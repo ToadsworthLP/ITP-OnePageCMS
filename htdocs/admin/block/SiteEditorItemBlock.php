@@ -12,10 +12,7 @@ function SiteEditorItemBlock(Block $block) {
     $attrArray = $attributes->getRawArray();
     $images = array();
     foreach ($attrArray as $key => $val) { // Fetch all image file entries so we can display their filenames on the buttons
-        $imageSuffix = "background-image";
-        $length = strlen($imageSuffix);
-        $isImage = $length > 0 ? substr($key, -$length) === $imageSuffix : true;
-
+        $isImage = $val instanceof FileAttribute;
         if($isImage) {
             $images[$key] = FileGateway::fetch(["id" => $attributes->get($key)]);
         }

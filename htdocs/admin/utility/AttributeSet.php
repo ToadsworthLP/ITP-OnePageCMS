@@ -16,13 +16,14 @@ class AttributeSet
 
         $this->attributes = array();
         foreach ($attributeList as $a) {
-            $this->attributes[$a->name] = ($a instanceof TextAttribute ? $a->text : $a->getFile()->getID());
+            $this->attributes[$a->name] = $a;
         }
     }
 
     public function get(string $key, string $default = "") : string {
         if(isset($this->attributes[$key])) {
-            return $this->attributes[$key];
+            $attr = $this->attributes[$key];
+            return ($attr instanceof TextAttribute ? $attr->text : $attr->getFile()->getID());
         } else {
             return $default;
         }
