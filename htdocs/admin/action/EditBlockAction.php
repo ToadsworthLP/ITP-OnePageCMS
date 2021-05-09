@@ -3,12 +3,13 @@ include_once "common/gateway/BlockGateway.php";
 include_once "common/gateway/AttributeGateway.php";
 include_once "admin/utility/RequirePermissions.php";
 include_once "admin/utility/AttributeSet.php";
+include_once "admin/config/PermissionConfig.php";
+
+RequirePermissions(PermissionConfig::STAFF);
 
 if(isset($_POST["_targetBlock"])) {
     $block = BlockGateway::fetch(["id" => $_POST["_targetBlock"]]);
     unset($_POST["_targetBlock"]);
-
-    RequirePermissions($block->getSite()->requiredPermissions);
 
     // Update block type if needed
     if(isset($_POST["_template"])) {
