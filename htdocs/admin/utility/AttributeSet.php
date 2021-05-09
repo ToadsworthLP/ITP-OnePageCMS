@@ -27,4 +27,8 @@ class AttributeSet
             return $default;
         }
     }
+
+    public function getRawArray() : array {
+        return $this->attributes;
+    }
 }

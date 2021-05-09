@@ -9,5 +9,17 @@ function SiteEditorItemBlock(Block $block) {
     $type = $block->getType()->getID();
     $attributes = new AttributeSet($block);
 
+    $attrArray = $attributes->getRawArray();
+    $images = array();
+    foreach ($attrArray as $key => $val) { // Fetch all image file entries so we can display their filenames on the buttons
+        $imageSuffix = "background-image";
+        $length = strlen($imageSuffix);
+        $isImage = $length > 0 ? substr($key, -$length) === $imageSuffix : true;
+
+        if($isImage) {
+            $images[$key] = FileGateway::fetch(["id" => $attributes->get($key)]);
+        }
+    }
+
     include "admin/template/SiteEditorItemTemplate.php";
 }

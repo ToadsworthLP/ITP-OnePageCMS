@@ -1,3 +1,5 @@
+
+
 <div class="form-group">
     <label>Überschrift</label>
     <input name="<?= $prefix ?>-title" type="text" class="form-control" value="<?= $attributes->get($prefix . "-title") ?>">
@@ -17,7 +19,7 @@
     <input id="<?=$id?>-<?= $prefix ?>-background-image" type="hidden" name="@<?= $prefix ?>-background-image" value="<?=$attributes->get($prefix."-background-image")?>">
     <button id="<?=$id?>-<?= $prefix ?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
             data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-<?= $prefix ?>-background-image')">
-        Hintergrundbild wählen
+        <?=isset($images[$prefix."-background-image"]) ? $images[$prefix."-background-image"]->filename." ausgewählt" : "Hintergrundbild wählen"?>
     </button>
 </div>
 <div class="form-group">
