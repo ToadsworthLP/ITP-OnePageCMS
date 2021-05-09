@@ -30,7 +30,7 @@
                 <p>&#169; Copyright 2021 - Mustertext</p>
             </div>
             <div class="col-sm footer-bottom-link">
-                <a href="#">Impressum</a>
+                <a href="#" data-toggle="modal" data-target="#impress-modal">Impressum</a>
             </div>
         </div>
     </div>

@@ -1,23 +1,33 @@
 <form method="post" action="admin.php?&action=<?= AdminActions::UPDATE_SETTINGS ?>">
     <h5>Seiteninformation</h5>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Seitentitel</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1"
                        name="<?= SettingsConfig::PAGE_TITLE ?>"
                        value="<?= Settings::get(SettingsConfig::PAGE_TITLE) ?>">
+                <br>
                 <?php SettingsResetButton(SettingsConfig::PAGE_TITLE) ?>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="form-check">
                 <input type="hidden" name="<?= SettingsConfig::FULL_WIDTH ?>" value="0">
-                <input class="form-check-input" type="checkbox" value="<?= true ?>" id="defaultCheck1"
+                <input class="form-check-input" type="checkbox" value="<?= true ?>" id="inGridSetting"
                        name="<?= SettingsConfig::FULL_WIDTH ?>"
                     <?= Settings::getBoolean(SettingsConfig::FULL_WIDTH) ? "checked" : "" ?>>
-                <label class="form-check-label" for="defaultCheck1">
+                <label class="form-check-label" for="inGridSetting">
                     Volle Breite / In Grid
+                </label>
+            </div>
+            <br>
+            <div class="form-check">
+                <input type="hidden" name="" value="0">
+                <input class="form-check-input" type="checkbox" value="" id="enableSlider"
+                       name="">
+                <label class="form-check-label" for="enableSlider">
+                    Slider aktivieren
                 </label>
             </div>
         </div>
@@ -74,7 +84,7 @@
                             data-toggle="modal"
                             data-target="#media-selection-modal"
                             onclick="setCurrentInputID('<?= $id ?>-background-image')">
-                        Hintergrundbild wählen
+                        Bild wählen
                     </button>
                 </div>
             </div>
@@ -91,7 +101,7 @@
                             data-toggle="modal"
                             data-target="#media-selection-modal"
                             onclick="setCurrentInputID('<?= $id ?>-background-image')">
-                        Hintergrundbild wählen
+                        Bild wählen
                     </button>
                 </div>
             </div>
@@ -108,7 +118,7 @@
                             data-toggle="modal"
                             data-target="#media-selection-modal"
                             onclick="setCurrentInputID('<?= $id ?>-background-image')">
-                        Hintergrundbild wählen
+                        Bild wählen
                     </button>
                 </div>
             </div>

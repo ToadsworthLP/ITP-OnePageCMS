@@ -9,6 +9,7 @@ class AdminPages implements IIncludeSwitchConfig
     const MEDIA = 3;
     const EDITOR = 4;
     const CONTACT = 5;
+    const MISC = 6;
 
     public function getMapping(): array
     {
@@ -18,7 +19,8 @@ class AdminPages implements IIncludeSwitchConfig
             AdminPages::USER_MANAGEMENT => "admin/page/UserManagementPage.php",
             AdminPages::MEDIA => "admin/page/MediaManagementPage.php",
             AdminPages::EDITOR => "admin/page/SiteEditorPage.php",
-            AdminPages::CONTACT => "admin/page/ContactFormPage.php"
+            AdminPages::CONTACT => "admin/page/ContactFormPage.php",
+            AdminPages::MISC => "admin/page/MiscPage.php"
         ];
     }
 

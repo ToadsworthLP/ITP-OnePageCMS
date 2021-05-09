@@ -27,6 +27,8 @@
 
     include_once "homepage/block/FooterBlock.php";
 
+    include_once "homepage/blocktype/elements/ImpressModalTemplate.php"
+
     ?>
 
     <!-- Optional JavaScript; choose one of the two! -->
