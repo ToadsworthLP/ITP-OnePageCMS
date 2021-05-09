@@ -10,7 +10,6 @@
     if($site->showSlider) $sliderData = HomepageGateway::getSliderData();
 
     $siteTree = new SiteTree($siteData, $sliderData);
-    var_dump($siteTree);
 
     foreach($siteTree->nodes as $id => $node) {
         include "homepage/blocktype/sections/" . $node->getType();
