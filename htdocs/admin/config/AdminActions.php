@@ -22,6 +22,7 @@ class AdminActions implements IIncludeSwitchConfig
     const EDIT_SLIDE = 16;
     const DELETE_SLIDE = 17;
     const CHANGE_SLIDE_ORDER = 18;
+    const UPDATE_SETTINGS = 19;
 
     public function getMapping(): array
     {
@@ -44,7 +45,8 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::ADD_SLIDE => "admin/action/AddSlideAction.php",
             AdminActions::EDIT_SLIDE => "admin/action/EditSlideAction.php",
             AdminActions::DELETE_SLIDE => "admin/action/DeleteSlideAction.php",
-            AdminActions::CHANGE_SLIDE_ORDER => "admin/action/ChangeSlideOrderAction.php"
+            AdminActions::CHANGE_SLIDE_ORDER => "admin/action/ChangeSlideOrderAction.php",
+            AdminActions::UPDATE_SETTINGS => "admin/action/UpdateSettingsAction.php"
         ];
     }
 

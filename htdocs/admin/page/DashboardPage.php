@@ -1,6 +1,7 @@
 <?php
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
+include_once "admin/block/GlobalSettingsBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
@@ -36,9 +37,7 @@ Navbar();
                         Globale Einstellungen
                     </div>
                     <div class="card-body">
-                        <?php
-                            include 'admin/template/DashboardGlobalSettingsForm.php';
-                        ?>
+                        <?php GlobalSettingsBlock(); ?>
                     </div>
                 </div>
             </div>

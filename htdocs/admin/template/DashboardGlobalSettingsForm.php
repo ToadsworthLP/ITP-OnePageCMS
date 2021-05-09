@@ -1,15 +1,21 @@
-<form>
+<form method="post" action="admin.php?&action=<?= AdminActions::UPDATE_SETTINGS ?>">
     <h5>Seiteninformation</h5>
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Seitentitel</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                       name="<?= SettingsConfig::PAGE_TITLE ?>"
+                       value="<?= Settings::get(SettingsConfig::PAGE_TITLE) ?>">
+                <?php SettingsResetButton(SettingsConfig::PAGE_TITLE) ?>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input type="hidden" name="<?= SettingsConfig::FULL_WIDTH ?>" value="0">
+                <input class="form-check-input" type="checkbox" value="<?= true ?>" id="defaultCheck1"
+                       name="<?= SettingsConfig::FULL_WIDTH ?>"
+                    <?= Settings::getBoolean(SettingsConfig::FULL_WIDTH) ? "checked" : "" ?>>
                 <label class="form-check-label" for="defaultCheck1">
                     Volle Breite / In Grid
                 </label>
@@ -18,12 +24,14 @@
         <div class="col-sm-12">
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Seitenbeschreibung</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                          name="<?= SettingsConfig::PAGE_DESCRIPTION ?>"><?= Settings::get(SettingsConfig::PAGE_DESCRIPTION) ?></textarea>
             </div>
+            <?php SettingsResetButton(SettingsConfig::PAGE_DESCRIPTION) ?>
         </div>
     </div>
     <hr>
-    <h5>Farben</h5>   
+    <h5>Farben</h5>
     <div class="row">
         <div class="col-sm">
             <div class="form-group">
@@ -62,10 +70,12 @@
         <div class="col-xl-10">
             <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
-                        data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
+                    <button id="<?= $id ?>-background-image-button" type="button" class="btn btn-block btn-secondary"
+                            data-toggle="modal"
+                            data-target="#media-selection-modal"
+                            onclick="setCurrentInputID('<?= $id ?>-background-image')">
                         Hintergrundbild wählen
-                    </button>                    
+                    </button>
                 </div>
             </div>
         </div>
@@ -77,10 +87,12 @@
         <div class="col-xl-10">
             <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
-                        data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
+                    <button id="<?= $id ?>-background-image-button" type="button" class="btn btn-block btn-secondary"
+                            data-toggle="modal"
+                            data-target="#media-selection-modal"
+                            onclick="setCurrentInputID('<?= $id ?>-background-image')">
                         Hintergrundbild wählen
-                    </button>                    
+                    </button>
                 </div>
             </div>
         </div>
@@ -92,10 +104,12 @@
         <div class="col-xl-10">
             <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
-                        data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
+                    <button id="<?= $id ?>-background-image-button" type="button" class="btn btn-block btn-secondary"
+                            data-toggle="modal"
+                            data-target="#media-selection-modal"
+                            onclick="setCurrentInputID('<?= $id ?>-background-image')">
                         Hintergrundbild wählen
-                    </button>                    
+                    </button>
                 </div>
             </div>
         </div>
