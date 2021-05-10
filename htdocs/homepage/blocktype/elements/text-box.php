@@ -1,4 +1,7 @@
 <div class="textbox">
+    <?php if($imagePath !== ""): ?>
+        <img src="<?=$imagePath?>" class="img-fluid textbox-icon-img" alt="...">
+    <?php endif; ?>
     <h3><?=$title?></h3>
     <h5><?=$subtitle?></h5>
     <?php if($separator !== ""): ?>

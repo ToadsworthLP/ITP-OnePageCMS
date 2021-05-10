@@ -1,6 +1,8 @@
 
 .idea/
 htdocs/stephTest
+htdocs/uploads/full
+htdocs/uploads/thumbnail
 htdocs/debug/
 
 htdocs/debug.php
