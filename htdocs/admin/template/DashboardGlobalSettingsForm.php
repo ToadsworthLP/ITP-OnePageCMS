@@ -40,6 +40,7 @@
             <?php SettingsResetButton(SettingsConfig::PAGE_DESCRIPTION) ?>
         </div>
     </div>
+    <!--Form elements below are not yet functional-->
     <hr>
     <h5>Farben</h5>
     <div class="row">
@@ -80,10 +81,10 @@
         <div class="col-xl-10">
             <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <button id="<?= $id ?>-background-image-button" type="button" class="btn btn-block btn-secondary"
+                    <button id="menu-logo-button" type="button" class="btn btn-block btn-secondary"
                             data-toggle="modal"
                             data-target="#media-selection-modal"
-                            onclick="setCurrentInputID('<?= $id ?>-background-image')">
+                            onclick="setCurrentInputID('menu-logo')">
                         Bild wählen
                     </button>
                 </div>
@@ -97,10 +98,10 @@
         <div class="col-xl-10">
             <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <button id="<?= $id ?>-background-image-button" type="button" class="btn btn-block btn-secondary"
+                    <button id="footer-logo-button" type="button" class="btn btn-block btn-secondary"
                             data-toggle="modal"
                             data-target="#media-selection-modal"
-                            onclick="setCurrentInputID('<?= $id ?>-background-image')">
+                            onclick="setCurrentInputID('footer-logo')">
                         Bild wählen
                     </button>
                 </div>
@@ -114,10 +115,10 @@
         <div class="col-xl-10">
             <div class="custom-file mb-3">
                 <div class="custom-file">
-                    <button id="<?= $id ?>-background-image-button" type="button" class="btn btn-block btn-secondary"
+                    <button id="favicon-button" type="button" class="btn btn-block btn-secondary"
                             data-toggle="modal"
                             data-target="#media-selection-modal"
-                            onclick="setCurrentInputID('<?= $id ?>-background-image')">
+                            onclick="setCurrentInputID('favicon')">
                         Bild wählen
                     </button>
                 </div>
