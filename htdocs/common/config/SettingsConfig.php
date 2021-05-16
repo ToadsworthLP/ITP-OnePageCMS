@@ -10,6 +10,10 @@ abstract class SettingsConfig
     const SECONDARY_COLOR = "secondaryColor";
     const LIGHT_BACKGROUND = "lightBackground";
     const DARK_BACKGROUND = "darkBackground";
+    const CONTACT_ADDRESS = "contactAddress";
+    const CONTACT_NAME = "contactName";
+    const CONTACT_EMAIL_HEADER = "contactEmailHeader";
+    const CONTACT_EMAIL_FOOTER = "contactEmailFooter";
 
     const DEFAULT_VALUES = [
         self::PAGE_TITLE => "New Page",
@@ -19,6 +23,10 @@ abstract class SettingsConfig
         self::PRIMARY_COLOR => "#999999",
         self::SECONDARY_COLOR => "#cccccc",
         self::LIGHT_BACKGROUND => "#ffffff",
-        self::DARK_BACKGROUND => "#111111"
+        self::DARK_BACKGROUND => "#111111",
+        self::CONTACT_ADDRESS => "",
+        self::CONTACT_NAME => "",
+        self::CONTACT_EMAIL_HEADER => "",
+        self::CONTACT_EMAIL_FOOTER => ""
     ];
 }

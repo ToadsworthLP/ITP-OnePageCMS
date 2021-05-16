@@ -1,3 +1,10 @@
+<?php
+include_once "admin/utility/IncludeSwitch.php";
+include_once "homepage/config/HomepageActions.php";
+
+$actionSwitch = new IncludeSwitch(new HomepageActions());
+$actionSwitch->include(HomepageActions::NONE);
+?>
 <!doctype html>
 <html lang="en">
     <head>

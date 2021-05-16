@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 require 'lib/PHPMailer/src/Exception.php';
 require 'lib/PHPMailer/src/PHPMailer.php';
 require 'lib/PHPMailer/src/SMTP.php';
-include_once "admin/config/EMailConfig.php";
+include_once "common/config/EMailConfig.php";
 
 class EMail
 {
@@ -16,7 +16,7 @@ class EMail
     {
         $this->mail = new PHPMailer(true);
 
-        $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $this->mail->SMTPDebug = SMTP::DEBUG_OFF;
         $this->mail->isSMTP();
         $this->mail->Host       = EMailConfig::SMTP_HOST;
         $this->mail->SMTPAuth   = EMailConfig::SMTP_AUTH;

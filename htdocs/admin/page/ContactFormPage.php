@@ -1,6 +1,8 @@
 <?php
 include_once "admin/block/NavbarBlock.php";
 include_once "admin/block/AlertListBlock.php";
+include_once "common/utility/Settings.php";
+include_once "admin/block/SettingsResetButtonBlock.php";
 
 include "admin/utility/LoginRedirect.php";
 
