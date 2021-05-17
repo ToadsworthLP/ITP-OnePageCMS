@@ -26,7 +26,7 @@ Navbar();
         <!-- Alerts -->
         <div class="row">
             <div class="col">
-                <?= AlertListBlock(); ?>
+                <?php AlertListBlock(); ?>
             </div>
         </div>
         <!-- Content -->
@@ -52,7 +52,7 @@ Navbar();
                     <div class="card-body">
                         <!-- Social Media Icon Liste -->
                         <?php
-                            include 'admin/template/MenuItemTemplate.php';
+                            include 'admin/template/DashboardSocialMediaSettingsForm.php';
                         ?>
                     </div>
                 </div>
@@ -75,3 +75,4 @@ Navbar();
         </div>
     </div>
 </div>
+<script src="admin/js/mediaSelect.js"></script>

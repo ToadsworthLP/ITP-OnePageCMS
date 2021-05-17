@@ -84,4 +84,5 @@ $site = 1;
         <br>   
     </div>
 </div>
+<script src="admin/js/mediaSelect.js"></script>
 <script src="admin/js/siteEditor.js"></script>
