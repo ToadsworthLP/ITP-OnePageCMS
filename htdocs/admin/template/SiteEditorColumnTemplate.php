@@ -1,5 +1,3 @@
-
-
 <div class="form-group">
     <label>Überschrift</label>
     <input name="<?= $prefix ?>-title" type="text" class="form-control" value="<?= $attributes->get($prefix . "-title") ?>">
@@ -9,7 +7,8 @@
     <input name="<?= $prefix ?>-subtitle" type="text" class="form-control" value="<?= $attributes->get($prefix . "-subtitle") ?>">
 </div>
 <div class="form-check">
-    <input name="<?= $prefix ?>-separator" class="form-check-input" type="checkbox" value="true" <?= $attributes->get($prefix . "-separator") == "" ? "" : "checked" ?>>
+    <input type="hidden" name="<?= $prefix ?>-separator" value="">
+    <input name="<?= $prefix ?>-separator" class="form-check-input" type="checkbox" value="1" <?= $attributes->get($prefix . "-separator") == "" ? "" : "checked" ?>>
     <label class="form-check-label">
         Trennlinie
     </label>

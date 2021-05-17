@@ -18,7 +18,7 @@
                             <div class="col-3">
                                 <div class="custom-control custom-switch">
                                     <input type="hidden" name="fullwidth" value="">
-                                    <input type="checkbox" class="custom-control-input" id="fullwidthchecker<?=$id?>" name="fullwidth" value="true"
+                                    <input type="checkbox" class="custom-control-input" id="fullwidthchecker<?=$id?>" name="fullwidth" value="1"
                                         <?=$attributes->get("fullwidth") == "" ? "" : "checked"?>>
                                     <label class="custom-control-label" for="fullwidthchecker<?=$id?>">Volle Breite / Im
                                         Raster</label>
@@ -27,7 +27,7 @@
                             <div class="col-3">
                                 <div class="custom-control custom-switch">
                                     <input type="hidden" name="menu-option" value="">
-                                    <input type="checkbox" class="custom-control-input" id="showInMenu<?=$id?>" name="menu-option" value="true"
+                                    <input type="checkbox" class="custom-control-input" id="showInMenu<?=$id?>" name="menu-option" value="1"
                                         <?=$attributes->get("menu-option") == "" ? "" : "checked"?>>
                                     <label class="custom-control-label" for="showInMenu<?=$id?>">Im Menü anzeigen</label>
                                 </div>
@@ -95,7 +95,7 @@
                                                         <div class="form-group form-check">
                                                             <input type="hidden" name="separator" value="">
                                                             <input type="checkbox" class="form-check-input"
-                                                                   id="hairline<?=$id?>" name="separator" value="true"
+                                                                   id="hairline<?=$id?>" name="separator" value="1"
                                                                 <?=$attributes->get("separator") == "" ? "" : "checked"?>>
                                                             <label class="form-check-label" for="hairline<?=$id?>">Trennlinie</label>
                                                         </div>
