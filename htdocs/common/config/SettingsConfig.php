@@ -6,6 +6,9 @@ abstract class SettingsConfig
     const PAGE_DESCRIPTION = "pageDescription";
     const FULL_WIDTH = "fullWidth";
     const SHOW_SLIDER = "showSlider";
+    const SLIDER_SHOW_INDICATORS = "sliderShowIndicators";
+    const SLIDER_SHOW_NAVIGATION = "sliderShowNavigation";
+    const SLIDER_DELAY = "sliderDelay";
     const PRIMARY_COLOR = "primaryColor";
     const SECONDARY_COLOR = "secondaryColor";
     const LIGHT_BACKGROUND = "lightBackground";
@@ -35,6 +38,9 @@ abstract class SettingsConfig
         self::PAGE_DESCRIPTION => "An example page.",
         self::FULL_WIDTH => false,
         self::SHOW_SLIDER => false,
+        self::SLIDER_SHOW_INDICATORS => true,
+        self::SLIDER_SHOW_NAVIGATION => true,
+        self::SLIDER_DELAY => "5000",
         self::PRIMARY_COLOR => "#999999",
         self::SECONDARY_COLOR => "#cccccc",
         self::LIGHT_BACKGROUND => "#ffffff",
