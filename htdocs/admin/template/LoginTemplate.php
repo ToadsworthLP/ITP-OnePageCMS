@@ -8,13 +8,14 @@
         <div class="col">
             <form method="post" action="admin.php?&action=<?=AdminActions::LOGIN?>">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="username" placeholder="Username...">
+                    <input class="form-control" type="text" name="username" placeholder="Username..." value="<?= $username ?>">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="password" name="password" placeholder="Passwort...">
                 </div>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <input type="checkbox" class="form-check-input" name="rememberUser"
+                    <?= $rememberUser ? "checked" : "" ?>>
                     <label class="form-check-label" for="exampleCheck1">Benutzerdaten merken</label>
                 </div>
                 <hr>

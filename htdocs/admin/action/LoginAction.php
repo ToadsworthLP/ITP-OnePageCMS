@@ -9,6 +9,13 @@ if(isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
+    if($_POST["rememberUser"]) {
+        setcookie("rememberUser", true, time()+60*60*24*7);
+        setcookie("username", $username, time()+60*60*24*7); // Expires after 7 days
+    } else {
+        setcookie("rememberUser", false, time()+60*60*24*7);
+    }
+
     $user = AccountUtility::login($username, $password);
     if(!$user){
         $error = new Alert(AlertType::WARNING, "The entered login credentials are incorrect.", true);
