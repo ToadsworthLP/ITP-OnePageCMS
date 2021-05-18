@@ -17,9 +17,11 @@ function GlobalSettingsBlock() {
     foreach ($allFiles as $file) { // Find files to show currently selected filenames
         if($file->getID() == $menuLogoId) {
             $menuLogo = $file;
-        } else if($file->getID() == $footerLogoId) {
+        }
+        if($file->getID() == $footerLogoId) {
             $footerLogo = $file;
-        } else if($file->getID() == $faviconId) {
+        }
+        if($file->getID() == $faviconId) {
             $favicon = $file;
         }
     }

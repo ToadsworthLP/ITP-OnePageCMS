@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Impressum von {Seitentitel}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Impressum von <?= Settings::get(SettingsConfig::PAGE_TITLE) ?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -17,30 +17,30 @@
                     <br>
                     <div class="row">
                         <div class="col">
-                            <h4>{Firmenbezeichnung}</h4>
-                            <p><strong>Inhaber: </strong>{Vor- und Nachname}
-                            <br><strong>Unternehmensgegenstand: </strong>{Unternehmensgegenstand}
-                            <br><strong>Firmenbuchnummer: </strong>{XX 000000 x}
-                            <br><strong>Handelsgericht: </strong>{Ort}
-                            <br><strong>Firmensitz: </strong>{PLZ}</p>
+                            <h4><?= Settings::get(SettingsConfig::COMPANY_NAME) ?></h4>
+                            <p><strong>Inhaber: </strong><?= Settings::get(SettingsConfig::COMPANY_OWNER) ?>
+                            <br><strong>Unternehmensgegenstand: </strong><?= Settings::get(SettingsConfig::COMPANY_CORPORATE_OBJECT) ?>
+                            <br><strong>Firmenbuchnummer: </strong><?= Settings::get(SettingsConfig::COMPANY_NUMBER) ?>
+                            <br><strong>Handelsgericht: </strong><?= Settings::get(SettingsConfig::COMPANY_COMMERCIAL_COURT) ?>
+                            <br><strong>Firmensitz: </strong><?= Settings::get(SettingsConfig::COMPANY_HEADQUARTERS) ?></p>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col">
                             <h4>Kontaktdaten</h4>
-                            <p>{Adresse}
-                            <br>{Ort}
-                            <br><strong>Tel.: </strong>{+43 (0) 000 000000}
-                            <br><strong>E-Mail: </strong>{+43 (0) 000 000000}</p>
+                            <p><?= Settings::get(SettingsConfig::COMPANY_ADDRESS) ?>
+                            <br><?= Settings::get(SettingsConfig::COMPANY_LOCATION) ?>
+                            <br><strong>Tel.: </strong><?= Settings::get(SettingsConfig::COMPANY_PHONE) ?>
+                            <br><strong>E-Mail: </strong><?= Settings::get(SettingsConfig::COMPANY_MAIL) ?></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <p><strong>Mitglied: </strong>WKO
                             <br><strong>Berufsrecht: </strong>Gewerbeordnung <a href="https://www.ris.bka.gv.at">www.ris.bka.gv.at</a>
-                            <br><strong>Aufsichtsbehörde/Gewerbebehörde: </strong>Bezirkshauptmannschaft {Ort}
-                            <br><strong>Berufsbezeichnung: </strong>{Unternehmensgegenstand}</p>
+                            <br><strong>Aufsichtsbehörde/Gewerbebehörde: </strong>Bezirkshauptmannschaft <?= Settings::get(SettingsConfig::COMPANY_LOCATION) ?>
+                            <br><strong>Berufsbezeichnung: </strong><?= Settings::get(SettingsConfig::COMPANY_CORPORATE_OBJECT) ?></p>
                         </div>   
                     </div>
                     <br>

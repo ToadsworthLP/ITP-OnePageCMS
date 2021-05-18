@@ -3,7 +3,7 @@
     <!-- To change the menu from full-width to in-grid simple change container-fluid to container -->
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="mockup\media\bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::MENU_LOGO) ?>" width="30" height="30" class="d-inline-block align-top" alt="">
             <!-- Seitenname -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,17 +22,17 @@
                     }
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link socialmedia-icon-link" href="#">
+                    <a class="nav-link socialmedia-icon-link" href="<?= Settings::get(SettingsConfig::FACEBOOK_LINK) ?>">
                         <?php include 'mockup/inc/backend-panel/icons/facebook-icon.php'; ?>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link socialmedia-icon-link" href="#">
+                    <a class="nav-link socialmedia-icon-link" href="<?= Settings::get(SettingsConfig::INSTAGRAM_LINK) ?>">
                         <?php include 'mockup/inc/backend-panel/icons/instagram-icon.php'; ?>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link socialmedia-icon-link" href="#">
+                    <a class="nav-link socialmedia-icon-link" href="<?= Settings::get(SettingsConfig::TWITTER_LINK) ?>">
                         <?php include 'mockup/inc/backend-panel/icons/twitter-icon.php'; ?>
                     </a>
                 </li>

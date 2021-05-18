@@ -1,6 +1,8 @@
 <?php
 include_once "admin/utility/IncludeSwitch.php";
 include_once "homepage/config/HomepageActions.php";
+include_once "common/utility/Settings.php";
+include_once "common/config/PathConfig.php";
 
 $actionSwitch = new IncludeSwitch(new HomepageActions());
 $actionSwitch->include(HomepageActions::NONE);
@@ -17,10 +19,10 @@ $actionSwitch->include(HomepageActions::NONE);
         <link rel="stylesheet" href="mockup/res/css/frontend-style.css">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="mockup/media/bootstrap-solid.svg">
-        <link rel="icon" type="image/png" href="mockup/media/bootstrap-solid.svg" sizes="32x32">
-        <link rel="icon" type="image/png" href="mockup/media/bootstrap-solid.svg" sizes="96x96">
-        <link rel="apple-touch-icon" sizes="180x180" href="mockup/media/bootstrap-solid.svg">
+        <link rel="shortcut icon" href="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::FAVICON) ?>">
+        <link rel="icon" type="image/png" href="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::FAVICON) ?>" sizes="32x32">
+        <link rel="icon" type="image/png" href="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::FAVICON) ?>" sizes="96x96">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::FAVICON) ?>">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <title>Seitentitel</title>
@@ -34,7 +36,7 @@ $actionSwitch->include(HomepageActions::NONE);
 
     include_once "homepage/block/FooterBlock.php";
 
-    include_once "homepage/blocktype/elements/ImpressModalTemplate.php"
+    include_once "homepage/blocktype/elements/ImprintModalTemplate.php"
 
     ?>
 

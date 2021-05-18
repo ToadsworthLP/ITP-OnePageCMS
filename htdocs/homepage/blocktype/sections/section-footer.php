@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <p>&#169; Copyright 2021 - Mustertext</p>
+                <p>&#169; Copyright 2021 - <?= Settings::get(SettingsConfig::COMPANY_NAME) ?></p>
             </div>
             <div class="col-sm footer-bottom-link">
                 <a href="#" data-toggle="modal" data-target="#impress-modal">Impressum</a>
