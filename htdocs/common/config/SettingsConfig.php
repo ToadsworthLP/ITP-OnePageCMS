@@ -30,8 +30,13 @@ abstract class SettingsConfig
     const COMPANY_NAME = "companyName";
     const COMPANY_ADDRESS = "companyAddress";
     const COMPANY_LOCATION = "companyLocation";
+    const COMPANY_HEADQUARTERS = "companyHeadquarters";
     const COMPANY_MAIL = "companyMail";
     const COMPANY_PHONE = "companyPhone";
+    const COMPANY_OWNER = "companyOwner";
+    const COMPANY_NUMBER = "companyNumber";
+    const COMPANY_CORPORATE_OBJECT = "companyCorporateObject";
+    const COMPANY_COMMERCIAL_COURT = "companyCommercialCourt";
 
     const DEFAULT_VALUES = [
         self::PAGE_TITLE => "New Page",
@@ -62,7 +67,12 @@ abstract class SettingsConfig
         self::COMPANY_NAME => "",
         self::COMPANY_ADDRESS => "",
         self::COMPANY_LOCATION => "",
+        self::COMPANY_HEADQUARTERS => "",
         self::COMPANY_MAIL => "",
-        self::COMPANY_PHONE => ""
+        self::COMPANY_PHONE => "",
+        self::COMPANY_OWNER => "",
+        self::COMPANY_NUMBER => "",
+        self::COMPANY_CORPORATE_OBJECT => "",
+        self::COMPANY_COMMERCIAL_COURT => ""
     ];
 }

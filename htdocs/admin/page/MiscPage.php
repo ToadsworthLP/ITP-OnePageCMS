@@ -38,7 +38,7 @@ Navbar();
                     </div>
                     <div class="card-body">
                         <?php
-                            include 'admin/template/ImpressInformationForm.php';
+                            include 'admin/template/ImprintInformationForm.php';
                         ?>
                     </div>
                 </div>
