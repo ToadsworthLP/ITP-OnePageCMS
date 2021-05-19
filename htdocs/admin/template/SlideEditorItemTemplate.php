@@ -16,7 +16,7 @@
                     <div class="col-1">
                         <form method="post" action="admin.php?action=<?= AdminActions::DELETE_SLIDE ?>">
                             <input type="hidden" name="id" value="<?=$id?>">
-                            <button class="btn btn-light siteeditor-delete-button" type="submit">
+                            <button class="btn btn-light siteeditor-delete-button" type="submit" data-toggle="tooltip" data-placement="left" data-html="true" title="Slider entfernen">
                                 <?php include 'admin/icon/DeleteIcon.php';?>
                             </button>
                         </form>
@@ -56,13 +56,13 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Buttontext</label>
                                     <input type="text" class="form-control" name="buttonText" value="<?= $buttonText ?>">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Buttonlink</label>
                                     <input type="text" class="form-control" name="buttonLink" value="<?= $buttonLink ?>">
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="<?=$id?>-button-color">Button-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-color"
@@ -78,7 +78,7 @@
                                            value="<?= $buttonColor ?>">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="<?=$id?>-button-hover-color">Button-Hover-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-hover-color"
@@ -86,7 +86,7 @@
                                            value="<?= $buttonHoverColor ?>">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="<?=$id?>-button-text-color">Button-Text-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-text-color"

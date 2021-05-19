@@ -35,7 +35,8 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Formulardaten
+                        <span class="h5">Formulardaten</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <div class="col">

@@ -34,7 +34,8 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Globale Einstellungen
+                        <span class="h5">Globale Einstellungen</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <?php GlobalSettingsBlock(); ?>
@@ -47,7 +48,8 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Menü
+                        <span class="h5">Menü</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <!-- Social Media Icon Liste -->
@@ -63,7 +65,8 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Footer
+                        <span class="h5">Footer</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <?php

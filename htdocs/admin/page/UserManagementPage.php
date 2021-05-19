@@ -35,7 +35,8 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Neuen Benutzer anlegen
+                        <span class="h5">Neuen Benutzer anlegen</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <?= AddUserBlock(); ?>
@@ -50,7 +51,8 @@ Navbar();
                 <div class="col">
                     <div class="card">
                         <div class="card-header">
-                            Eigenes Profil bearbeiten
+                            <span class="h5">Eigenes Profil bearbeiten</span>
+                            <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                         </div>
                         <div class="card-body">
                             <?= EditUserBlock(AccountUtility::getCurrentUser()); ?>
@@ -66,7 +68,8 @@ Navbar();
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Benutzer bearbeiten
+                        <span class="h5">Benutzer bearbeiten</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <?= EditUserBlock(UserGateway::fetch(["id" => $_POST["targetUser"]])); ?>

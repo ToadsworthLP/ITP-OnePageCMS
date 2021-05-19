@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="selectorInput<?=$id?>" hidden>#ID-Selektor</label>
                                     <input type="text" class="form-control" id="selectorInput<?=$id?>"
@@ -15,7 +15,7 @@
                                            placeholder="#ID-Selektor" value="<?=$attributes->get("selector")?>">
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-sm">
                                 <div class="custom-control custom-switch">
                                     <input type="hidden" name="fullwidth" value="">
                                     <input type="checkbox" class="custom-control-input" id="fullwidthchecker<?=$id?>" name="fullwidth" value="1"
@@ -24,7 +24,7 @@
                                         Raster</label>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-sm">
                                 <div class="custom-control custom-switch">
                                     <input type="hidden" name="menu-option" value="">
                                     <input type="checkbox" class="custom-control-input" id="showInMenu<?=$id?>" name="menu-option" value="1"
@@ -33,8 +33,9 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="backGroundColors<?=$id?>">Hintergrundfarbe</label>
                                     <input type="color" class="form-control" id="backGroundColors<?=$id?>"
@@ -42,7 +43,7 @@
                                            value="<?=$attributes->get("background-color", "#ffffff")?>">
                                 </div>
                             </div>
-                            <div class="col-8">
+                            <div class="col-lg-8">
                                 <div class="custom-file mb-3">
                                     <input id="<?=$id?>-background-image" type="hidden" name="@background-image" value="<?=$attributes->get("background-image")?>">
                                     <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
@@ -73,7 +74,7 @@
                                              data-parent="#accordionHeading<?=$id?>">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-lg-4">
                                                         <div class="form-group">
                                                             <label for="sectionHeading<?=$id?>">Überschrift</label>
                                                             <input type="text" class="form-control"
@@ -82,7 +83,7 @@
                                                                    value="<?=$attributes->get("title")?>">
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-lg-4">
                                                         <div class="form-group">
                                                             <label for="sectionSubheading<?=$id?>">Unterüberschrift</label>
                                                             <input type="text" class="form-control"
@@ -91,7 +92,7 @@
                                                                    value="<?=$attributes->get("subtitle")?>">
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-lg-3">
                                                         <div class="form-group form-check">
                                                             <input type="hidden" name="separator" value="">
                                                             <input type="checkbox" class="form-check-input"

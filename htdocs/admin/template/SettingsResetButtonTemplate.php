@@ -1,1 +1,1 @@
-<button class="btn btn-primary" type="submit" name="<?= $key ?>" value="">Zurücksetzen</button>
+<button class="btn btn-light reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Zurücksetzen"><?php include 'mockup/inc/backend-panel/icons/reset-icon.php'; ?></button>

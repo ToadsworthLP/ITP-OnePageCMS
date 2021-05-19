@@ -16,7 +16,7 @@
                     <div class="col-1">
                         <form method="post" action="admin.php?action=<?= AdminActions::DELETE_BLOCK ?>">
                             <input type="hidden" name="targetBlock" value="<?=$id?>">
-                            <button class="btn btn-light siteeditor-delete-button" type="submit">
+                            <button class="btn btn-light siteeditor-delete-button" type="submit" data-toggle="tooltip" data-placement="left" data-html="true" title="Sektion entfernen">
                                 <?php include 'admin/icon/DeleteIcon.php';?>
                             </button>
                         </form>

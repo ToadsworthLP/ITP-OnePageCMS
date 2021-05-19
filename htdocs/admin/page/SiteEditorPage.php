@@ -37,7 +37,8 @@ $site = 1;
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Slider
+                        <span class="h5">Slider</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -63,7 +64,8 @@ $site = 1;
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        Seiteninhalt
+                        <span class="h5">Seiteninhalt</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
                     </div>
                     <div class="card-body">
                         <!-- SECTION BLOCKS -->

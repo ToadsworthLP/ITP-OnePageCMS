@@ -27,11 +27,10 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
+                    <label for="">Sliderzeit <?php SettingsResetButton(SettingsConfig::SLIDER_DELAY) ?></label>
                     <input type="number" class="form-control" id=""
                            name="<?= SettingsConfig::SLIDER_DELAY ?>"
                            value="<?= Settings::get(SettingsConfig::SLIDER_DELAY) ?>">
-                    <label for="">Sliderzeit</label>
-                    <?php SettingsResetButton(SettingsConfig::SLIDER_DELAY) ?>
                 </div>
             </div>
         </div>
