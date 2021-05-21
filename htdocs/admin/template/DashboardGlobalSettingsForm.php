@@ -20,16 +20,6 @@
                     Volle Breite / In Grid
                 </label>
             </div>
-            <br>
-            <div class="form-check">
-                <input type="hidden" name="<?= SettingsConfig::SHOW_SLIDER ?>" value="0">
-                <input class="form-check-input" type="checkbox" value="<?= true ?>" id="enableSlider"
-                       name="<?= SettingsConfig::SHOW_SLIDER ?>"
-                    <?= Settings::getBoolean(SettingsConfig::SHOW_SLIDER) ? "checked" : "" ?>>
-                <label class="form-check-label" for="enableSlider">
-                    Slider aktivieren
-                </label>
-            </div>
         </div>
         <div class="col-sm-12">
             <div class="form-group">
