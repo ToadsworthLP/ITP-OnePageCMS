@@ -1,5 +1,18 @@
 <form method="post" action="admin.php?&action=<?= AdminActions::UPDATE_SETTINGS ?>">
     <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input type="hidden" name="<?= SettingsConfig::SHOW_CONTACT_FORM ?>" value="0">
+                <input class="form-check-input" type="checkbox" value="<?= true ?>" id="showFormSetting"
+                       name="<?= SettingsConfig::SHOW_CONTACT_FORM ?>"
+                    <?= Settings::getBoolean(SettingsConfig::SHOW_CONTACT_FORM) ? "checked" : "" ?>>
+                <label class="form-check-label" for="showFormSetting">
+                    Kontaktformular anzeigen
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
          <div class="col-lg-6">
             <div class="form-group">
                 <label for="exampleInputEmail1">Kontaktadresse <?php SettingsResetButton(SettingsConfig::CONTACT_ADDRESS) ?></label>
