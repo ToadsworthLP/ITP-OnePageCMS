@@ -16,7 +16,7 @@ function Navbar() {
     $media = $linkBase.AdminPages::MEDIA;
     $contact = $linkBase.AdminPages::CONTACT;
     $misc = $linkBase.AdminPages::MISC;
-    $help = $linkBase.AdminPages::DASHBOARD;
+    $help = $linkBase.AdminPages::HELP;
     $profile = $linkBase.AdminPages::USER_MANAGEMENT."&editSelf=true";
     $logout = $linkBase.AdminPages::LOGIN."&action=".AdminActions::LOGOUT;
 
