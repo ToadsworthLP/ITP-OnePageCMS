@@ -25,14 +25,20 @@ $actionSwitch->include(HomepageActions::NONE);
         <link rel="apple-touch-icon" sizes="180x180" href="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::FAVICON) ?>">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-        <title>Seitentitel</title>
+        <title><?=Settings::get(SettingsConfig::PAGE_TITLE)?></title>
     </head>
     <body>
     <?php
 
     include_once "homepage/block/NavbarBlock.php";
 
-    include_once "homepage/block/BodyBlock.php";
+    ?>
+    <div class="<?=Settings::get(SettingsConfig::FULL_WIDTH) == true ? "container-fluid" : "container"?>" style="background-color: <?=Settings::get(SettingsConfig::LIGHT_BACKGROUND)?>">
+        <?php
+            include_once "homepage/block/BodyBlock.php"
+        ?>
+    </div>
+    <?php
 
     include_once "homepage/block/FooterBlock.php";
 
