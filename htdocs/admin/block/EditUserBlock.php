@@ -1,10 +1,14 @@
 <?php
+include_once "admin/utility/AccountUtility.php";
 
 function EditUserBlock(User $user) {
     $id = $user->getID();
     $username = $user->username;
     $email = $user->email;
+    $password = $user->password;
     $currRole = $user->getRole()->getID();
+
+    $editingSelf = AccountUtility::getCurrentUser()->getID() == $id;
 
     $roles = RoleGateway::fetchAll();
     $roleOptions = "";

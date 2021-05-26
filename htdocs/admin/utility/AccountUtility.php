@@ -96,7 +96,7 @@ class AccountUtility
      * @param string $input The string to hash
      * @return string The hash value
      */
-    private static function hash(string $input): string
+    public static function hash(string $input): string
     {
         return password_hash($input, PASSWORD_BCRYPT);
     }

@@ -20,6 +20,7 @@ function AlertListBlock() {
                 $modified = true;
             } elseif ($alert->lifetime == 0) { // Dismiss automatically
                 array_splice($currentAlerts, $i, 1);
+                $i--;
                 $modified = true;
             }
 
