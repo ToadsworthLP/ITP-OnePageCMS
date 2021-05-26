@@ -21,21 +21,9 @@
                         <?php endif;
                     }
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link socialmedia-icon-link" href="<?= Settings::get(SettingsConfig::FACEBOOK_LINK) ?>">
-                        <?php include 'mockup/inc/backend-panel/icons/facebook-icon.php'; ?>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link socialmedia-icon-link" href="<?= Settings::get(SettingsConfig::INSTAGRAM_LINK) ?>">
-                        <?php include 'mockup/inc/backend-panel/icons/instagram-icon.php'; ?>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link socialmedia-icon-link" href="<?= Settings::get(SettingsConfig::TWITTER_LINK) ?>">
-                        <?php include 'mockup/inc/backend-panel/icons/twitter-icon.php'; ?>
-                    </a>
-                </li>
+                <?php SocialMediaLinkBlock(SettingsConfig::FACEBOOK_LINK, "FacebookIcon.php"); ?>
+                <?php SocialMediaLinkBlock(SettingsConfig::INSTAGRAM_LINK, "InstagramIcon.php"); ?>
+                <?php SocialMediaLinkBlock(SettingsConfig::TWITTER_LINK, "TwitterIcon.php"); ?>
             </ul>
         </div>
     </div>
