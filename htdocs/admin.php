@@ -3,6 +3,7 @@ include_once "admin/utility/ReturnUtility.php";
 include_once "admin/utility/IncludeSwitch.php";
 include_once "admin/config/AdminPages.php";
 include_once "admin/config/AdminActions.php";
+include_once "common/utility/Settings.php";
 
 session_start();
 

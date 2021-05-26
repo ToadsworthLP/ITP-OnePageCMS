@@ -5,7 +5,6 @@ include_once "admin/block/SiteEditorBlock.php";
 include_once "admin/block/SlideEditorBlock.php";
 include_once "admin/block/MediaSelectionModalBlock.php";
 include_once "admin/block/SettingsResetButtonBlock.php";
-include_once "common/utility/Settings.php";
 
 include "admin/utility/LoginRedirect.php";
 
