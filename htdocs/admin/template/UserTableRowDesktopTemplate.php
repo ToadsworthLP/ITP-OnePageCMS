@@ -11,7 +11,7 @@
                     <input type="hidden" name="targetUser" value="<?=$id?>">
                     <button class="dropdown-item" type="submit">Bearbeiten</button>
                 </form>
-                <form method="post" action="admin.php?action="<?= AdminActions::RESET_PASSWORD ?>>
+                <form method="post" action="admin.php?action=<?= AdminActions::RESET_PASSWORD ?>">
                     <input type="hidden" name="targetUser" value="<?=$id?>">
                     <button class="dropdown-item" type="submit">Passwort zurücksetzen</button>
                 </form>

@@ -33,7 +33,7 @@ class AdminActions implements IIncludeSwitchConfig
             AdminActions::DISMISS_ALERT => "admin/action/DismissAlertAction.php",
             AdminActions::ADD_USER => "admin/action/AddUserAction.php",
             AdminActions::EDIT_USER => "admin/action/EditUserAction.php",
-            AdminActions::RESET_PASSWORD => "", // TODO add password reset
+            AdminActions::RESET_PASSWORD => "admin/action/ResetPasswordAction.php",
             AdminActions::DELETE_USER => "admin/action/DeleteUserAction.php",
             AdminActions::ADD_BLOCK => "admin/action/AddBlockAction.php",
             AdminActions::EDIT_BLOCK => "admin/action/EditBlockAction.php",
