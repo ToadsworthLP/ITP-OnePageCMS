@@ -31,7 +31,7 @@ if(isset($_POST["targetUser"]) && isset($_POST["username"]) && isset($_POST["ema
             $error->post();
         }
 
-        if(isset($_POST["password"]) && isset($_POST["confirmPassword"]) && $editingSelf) {
+        if(isset($_POST["password"]) && isset($_POST["confirmPassword"]) && $editingSelf && $_POST["password"] != "") {
             if($_POST["password"] == $_POST["confirmPassword"]) {
                 $newPassword = AccountUtility::hash($_POST["password"]);
                 $targetUser->password = $newPassword;
