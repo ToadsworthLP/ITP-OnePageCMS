@@ -20,7 +20,25 @@ label{
 
 input[type="color"]{
     height: 38px;
-    padding: .2rem;;
+    padding: .2rem;
+}
+
+.btn-primary{
+    background-color: #6600CC !important;
+    border-color: #6600CC !important;
+}
+
+.btn-link{
+    color: #6600CC !important;
+}
+
+a:active, ::selection{
+    background-color: rgba(102, 0, 204, 0.25) !important;
+}
+
+input:focus, textarea:focus, button:focus, a:focus{
+    border-color: #6600CC !important;
+    box-shadow: 0 0 0 0.2rem rgba(102, 0, 204, 0.25) !important;
 }
 
 /* === USER === */
@@ -52,6 +70,10 @@ input[type="color"]{
 
 .table-end{
     border-top-right-radius: .25rem !important;
+}
+
+.thead-dark{
+    background-color: #241E2A !important;
 }
 
 th{
@@ -134,7 +156,7 @@ td{
 }
 
 .login-logo{
-    width: 180px !important;
+    width: 100%;
     height: auto;
     margin: 0 auto 2rem;
 }
@@ -149,4 +171,14 @@ td{
     .help-content{
         margin-top: 2rem;
     }
+}
+
+.nav-pills .nav-link.active{
+    background-color: #6600CC !important;
+    color: #FDF7FF !important;
+}
+
+
+.nav-pills a{
+    color: #6600CC !important;
 }

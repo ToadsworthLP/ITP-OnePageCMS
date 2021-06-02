@@ -30,12 +30,12 @@ $pageSwitch = new IncludeSwitch(new AdminPages());
     <link rel="stylesheet" href="mockup/res/css/backend-panel-style.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="mockup/media/bootstrap-solid.svg">
-    <link rel="icon" type="image/png" href="mockup/media/bootstrap-solid.svg" sizes="32x32">
-    <link rel="icon" type="image/png" href="mockup/media/bootstrap-solid.svg" sizes="96x96">
-    <link rel="apple-touch-icon" sizes="180x180" href="mockup/media/bootstrap-solid.svg">
+    <link rel="shortcut icon" href="mockup/media/de-press-icon-colored.svg">
+    <link rel="icon" type="image/png" href="mockup/media/de-press-icon-colored.svg" sizes="32x32">
+    <link rel="icon" type="image/png" href="mockup/media/de-press-icon-colored.svg" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="mockup/media/de-press-icon-colored.svg">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="mockup/media/bootstrap-solid.svg">
+    <meta name="msapplication-TileImage" content="mockup/media/de-press-icon-colored.svg">
 </head>
 <body>
 <!-- JQuery -->

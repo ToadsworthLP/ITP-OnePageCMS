@@ -5,9 +5,9 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="<?=$dashboard?>">
-        <img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30"
+        <img src="mockup/media/de-press-icon-colored.svg" style="margin-top: 4px;" height="30"
              class="d-inline-block align-top" alt="">
-        <span class="menu-collapsed">DE-PRESS</span>
+        <span class="menu-collapsed"><img src='mockup/media/de-press-name.svg' style="margin-left: 8px" height="21"/></span>
     </a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
@@ -147,7 +147,7 @@
             </a>
             <!-- Logo -->
             <li class="list-group-item logo-separator d-flex justify-content-center">
-                <img src='https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg' width="30" height="30"/>
+                <img src='mockup/media/de-press-icon-colored.svg' style="margin-top: 4px;" height="30"/>
             </li>
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
