@@ -60,7 +60,7 @@
             </li>
             <!-- /END Separator -->
             <!-- Menu with submenu -->
-            <a href="#submenu1" data-toggle="collapse" aria-expanded="false"
+            <a id="dashboard-nav" href="#submenu1" data-toggle="collapse" aria-expanded="false"
                class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
@@ -73,22 +73,30 @@
                 <a href="<?=$dashboard?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Globale Einstellungen</span>
                 </a>
-                <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="<?=$menu?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Menü</span>
-                </a>
-                <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed">Slider</span>
                 </a>
                 <a href="<?=$footer?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed">Footer</span>
                 </a>
             </div>
-            <a href="<?=$editor?>" class="bg-dark list-group-item list-group-item-action">
+            <a id="dashboard-nav" href="#submenu3" data-toggle="collapse" aria-expanded="false"
+               class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-edit fa-fw mr-3"></span>
                     <span class="menu-collapsed">Seiteneditor</span>
+                    <span class="submenu-icon ml-auto"></span>
                 </div>
             </a>
+            <!-- Submenu content -->
+            <div id='submenu3' class="collapse sidebar-submenu">
+                <a href="<?=$editor?>" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Slider</span>
+                </a>
+                <a href="<?=$editor?>" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Editor</span>
+                </a>
+            </div>
             <a href="#submenu2" data-toggle="collapse" aria-expanded="false"
                class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">

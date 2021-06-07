@@ -23,6 +23,10 @@ input[type="color"]{
     padding: .2rem;
 }
 
+.btn{
+    margin-bottom: .4rem;
+}
+
 .btn-primary{
     background-color: #6600CC !important;
     border-color: #6600CC !important;
@@ -181,4 +185,8 @@ td{
 
 .nav-pills a{
     color: #6600CC !important;
+}
+
+.question-icon{
+    margin-left: 1.4rem !important;
 }

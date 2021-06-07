@@ -20,7 +20,12 @@ Navbar();
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Benutzer</h1>
-                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <p class="lead">Hier können Sie die Benutzer Ihres Backends verwalten. Benutzer lassen sich hier bequem neu anlegen und bearbeiten.</p>
+                    <hr class="my-4">
+                    <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7" role="button" target="_blank">Hilfe<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                    </p>
                 </div>
             </div>
         </div>

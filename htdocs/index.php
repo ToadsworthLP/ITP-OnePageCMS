@@ -42,7 +42,8 @@ $actionSwitch->include(HomepageActions::NONE);
 
     include_once "homepage/block/FooterBlock.php";
 
-    include_once "homepage/blocktype/elements/ImprintModalTemplate.php"
+    include_once "homepage/blocktype/elements/ImprintModalTemplate.php";
+    include_once "homepage/blocktype/elements/DataProtectionModalTemplate.php";
 
     ?>
 

@@ -14,11 +14,11 @@ Navbar();
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Sonstiges</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p class="lead">Hier können Sie die gesetzlich verpflichtenden Informationen für Ihr Seitenimpressum und zur Einhaltung der Datenschutzverordnung anlegen.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-misc" role="button" target="_blank">Hilfe<?php include 'admin/icon/HelpIcon.php'; ?></a>
                     </p>
                 </div>
             </div>
@@ -40,6 +40,22 @@ Navbar();
                     <div class="card-body">
                         <?php
                             include 'admin/template/ImprintInformationForm.php';
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="h5">Datenschutzerklärung</span>
+                        <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
+                    </div>
+                    <div class="card-body">
+                        <?php
+                            include 'admin/template/DataProtectionInformationForm.php';
                         ?>
                     </div>
                 </div>

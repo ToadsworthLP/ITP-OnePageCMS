@@ -21,7 +21,13 @@ $site = 1;
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Seiteneditor</h1>
-                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <p class="lead">Hier können Sie den Inhalt und die Gestalung Ihres Webauftirtts bearbeiten. Es lassen sich beliebig viele Slider und Seitenelemente hinzufügen um Ihren Bedürfnissen gerecht zu werden.</p>
+                    <hr class="my-4">
+                    <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-slider" role="button" target="_blank">Slider<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-editor" role="button" target="_blank">Editor<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -32,7 +38,7 @@ $site = 1;
             </div>
         </div>
         <!-- Content -->
-        <div class="row">
+        <div id="siteeditor-slider" class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">
@@ -59,7 +65,7 @@ $site = 1;
             </div>
         </div>
         <br>
-        <div class="row">
+        <div id="siteeditor-editor" class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">

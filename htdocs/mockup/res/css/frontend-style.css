@@ -33,6 +33,11 @@ a:hover{
     color: #39C19B;
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .btn:focus{
     background-color: #39C19B !important;
 }
@@ -107,6 +112,10 @@ a:hover{
 /* === SLIDER === */
 .slider-heading{
     margin-bottom: 2rem;
+}
+
+.carousel-inner{
+    max-height: calc(100vh - 96px) !important;
 }
 
 /* === SECTION === */
@@ -230,6 +239,7 @@ textarea{
 }
 
 .footer-bottom-link a{
+    margin-left: 1rem;
     color: #707070;
     text-transform: uppercase;
 }

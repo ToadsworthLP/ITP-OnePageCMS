@@ -30,6 +30,7 @@
                 <p>&#169; Copyright 2021 - <?= Settings::get(SettingsConfig::COMPANY_NAME) ?></p>
             </div>
             <div class="col-sm footer-bottom-link">
+                <a href="#" data-toggle="modal" data-target="#data-protection-modal">Datenschutzerklärung</a>
                 <a href="#" data-toggle="modal" data-target="#impress-modal">Impressum</a>
             </div>
         </div>

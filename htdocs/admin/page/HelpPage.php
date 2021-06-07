@@ -14,11 +14,11 @@ Navbar();
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Hilfe</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p class="lead">Hier finden Sie eine in Kategorien eingeteilte Hilfestellung zu den Features.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Eine Anleitung als PDF steht Ihnen unter folgendem Link zur Verfügung.</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Herunterladen</a>
                     </p>
                 </div>
             </div>
@@ -47,7 +47,7 @@ Navbar();
             </div>
             <div class="col-lg-8 help-content">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashobar-tab">
+                    <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
                             <div class="card">
                                 <div class="card-header">
                                     <span class="h5">Allgemeine Seiteneinstellungen</span>
@@ -142,4 +142,4 @@ Navbar();
         </div>
     </div>
 </div>
-<script src="admin/js/mediaSelect.js"></script>
+<script src="admin/js/help-navigation.js" defer></script>

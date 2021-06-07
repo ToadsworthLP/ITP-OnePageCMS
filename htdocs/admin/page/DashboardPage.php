@@ -14,11 +14,13 @@ Navbar();
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Dashboard</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p class="lead">Hier können Sie globale Einstellung ihrer Website vornehmen. Denken Sie daran Ihre Änderungen im jeweiligen Abschnitt zu speichern.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-dashboard" role="button" target="_blank">Allgemein<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-menu" role="button" target="_blank">Menü<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-footer" role="button" target="_blank">Footer<?php include 'admin/icon/HelpIcon.php'; ?></a>
                     </p>
                 </div>
             </div>
@@ -44,7 +46,7 @@ Navbar();
             </div>
         </div>
         <br>
-        <div class="row">
+        <div id="dashboard-menu" class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">
@@ -61,7 +63,7 @@ Navbar();
             </div>
         </div>
         <br>
-        <div class="row">
+        <div id="dashboard-footer" class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">

@@ -18,7 +18,12 @@ MediaInfoModalBlock();
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Medienverwaltung</h1>
-                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <p class="lead">Hier finden Sie eine Übersicht Ihrer Mediendateien die für Sie für Ihren Internetauftritt nutzen.</p>
+                    <hr class="my-4">
+                    <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-media" role="button" target="_blank">Medien<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                    </p>
                 </div>
             </div>
         </div>

@@ -14,11 +14,11 @@ Navbar();
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Kontaktformular</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p class="lead">Hier können Sie die Kontaktinformationen für Ihr automatischen Nachrichten des Kontaktformulars angeben und die Adresse von der aus gesendet werden soll.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-contact" role="button" target="_blank">Hilfe<?php include 'admin/icon/HelpIcon.php'; ?></a>
                     </p>
                 </div>
             </div>
