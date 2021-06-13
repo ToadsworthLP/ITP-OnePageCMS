@@ -3,16 +3,16 @@
         <div class="row">
             <div class="col-12">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Telefonnummer des Datenschutzbeauftragten <?php SettingsResetButton(SettingsConfig::COMPANY_OWNER) ?></label>
+                    <label for="exampleInputEmail1">Telefonnummer des Datenschutzbeauftragten <?php SettingsResetButton(SettingsConfig::DATA_PROTECTION_PHONE) ?></label>
                     <input type="text" class="form-control" id="exampleInputEmail1"
-                    name="<?= SettingsConfig::COMPANY_OWNER ?>"
-                    value="<?= Settings::get(SettingsConfig::COMPANY_OWNER) ?>">
+                    name="<?= SettingsConfig::DATA_PROTECTION_PHONE ?>"
+                    value="<?= Settings::get(SettingsConfig::DATA_PROTECTION_PHONE) ?>">
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Datenschutzerklärung <?php SettingsResetButton(SettingsConfig::COMPANY_NUMBER) ?></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleInputEmail1">Datenschutzerklärung <?php SettingsResetButton(SettingsConfig::DATA_PROTECTION_CUSTOM_TEXT) ?></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="<?= SettingsConfig::DATA_PROTECTION_CUSTOM_TEXT ?>"><?= Settings::get(SettingsConfig::DATA_PROTECTION_CUSTOM_TEXT) ?></textarea>
                 </div>
             </div>
         </div>

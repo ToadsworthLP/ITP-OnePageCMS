@@ -38,6 +38,8 @@ abstract class SettingsConfig
     const COMPANY_NUMBER = "companyNumber";
     const COMPANY_CORPORATE_OBJECT = "companyCorporateObject";
     const COMPANY_COMMERCIAL_COURT = "companyCommercialCourt";
+    const DATA_PROTECTION_PHONE = "dataProtectionPhone";
+    const DATA_PROTECTION_CUSTOM_TEXT = "dataProtectionCustomText";
 
     const DEFAULT_VALUES = [
         self::PAGE_TITLE => "New Page",
@@ -75,6 +77,8 @@ abstract class SettingsConfig
         self::COMPANY_OWNER => "",
         self::COMPANY_NUMBER => "",
         self::COMPANY_CORPORATE_OBJECT => "",
-        self::COMPANY_COMMERCIAL_COURT => ""
+        self::COMPANY_COMMERCIAL_COURT => "",
+        self::DATA_PROTECTION_PHONE => "",
+        self::DATA_PROTECTION_CUSTOM_TEXT => "Persönliche Daten, die Sie auf dieser Website elektronisch übermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere persönlichen Angaben, werden von uns nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben. Der Provider erhebt und speichert automatisch Informationen am Webserver wie verwendeter Browser, Betriebssystem, Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw. Diese Daten können ohne Prüfung weiterer Datenquellen keinen bestimmten Personen zugeordnet werden und wir werten diese Daten auch nicht weiter aus solange keine rechtswidrige Nutzung unserer Webseite vorliegt."
     ];
 }

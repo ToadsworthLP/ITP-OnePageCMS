@@ -19,17 +19,19 @@
                         <div class="col">
                             <h5>Persönliche Daten</h5>
                             <!-- Das ist ein Standardtext wenn keine Daten gesammelt werden. Sollte der Nutzer im Formular etwas anderes eintragen soll dieser Text ersetzt werden -->
-                            <p>Persönliche Daten, die Sie auf dieser Website elektronisch übermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere persönlichen Angaben, werden von uns nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben. Der Provider erhebt und speichert automatisch Informationen am Webserver wie verwendeter Browser, Betriebssystem, Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw. Diese Daten können ohne Prüfung weiterer Datenquellen keinen bestimmten Personen zugeordnet werden und wir werten diese Daten auch nicht weiter aus solange keine rechtswidrige Nutzung unserer Webseite vorliegt.</p>
+                            <p><?= Settings::get(SettingsConfig::DATA_PROTECTION_CUSTOM_TEXT) ?></p>
                         </div>
                     </div>
                     <br>
                     <!-- Diese Row soll nur angezeigt werden wenn eine Nummer eingetragen ist, denn nur größere Firmen brauchen einen externen Datenschutzbeauftragten -->
-                    <div class="row">
-                        <div class="col">
-                            <h5>Datenschutzbeauftragter</h5>
-                            <p>Unseren Datenschutzsbeauftragten erreichen Sie unter: {Telefonnummer}</p>
+                    <?php if (Settings::get(SettingsConfig::DATA_PROTECTION_PHONE) != ""): ?>
+                        <div class="row">
+                            <div class="col">
+                                <h5>Datenschutzbeauftragter</h5>
+                                <p>Unseren Datenschutzsbeauftragten erreichen Sie unter: <?= Settings::get(SettingsConfig::DATA_PROTECTION_PHONE) ?></p>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif;?>
                     <br>
                     <div class="row">
                         <div class="col">
