@@ -1,4 +1,4 @@
-<li id="item-<?=$id?>" class="slider-list-item">
+<li id="slide-<?=$id?>" class="slider-list-item">
     <div class="accordion" id="slide-accordion-<?=$id?>">
         <div class="card">
             <div class="card-header" id="heading_1">
@@ -49,8 +49,8 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Slidertext</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="1"><?= $text ?></textarea>
+                                    <label for="exampleFormControlTextarea<?=$id?>">Slidertext</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea<?=$id?>" name="text" rows="1"><?= $text ?></textarea>
                                 </div>
                             </div>
                         </div>

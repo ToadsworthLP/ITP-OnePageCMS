@@ -23,7 +23,7 @@
                     </div>
                 </div>       
             </div>
-            <div id="collapse<?php echo $i; ?>" class="collapse show" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordionSection<?=$id?>">
+            <div id="collapse<?=$id?>" class="collapse show" aria-labelledby="heading<?=$id?>" data-parent="#accordionSection<?=$id?>">
                 <?php include "admin/template/SiteEditorSectionFormTemplate.php"?>
             </div>
         </div>

@@ -56,7 +56,7 @@ $site = 1;
                             <div class="col">
                                 <form method="post" action="admin.php?action=<?= AdminActions::ADD_SLIDE ?>">
                                     <input type="hidden" name="id" value="<?= $site ?>">
-                                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                                    <button type="submit" id="addSlider" class="btn btn-lg btn-block btn-secondary">+</button>
                                 </form>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ $site = 1;
                             <div class="col">
                                 <form method="post" action="admin.php?action=<?= AdminActions::ADD_BLOCK ?>">
                                     <input type="hidden" name="targetSite" value="<?= $site ?>">
-                                    <button type="submit" id="add" class="btn btn-lg btn-block btn-secondary">+</button>
+                                    <button type="submit" id="addSiteblock" class="btn btn-lg btn-block btn-secondary">+</button>
                                 </form>
                             </div>
                         </div>

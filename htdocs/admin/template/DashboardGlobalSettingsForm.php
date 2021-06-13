@@ -41,14 +41,14 @@
         </div>
         <div class="col-lg">
             <div class="form-group">
-                <label for="exampleInputEmail1">Sekundärfarbe <?php SettingsResetButton(SettingsConfig::SECONDARY_COLOR) ?></label>
+                <label for="exampleInputEmail2">Sekundärfarbe <?php SettingsResetButton(SettingsConfig::SECONDARY_COLOR) ?></label>
                 <input class="form-control" type="color" name="<?= SettingsConfig::SECONDARY_COLOR ?>"
                        value="<?= Settings::get(SettingsConfig::SECONDARY_COLOR) ?>">
             </div>
         </div>
         <div class="col-lg">
             <div class="form-group">
-                <label for="exampleInputEmail1">Heller Hintergrund <?php SettingsResetButton(SettingsConfig::LIGHT_BACKGROUND) ?></label>
+                <label for="exampleInputEmail3">Heller Hintergrund <?php SettingsResetButton(SettingsConfig::LIGHT_BACKGROUND) ?></label>
                 <input class="form-control" type="color" name="<?= SettingsConfig::LIGHT_BACKGROUND ?>"
                        value="<?= Settings::get(SettingsConfig::LIGHT_BACKGROUND) ?>">
             </div>

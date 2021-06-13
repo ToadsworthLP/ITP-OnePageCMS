@@ -45,8 +45,8 @@
         </div>
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Kurzbeschreibung <?php SettingsResetButton(SettingsConfig::FOOTER_DESCRIPTION) ?></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"
+                <label for="exampleFormControlTextarea2">Kurzbeschreibung <?php SettingsResetButton(SettingsConfig::FOOTER_DESCRIPTION) ?></label>
+                <textarea class="form-control" id="exampleFormControlTextarea2" rows="1"
                           name="<?= SettingsConfig::FOOTER_DESCRIPTION ?>"><?= Settings::get(SettingsConfig::FOOTER_DESCRIPTION) ?></textarea>
             </div>
         </div>
