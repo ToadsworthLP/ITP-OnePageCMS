@@ -56,7 +56,7 @@ Navbar();
                     <div class="card-body">
                         <!-- Social Media Icon Liste -->
                         <?php
-                            include 'admin/template/DashboardSocialMediaSettingsForm.php';
+                        include 'admin/template/DashboardSocialMediaSettingsForm.php';
                         ?>
                     </div>
                 </div>
