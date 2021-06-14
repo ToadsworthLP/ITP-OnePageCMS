@@ -24,6 +24,9 @@
                 <?php SocialMediaLinkBlock(SettingsConfig::FACEBOOK_LINK, "FacebookIcon.php"); ?>
                 <?php SocialMediaLinkBlock(SettingsConfig::INSTAGRAM_LINK, "InstagramIcon.php"); ?>
                 <?php SocialMediaLinkBlock(SettingsConfig::TWITTER_LINK, "TwitterIcon.php"); ?>
+                <?php SocialMediaLinkBlock(SettingsConfig::LINKEDIN_LINK, "LinkedInIcon.php"); ?>
+                <?php SocialMediaLinkBlock(SettingsConfig::YOUTUBE_LINK, "YouTubeIcon.php"); ?>
+                <?php SocialMediaLinkBlock(SettingsConfig::ANY_LINK, "AnyLinkIcon.php"); ?>
             </ul>
         </div>
     </div>
