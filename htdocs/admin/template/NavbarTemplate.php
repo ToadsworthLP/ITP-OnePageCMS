@@ -26,7 +26,7 @@
                     <a class="dropdown-item" href="<?=$dashboard?>">Dashboard</a>
                     <a class="dropdown-item" href="<?=$users?>">Benutzer</a>
                     <a class="dropdown-item" href="<?=$media?>">Medien</a>
-                    <a class="dropdown-item" href="<?=$settings?>">Einstellungen</a>
+                    <a class="dropdown-item" href="<?=$misc?>">Sonstiges</a>
                     <a class="dropdown-item" href="<?=$help?>">Hilfe</a>
                 </div>
             </li><!-- Smaller devices menu END -->

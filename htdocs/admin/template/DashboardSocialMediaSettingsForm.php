@@ -44,6 +44,51 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">LinkedIn <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="socialMediaInput4" hidden>Link</label>
+                <input type="text" class="form-control" id="socialMediaInput4" placeholder="Profil-Adresse"
+                       name="<?= SettingsConfig::LINKEDIN_LINK ?>"
+                       value="<?= Settings::get(SettingsConfig::LINKEDIN_LINK) ?>">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">YoutTube <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="socialMediaInput5" hidden>Link</label>
+                <input type="text" class="form-control" id="socialMediaInput5" placeholder="Profil-Adresse"
+                       name="<?= SettingsConfig::YOUTUBE_LINK ?>"
+                       value="<?= Settings::get(SettingsConfig::YOUTUBE_LINK) ?>">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Custom <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="socialMediaInput6" hidden>Link</label>
+                <input type="text" class="form-control" id="socialMediaInput6" placeholder="Profil-Adresse"
+                       name="<?= SettingsConfig::ANY_LINK ?>"
+                       value="<?= Settings::get(SettingsConfig::ANY_LINK) ?>">
+            </div>
+        </div>
+    </div>
     <hr>
     <div class="row">
         <div class="col">

@@ -24,6 +24,9 @@ abstract class SettingsConfig
     const FACEBOOK_LINK = "facebookLink";
     const INSTAGRAM_LINK = "instagramLink";
     const TWITTER_LINK = "twitterLink";
+    const LINKEDIN_LINK = "linkedinLink";
+    const YOUTUBE_LINK = "youtubeLink";
+    const ANY_LINK = "anyLink";
     const FOOTER_LIGHT_BACKGROUND = "footerLightBackground";
     const FOOTER_DARK_BACKGROUND = "footerDarkBackground";
     const FOOTER_FONT_COLOR = "footerFontColor";
@@ -64,6 +67,9 @@ abstract class SettingsConfig
         self::FACEBOOK_LINK => "",
         self::INSTAGRAM_LINK => "",
         self::TWITTER_LINK => "",
+        self::LINKEDIN_LINK => "",
+        self::YOUTUBE_LINK => "",
+        self::ANY_LINK => "",
         self::FOOTER_LIGHT_BACKGROUND => "#2d3331",
         self::FOOTER_DARK_BACKGROUND => "#202624",
         self::FOOTER_FONT_COLOR => "#707070",
