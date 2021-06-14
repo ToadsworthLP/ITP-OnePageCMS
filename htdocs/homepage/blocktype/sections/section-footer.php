@@ -1,5 +1,5 @@
-<div id="<?=$node->getID()?>" class="container-fluid footer" style="color: <?=Settings::get(SettingsConfig::FOOTER_FONT_COLOR)?> !important; background-color: <?=Settings::get(SettingsConfig::FOOTER_LIGHT_BACKGROUND)?>">
-    <div class="container">
+<div id="<?=$node->getID()?>" class="container-fluid footer" style="background-color: <?=Settings::get(SettingsConfig::FOOTER_LIGHT_BACKGROUND)?>">
+    <div class="<?=Settings::get(SettingsConfig::FULL_WIDTH) == true ? "container-fluid" : "container"?>">
         <!-- To change from 4 to 2 columns change to row-cols-2, this still keeps the 4 content columns -->
         <div class="row">
             <div class="col-sm footer-content">
@@ -24,7 +24,7 @@
     </div>  
 </div>
 <div class="container-fluid copyright" style="color: <?=Settings::get(SettingsConfig::FOOTER_FONT_COLOR)?>; background-color: <?=Settings::get(SettingsConfig::FOOTER_DARK_BACKGROUND)?>">
-    <div class="container">
+    <div class="<?=Settings::get(SettingsConfig::FULL_WIDTH) == true ? "container-fluid" : "container"?>">
         <div class="row">
             <div class="col-sm">
                 <p>&#169; Copyright 2021 - <?= Settings::get(SettingsConfig::COMPANY_NAME) ?></p>

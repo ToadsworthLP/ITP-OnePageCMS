@@ -1,7 +1,7 @@
 <!-- Remove sticky-top class if you dont want the menu to be fixed at the top -->
 <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
     <!-- To change the menu from full-width to in-grid simple change container-fluid to container -->
-    <div class="container">
+    <div class="<?=Settings::get(SettingsConfig::FULL_WIDTH) == true ? "container-fluid" : "container"?>">
         <a class="navbar-brand" href="#">
             <img src="<?= PathConfig::IMAGE_PATH_FULL.Settings::get(SettingsConfig::MENU_LOGO) ?>" width="30" height="30" class="d-inline-block align-top" alt="">
             <?=Settings::get(SettingsConfig::PAGE_TITLE)?>

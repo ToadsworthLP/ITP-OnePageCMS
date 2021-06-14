@@ -32,13 +32,7 @@ $actionSwitch->include(HomepageActions::NONE);
 
     include_once "homepage/block/NavbarBlock.php";
 
-    ?>
-    <div class="<?=Settings::get(SettingsConfig::FULL_WIDTH) == true ? "container-fluid" : "container"?>" style="background-color: <?=Settings::get(SettingsConfig::LIGHT_BACKGROUND)?>">
-        <?php
-            include_once "homepage/block/BodyBlock.php"
-        ?>
-    </div>
-    <?php
+    include_once "homepage/block/BodyBlock.php";
 
     include_once "homepage/block/FooterBlock.php";
 

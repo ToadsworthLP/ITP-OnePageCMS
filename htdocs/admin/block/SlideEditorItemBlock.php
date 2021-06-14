@@ -1,6 +1,7 @@
 <?php
 include_once "common/model/Slide.php";
 include_once "admin/utility/AttributeSet.php";
+include_once "common/utility/Settings.php";
 
 function SlideEditorItemBlock(Slide $slide) {
     $id = $slide->getID();

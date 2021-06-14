@@ -20,7 +20,16 @@
         include "homepage/blocktype/elements/slider.php";
     }
 
+    $counter = 0;
+    $globalBackgroundColor = "";
     foreach($siteTree->nodes as $id => $node) {
+        if($counter % 2 == 0) {
+            $globalBackgroundColor = Settings::get(SettingsConfig::LIGHT_BACKGROUND);
+        }
+        else {
+            $globalBackgroundColor = Settings::get(SettingsConfig::DARK_BACKGROUND);
+        }
+        $counter++;
         include "homepage/blocktype/sections/" . $node->getType();
     }
 

@@ -3,7 +3,7 @@
 <?php endif; ?>
 <div class="carousel-caption d-none d-md-block slider-heading">
     <h2 style="color: <?=$slide->buttonTextColor?>"><?=$slide->title?></h2>
-    <hr class="heading-hairline" style="background-color: <?=$slide->buttonHoverColor?>">
+    <hr class="heading-hairline" style="background-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>">
     <h4 style="color: <?=$slide->buttonTextColor?>"><?=$slide->text?></h4>
     <?php if($slide->buttonText !== ""): ?>
         <!-- color: Schriftfarbe, onMouseover: buttonhoverfarbe, onMouseOut: buttonhintergrundfarbe -->

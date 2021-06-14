@@ -2,6 +2,7 @@
 include_once "common/gateway/SlideGateway.php";
 include_once "admin/utility/RequirePermissions.php";
 include_once "admin/config/PermissionConfig.php";
+include_once "common/utility/Settings.php";
 
 RequirePermissions(PermissionConfig::STAFF);
 
@@ -20,8 +21,8 @@ if(isset($_POST["id"])) {
     $newSlide->text = "";
     $newSlide->buttonText = "";
     $newSlide->buttonLink = "";
-    $newSlide->buttonColor = "#ffffff";
-    $newSlide->buttonHoverColor = "#dddddd";
+    $newSlide->buttonColor = Settings::get(SettingsConfig::PRIMARY_COLOR);
+    $newSlide->buttonHoverColor = Settings::get(SettingsConfig::SECONDARY_COLOR);
     $newSlide->buttonTextColor = "#000000";
     $newSlide->setImage(null);
     $newSlide->create();

@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="background-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>; border-color: <?=Settings::get(SettingsConfig::SECONDARY_COLOR)?>" onMouseOver="this.style.backgroundColor='<?=Settings::get(SettingsConfig::SECONDARY_COLOR)?>'" onMouseOut="this.style.backgroundColor='<?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>'">Submit</button>
                 </div>
             </div>
         </form>
