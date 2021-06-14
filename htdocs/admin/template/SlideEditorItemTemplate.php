@@ -32,7 +32,7 @@
                                 <br>
                                 <div class="custom-file mb-3">
                                     <input id="<?=$id?>-slide-image" type="hidden" name="image" value="<?=$image != null ? $image->getID() : ""?>">
-                                    <button id="<?=$id?>-slide-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
+                                    <button title="Wählen Sie ein Bild für Ihren Slider Achten Sie darauf dass die Auflösung nicht zu hoch ist." id="<?=$id?>-slide-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
                                             data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-slide-image')">
                                         <?=$image != null ? $image->filename." ausgewählt" : "Sliderbild wählen"?>
                                     </button>
@@ -43,13 +43,13 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="form-group">
-                                    <label for="">Sliderüberschrift</label>
+                                    <label title="Die Überschrift wird in der Mitte des Sliders dargestellt." for="">Sliderüberschrift</label>
                                     <input type="text" class="form-control" name="title" value="<?= $title ?>" id="">
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea<?=$id?>">Slidertext</label>
+                                    <label title="Der Text wird unter der Überschrift dargestellt." for="exampleFormControlTextarea<?=$id?>">Slidertext</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea<?=$id?>" name="text" rows="1"><?= $text ?></textarea>
                                 </div>
                             </div>
@@ -58,13 +58,13 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="">Buttontext</label>
+                                    <label title="Dieser Text steht in dem Button des Sliders." for="">Buttontext</label>
                                     <input type="text" class="form-control" name="buttonText" value="<?= $buttonText ?>">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="">Buttonlink</label>
+                                    <label title="Geben Sie hier den Link an zu dem dieser Button den Nutzer weiterleiten soll." for="">Buttonlink</label>
                                     <input type="text" class="form-control" name="buttonLink" value="<?= $buttonLink ?>">
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label for="<?=$id?>-button-color">Button-Farbe</label>
+                                    <label title="Hier können Sie die Hauptfarbe des Buttons überschreiben falls diese mit dem Slider Bild zu einem Konflikt führt." for="<?=$id?>-button-color">Button-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-color"
                                            name="buttonColor"
                                            value="<?= $buttonColor ?>">
@@ -80,7 +80,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label for="<?=$id?>-button-hover-color">Button-Hover-Farbe</label>
+                                    <label title="Hier können Sie die Sekundärfarbe überschreiben für ein farbliches Feedback." for="<?=$id?>-button-hover-color">Button-Hover-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-hover-color"
                                            name="buttonHoverColor"
                                            value="<?= $buttonHoverColor ?>">
@@ -88,7 +88,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label for="<?=$id?>-button-text-color">Button-Text-Farbe</label>
+                                    <label title="Hier können Sie die Buttontext-Farbe anpassen." for="<?=$id?>-button-text-color">Button-Text-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-text-color"
                                            name="buttonTextColor"
                                            value="<?= $buttonTextColor ?>">

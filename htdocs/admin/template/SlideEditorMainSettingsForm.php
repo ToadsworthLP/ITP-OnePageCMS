@@ -7,7 +7,7 @@
                     <input class="form-check-input" type="checkbox" value="<?= true ?>" id="enableSlider"
                            name="<?= SettingsConfig::SHOW_SLIDER ?>"
                         <?= Settings::getBoolean(SettingsConfig::SHOW_SLIDER) ? "checked" : "" ?>>
-                    <label class="form-check-label" for="enableSlider">
+                    <label id="input_3_1" class="form-check-label" for="enableSlider">
                         Slider aktivieren
                     </label>
                 </div>
@@ -18,7 +18,7 @@
                     <input class="form-check-input" type="checkbox" value="<?= true ?>" id="sliderShowIndicators"
                            name="<?= SettingsConfig::SLIDER_SHOW_INDICATORS ?>"
                         <?= Settings::getBoolean(SettingsConfig::SLIDER_SHOW_INDICATORS) ? "checked" : "" ?>>
-                    <label class="form-check-label" for="sliderShowIndicators">
+                    <label id="input_3_2" class="form-check-label" for="sliderShowIndicators">
                         Indikatoren einblenden
                     </label>
                 </div>
@@ -30,7 +30,7 @@
                     <input class="form-check-input" type="checkbox" value="<?= true ?>" id="sliderShowNavigation"
                            name="<?= SettingsConfig::SLIDER_SHOW_NAVIGATION ?>"
                         <?= Settings::getBoolean(SettingsConfig::SLIDER_SHOW_NAVIGATION) ? "checked" : "" ?>>
-                    <label class="form-check-label" for="sliderShowNavigation">
+                    <label id="input_3_3" class="form-check-label" for="sliderShowNavigation">
                         Navigationspfeile einblenden
                     </label>
                 </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="sliderDelay">Sliderzeit <?php SettingsResetButton(SettingsConfig::SLIDER_DELAY) ?></label>
+                    <label id="input_3_4" for="sliderDelay">Sliderzeit <?php SettingsResetButton(SettingsConfig::SLIDER_DELAY) ?></label>
                     <input type="number" class="form-control" id="sliderDelay"
                            name="<?= SettingsConfig::SLIDER_DELAY ?>"
                            value="<?= Settings::get(SettingsConfig::SLIDER_DELAY) ?>">

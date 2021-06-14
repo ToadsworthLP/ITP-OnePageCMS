@@ -1,0 +1,106 @@
+"use strict"
+
+let dashboard_map = new Map();
+let menu_map = new Map();
+let footer_map = new Map();
+let slider_map = new Map();
+let user_map = new Map();
+let media_map = new Map();
+let contact_map = new Map();
+let misc_map = new Map();
+
+
+// Global Settings
+dashboard_map.set("input_0_1", "Text: input_0_1");
+dashboard_map.set("input_0_2", "Text: input_0_2");
+dashboard_map.set("input_0_3", "Text: input_0_3");
+dashboard_map.set("input_0_4", "Text: input_0_4");
+dashboard_map.set("input_0_5", "Text: input_0_5");
+dashboard_map.set("input_0_6", "Text: input_0_6");
+dashboard_map.set("input_0_7", "Text: input_0_7");
+dashboard_map.set("input_0_8", "Text: input_0_8");
+dashboard_map.set("input_0_9", "Text: input_0_9");
+dashboard_map.set("input_0_10", "Text: input_0_10");
+
+// Menu
+menu_map.set("input_1_1", "Text: input_1_1");
+menu_map.set("input_1_2", "Text: input_1_2");
+menu_map.set("input_1_3", "Text: input_1_3");
+menu_map.set("input_1_4", "Text: input_1_4");
+menu_map.set("input_1_5", "Text: input_1_5");
+menu_map.set("input_1_6", "Text: input_1_6");
+
+// Footer
+footer_map.set("input_2_1", "Text: input_2_1");
+footer_map.set("input_2_2", "Text: input_2_2");
+footer_map.set("input_2_3", "Text: input_2_3");
+footer_map.set("input_2_4", "Text: input_2_4");
+footer_map.set("input_2_5", "Text: input_2_5");
+footer_map.set("input_2_6", "Text: input_2_6");
+footer_map.set("input_2_7", "Text: input_2_7");
+footer_map.set("input_2_8", "Text: input_2_8");
+footer_map.set("input_2_9", "Text: input_2_9");
+
+// Slider
+slider_map.set("input_3_1", "Text: input_3_1");
+slider_map.set("input_3_2", "Text: input_3_2");
+slider_map.set("input_3_3", "Text: input_3_3");
+slider_map.set("input_3_4", "Text: input_3_4");
+
+// User
+user_map.set("input_4_1", "Text: input_4_1");
+user_map.set("input_4_2", "Text: input_4_2");
+user_map.set("input_4_3", "Text: input_4_3");
+user_map.set("input_4_4", "Text: input_4_4");
+user_map.set("input_4_5", "Text: input_4_5");
+user_map.set("input_4_6", "Text: input_4_6");
+user_map.set("input_4_7", "Text: input_4_7");
+user_map.set("input_4_8", "Text: input_4_8");
+user_map.set("input_4_9", "Text: input_4_9");
+
+// Media
+media_map.set("input_5_1", "Text: input_5_1");
+
+// Contactform
+contact_map.set("input_6_1", "Text: input_6_1");
+contact_map.set("input_6_2", "Text: input_6_2");
+contact_map.set("input_6_3", "Text: input_6_3");
+contact_map.set("input_6_4", "Text: input_6_4");
+contact_map.set("input_6_5", "Text: input_6_5");
+
+// Misc
+misc_map.set("input_7_1", "Text: input_7_1");
+misc_map.set("input_7_2", "Text: input_7_2");
+misc_map.set("input_7_3", "Text: input_7_3");
+misc_map.set("input_7_4", "Text: input_7_4");
+misc_map.set("input_7_5", "Text: input_7_5");
+misc_map.set("input_7_6", "Text: input_7_6");
+misc_map.set("input_7_7", "Text: input_7_7");
+misc_map.set("input_7_8", "Text: input_7_8");
+misc_map.set("input_7_9", "Text: input_7_9");
+misc_map.set("input_7_10", "Text: input_7_10");
+misc_map.set("input_7_11", "Text: input_7_11");
+
+// Array of Sitemaps
+let site_array = [
+    dashboard_map,
+    menu_map,
+    footer_map,
+    slider_map,
+    user_map,
+    media_map,
+    contact_map,
+    misc_map
+];
+
+// Inserts Text to the Labels if it exists
+for(let i = 0; i < site_array.length; i++){
+    for(let j = 1; j <= site_array[i].size; j++){
+        let tempElement = document.getElementById(`input_${i}_${j}`);
+        if(tempElement != null){
+            let text = site_array[i].get(`input_${i}_${j}`);
+            document.getElementById(`input_${i}_${j}`).setAttribute("title", text);
+        }
+    }
+}
+

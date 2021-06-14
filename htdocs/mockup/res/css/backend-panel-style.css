@@ -8,6 +8,11 @@
 
 label{
     width: 100%;
+    cursor: help;
+}
+
+label:hover{
+    text-decoration: underline;
 }
 
 .reset-button{
@@ -189,4 +194,8 @@ td{
 
 .question-icon{
     margin-left: 1.4rem !important;
+}
+
+.help-icon svg > path{
+    fill: #fff; 
 }

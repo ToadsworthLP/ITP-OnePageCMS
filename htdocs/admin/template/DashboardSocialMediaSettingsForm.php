@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Facebook <?php SettingsResetButton(SettingsConfig::FACEBOOK_LINK) ?></label>
+                <label id="input_1_1" for="exampleFormControlSelect1">Facebook <?php SettingsResetButton(SettingsConfig::FACEBOOK_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Instagram <?php SettingsResetButton(SettingsConfig::INSTAGRAM_LINK) ?></label>
+                <label id="input_1_2" for="exampleFormControlSelect1">Instagram <?php SettingsResetButton(SettingsConfig::INSTAGRAM_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Twitter <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_3" for="exampleFormControlSelect1">Twitter <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">LinkedIn <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_4" for="exampleFormControlSelect1">LinkedIn <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -62,7 +62,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">YoutTube <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_5" for="exampleFormControlSelect1">YoutTube <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -77,7 +77,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Custom <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_6" for="exampleFormControlSelect1">Custom <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">

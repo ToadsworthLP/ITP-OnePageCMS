@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="selectorInput<?=$id?>" hidden>#ID-Selektor</label>
+                                    <label title="Geben Sie einen gewünschten Selektor an. Dieser wird zum verlinken verwendet. Achten Sie darauf dass dieser einzigartig ist und keine Sonderzeichen enthält. Geben Sie keinen an so wird automatisch einer erstellt." for="selectorInput<?=$id?>" hidden>#ID-Selektor</label>
                                     <input type="text" class="form-control" id="selectorInput<?=$id?>"
                                            name="selector"
                                            placeholder="#ID-Selektor" value="<?=$attributes->get("selector")?>">
@@ -20,8 +20,7 @@
                                     <input type="hidden" name="fullwidth" value="">
                                     <input type="checkbox" class="custom-control-input" id="fullwidthchecker<?=$id?>" name="fullwidth" value="1"
                                         <?=$attributes->get("fullwidth") == "" ? "" : "checked"?>>
-                                    <label class="custom-control-label" for="fullwidthchecker<?=$id?>">Volle Breite / Im
-                                        Raster</label>
+                                    <label title="Geben Sie an ob sich diese Sektion über die volle Breite Ihres Bildschirmes erstrecken soll. Dies hat keinen Einfluss auf den Inhalt der Sektion." class="custom-control-label" for="fullwidthchecker<?=$id?>">Volle Breite</label>
                                 </div>
                             </div>
                             <div class="col-sm">
@@ -29,7 +28,7 @@
                                     <input type="hidden" name="menu-option" value="">
                                     <input type="checkbox" class="custom-control-input" id="showInMenu<?=$id?>" name="menu-option" value="1"
                                         <?=$attributes->get("menu-option") == "" ? "" : "checked"?>>
-                                    <label class="custom-control-label" for="showInMenu<?=$id?>">Im Menü anzeigen</label>
+                                    <label title="Geben Sie hier an ob zu dieser Sektion ein Menüpunkt in der Navigationsleiste hinzugefügt werden soll." class="custom-control-label" for="showInMenu<?=$id?>">Im Menü anzeigen</label>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +36,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label for="backGroundColors<?=$id?>">Hintergrundfarbe</label>
+                                    <label title="Wählen Sie eine Hintergrund farbe für diese Sektion. Lassen Sie das Feld leer so wird die Farbe automatisch von den globalen Einstellungen übernommen." for="backGroundColors<?=$id?>">Hintergrundfarbe</label>
                                     <input type="color" class="form-control" id="backGroundColors<?=$id?>"
                                            name="background-color"
                                            value="<?=$attributes->get("background-color", "#ffffff")?>">
@@ -46,7 +45,7 @@
                             <div class="col-lg-8">
                                 <div class="custom-file mb-3">
                                     <input id="<?=$id?>-background-image" type="hidden" name="@background-image" value="<?=$attributes->get("background-image")?>">
-                                    <button id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
+                                    <button title="Hier können Sie ein Hintergrundbild für die Sektion wählen. Dieses füllt die gesamte Breite der Sektion aus." id="<?=$id?>-background-image-button" type="button" class="btn btn-block btn-secondary" data-toggle="modal"
                                             data-target="#media-selection-modal" onclick="setCurrentInputID('<?=$id?>-background-image')">
                                         <?=isset($images["background-image"]) != null ? $images["background-image"]->filename." ausgewählt" : "Hintergrundbild wählen"?>
                                     </button>
@@ -76,7 +75,7 @@
                                                 <div class="row">
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
-                                                            <label for="sectionHeading<?=$id?>">Überschrift</label>
+                                                            <label title="Hier können Sie eine Überschrift für die Sektion eintragen." for="sectionHeading<?=$id?>">Überschrift</label>
                                                             <input type="text" class="form-control"
                                                                    id="sectionHeading<?=$id?>" placeholder=""
                                                                    name="title"
@@ -85,7 +84,7 @@
                                                     </div>
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
-                                                            <label for="sectionSubheading<?=$id?>">Unterüberschrift</label>
+                                                            <label title="Hier können Sie eine Unterüberschrift für diese Sektion eintragen." for="sectionSubheading<?=$id?>">Unterüberschrift</label>
                                                             <input type="text" class="form-control"
                                                                    id="sectionSubheading<?=$id?>" placeholder=""
                                                                    name="subtitle"
@@ -98,14 +97,14 @@
                                                             <input type="checkbox" class="form-check-input"
                                                                    id="hairline<?=$id?>" name="separator" value="1"
                                                                 <?=$attributes->get("separator") == "" ? "" : "checked"?>>
-                                                            <label class="form-check-label" for="hairline<?=$id?>">Trennlinie</label>
+                                                            <label title="Hier können Sie eine dekorative Trennlinie anzeigen lassen." class="form-check-label" for="hairline<?=$id?>">Trennlinie</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="headingParagraph<?=$id?>">Text unter
+                                                            <label title="Geben Sie hier einen Text für diese Sektion an." for="headingParagraph<?=$id?>">Text unter
                                                                 Überschrift</label>
                                                             <textarea class="form-control"
                                                                       id="headingParagraph<?=$id?>"
@@ -126,7 +125,6 @@
                             <div class="col">
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <!-- TODO Symbole statt Zahlen -->
                                         <a class="nav-link <?= $type === 1 ? "active" : "" ?>" id="nav-column-1-<?=$id?>" data-toggle="tab" href="#column-1-<?=$id?>"
                                            role="tab" aria-controls="nav-home" aria-selected="true" onclick="setTemplate(<?=$id?>, 1)"><img class="column-layout-icon" src="mockup/media/Column-Icons-01.svg"></a>
                                         <a class="nav-link <?= $type === 2 ? "active" : "" ?>" id="nav-column-2-<?=$id?>" data-toggle="tab" href="#column-2-<?=$id?>"

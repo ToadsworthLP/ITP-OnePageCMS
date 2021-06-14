@@ -24,7 +24,7 @@ Navbar();
                     <hr class="my-4">
                     <p>Brauchen Sie Hilfe? Eine genauere Beschreibung finden Sie unter folgendem Link.</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="admin.php?page=7" role="button" target="_blank">Hilfe<?php include 'admin/icon/HelpIcon.php'; ?></a>
+                        <a class="btn btn-primary btn-lg" href="admin.php?page=7#v-pills-user" role="button" target="_blank">Hilfe<?php include 'admin/icon/HelpIcon.php'; ?></a>
                     </p>
                 </div>
             </div>
@@ -42,7 +42,7 @@ Navbar();
                     <div class="card">
                         <div class="card-header">
                             <span class="h5">Neuen Benutzer anlegen</span>
-                            <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
+                            <a class="btn btn-secondary reset-button" href="admin.php?page=7#v-pills-user" target="_blank" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Brauchen Sie Hilfe?"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></a>
                         </div>
                         <div class="card-body">
                             <?= AddUserBlock(); ?>
@@ -59,7 +59,7 @@ Navbar();
                     <div class="card">
                         <div class="card-header">
                             <span class="h5">Eigenes Profil bearbeiten</span>
-                            <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
+                            <a class="btn btn-secondary reset-button help-button" href="admin.php?page=7#v-pills-user" target="_blank" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Brauchen Sie Hilfe?"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></a>
                         </div>
                         <div class="card-body">
                             <?= EditUserBlock(AccountUtility::getCurrentUser()); ?>
@@ -77,7 +77,7 @@ Navbar();
                     <div class="card">
                         <div class="card-header">
                             <span class="h5">Benutzer bearbeiten</span>
-                            <button class="btn btn-secondary reset-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></button>
+                            <a class="btn btn-secondary reset-button help-button" type="submit" name="<?= $key ?>" value="" data-toggle="tooltip" data-placement="left" data-html="true" title="Hilfe"><?php include 'mockup/inc/backend-panel/icons/help-icon.php'; ?></a>
                         </div>
                         <div class="card-body">
                             <?= EditUserBlock(UserGateway::fetch(["id" => $_POST["targetUser"]])); ?>
