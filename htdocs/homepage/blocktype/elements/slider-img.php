@@ -7,6 +7,6 @@
     <h4 style="color: <?=$slide->buttonTextColor?>"><?=$slide->text?></h4>
     <?php if($slide->buttonText !== ""): ?>
         <!-- color: Schriftfarbe, onMouseover: buttonhoverfarbe, onMouseOut: buttonhintergrundfarbe -->
-        <a class="btn btn-primary" href="<?=$slide->buttonLink?>" role="button" style="color: <?=$slide->buttonTextColor?>; background-color: <?=$slide->buttonColor?>; border-color: <?=$slide->buttonHoverColor?>" onMouseOver="this.style.backgroundColor='<?=$slide->buttonHoverColor?>'" onMouseOut="this.style.backgroundColor='<?=$slide->buttonColor?>'"><?=$slide->buttonText?></a>
+        <a class="btn btn-primary" href="<?=$slide->buttonLink?>" role="button" style="color: <?=$slide->buttonTextColor?>; background-color: <?=$slide->buttonColor?>;"><?=$slide->buttonText?></a>
     <?php endif; ?>
 </div>
