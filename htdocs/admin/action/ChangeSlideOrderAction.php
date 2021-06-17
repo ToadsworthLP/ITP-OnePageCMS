@@ -11,7 +11,7 @@ if ($list != null) {
     $output = [];
     parse_str($list, $output);
 
-    foreach ($output["item"] as $pos => $id) {
+    foreach ($output["slide"] as $pos => $id) {
         $slide = SlideGateway::fetch(["id" => $id]);
         $slide->slideOrder = $pos;
         $slide->update();
