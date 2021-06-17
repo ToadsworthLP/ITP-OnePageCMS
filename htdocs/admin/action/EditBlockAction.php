@@ -25,8 +25,6 @@ if(isset($_POST["_targetBlock"])) {
     $current = new AttributeSet($block);
 
     foreach ($_POST as $key => $value) {
-        echo $key." ".$value."<br>";
-
         if($key[0] == "@") {
             $currentValue = $current->get(substr($key, 1)); // The @ isn't part of the attribute name
         } else {

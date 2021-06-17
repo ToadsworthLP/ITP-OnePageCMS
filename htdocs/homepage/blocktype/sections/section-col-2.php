@@ -1,4 +1,8 @@
-<section id="<?=$node->getID()?>" class="my-section" style="background: url('<?=$node->getAttributeFilePath("background-image", "")?>') <?=$node->getAttribute("background-color", "#ffffff") == "#ffffff" ? $globalBackgroundColor : $node->getAttribute("background-color", "")?>; background-repeat: no-repeat; background-size: cover">
+<?php
+$selector = $node->getAttribute("selector", "");
+$selector == "" ? $node->getID() : $selector;
+?>
+<section id="<?=$selector?>" class="my-section" style="background: url('<?=$node->getAttributeFilePath("background-image", "")?>') <?=$node->getAttribute("background-color", "#ffffff") == "#ffffff" ? $globalBackgroundColor : $node->getAttribute("background-color", "")?>; background-repeat: no-repeat; background-size: cover">
     <div class="<?=$node->getAttribute("fullwidth", "") == true ? "container-fluid" : "container"?>">
         <div class="<?=Settings::get(SettingsConfig::FULL_WIDTH) == true ? "container-fluid" : "container"?>">
             <div class="row">

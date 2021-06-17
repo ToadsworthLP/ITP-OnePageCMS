@@ -8,7 +8,7 @@ RequirePermissions(PermissionConfig::STAFF);
 $list = isset($_POST["list"]) ? $_POST["list"] : null;
 
 if ($list != null) {
-    $output = "";
+    $output = [];
     parse_str($list, $output);
 
     foreach ($output["item"] as $pos => $id) {
