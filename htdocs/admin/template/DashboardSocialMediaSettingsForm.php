@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label id="input_1_4" for="exampleFormControlSelect1">LinkedIn <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_4" for="exampleFormControlSelect1">LinkedIn <?php SettingsResetButton(SettingsConfig::LINKEDIN_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -62,7 +62,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label id="input_1_5" for="exampleFormControlSelect1">YoutTube <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_5" for="exampleFormControlSelect1">YouTube <?php SettingsResetButton(SettingsConfig::YOUTUBE_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
@@ -77,7 +77,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="form-group">
-                <label id="input_1_6" for="exampleFormControlSelect1">Custom <?php SettingsResetButton(SettingsConfig::TWITTER_LINK) ?></label>
+                <label id="input_1_6" for="exampleFormControlSelect1">Custom <?php SettingsResetButton(SettingsConfig::ANY_LINK) ?></label>
             </div>
         </div>
         <div class="col-sm-9">
