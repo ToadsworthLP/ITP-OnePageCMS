@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2021 at 03:34 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Generation Time: Jun 18, 2021 at 05:55 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -62,8 +62,8 @@ INSERT INTO `attribute` (`id`, `block`, `name`) VALUES
 (151, 34, '2-2-background-image'),
 (145, 34, 'background-color'),
 (159, 34, 'menu-option'),
+(165, 34, 'menu-text'),
 (144, 34, 'selector'),
-(146, 34, 'title'),
 (155, 35, '2-1-background-image'),
 (163, 35, '2-2-separator'),
 (157, 35, '2-2-subtitle'),
@@ -71,8 +71,8 @@ INSERT INTO `attribute` (`id`, `block`, `name`) VALUES
 (156, 35, '2-2-title'),
 (153, 35, 'background-color'),
 (160, 35, 'menu-option'),
-(152, 35, 'selector'),
-(154, 35, 'title');
+(166, 35, 'menu-text'),
+(152, 35, 'selector');
 
 -- --------------------------------------------------------
 
@@ -319,23 +319,23 @@ INSERT INTO `text_attribute` (`parent`, `text`) VALUES
 (140, 'FRÜHER AN SPÄTER DENKEN'),
 (141, '1'),
 (142, 'Der innere Schweinehund hat bei meinen Workouts keine Chance. Wer einmal bei XHIT (Xtreme-High-Intensity-Training) mitgemacht hat weiß, dass an seine Grenzen gehen richtig Spaß machen kann.\r\n\r\nDie beste Altersvorsorge ist ein gesunder Körper. Mit meinem ganzheitlichen Ansatz möchte ich dich unterstützen deine Ziele zu erreichen. Die persönliche und individuelle Betreuung ist dabei für mich von höchster Bedeutung, weshalb das Training auf dein jeweiliges Leistungsniveau bzw. deine Ziele angepasst und ständig optimiert werden.'),
-(144, '34'),
+(144, 'Rehab'),
 (145, '#ffffff'),
-(146, 'REHAB'),
 (147, 'REHAB'),
 (148, 'COME BACK STRONGER'),
 (149, '1'),
 (150, 'Ganz egal ob du ein Freizeit- oder Leistungssportler bist, ich mache dich wieder fit für deinen Alltag und Sport. Ein systematischer Rehabilitationsaufbau nach einer Verletzung und ein Netzwerk aus Ärzten und Physiotherapeuten steht dir zu Seite.'),
-(152, '35'),
+(152, 'Athletic'),
 (153, '#ffffff'),
-(154, 'ATHLETIC'),
 (156, 'ATHLETIC'),
 (157, 'JEDER TAG ZÄHLT'),
 (158, 'Egal aus welcher Sportart du kommst, bei allen körperlichen Aktivitäten kommt es auf schnelle, gut koordinierte und kraftvolle Bewegungen an. Effiziente Bewegungsmuster verbessern die Performance und verringern das Verletzungsrisiko. Ich sehe den Körper als eine Einheit. Im Athletiktraining unterscheide ich nicht zwischen verschiedenen Muskelgruppen, Organsystemen oder Körperteilen; sie alle sind ein großes Ganzes und so gehören sie auch trainiert.'),
 (159, '1'),
 (160, '1'),
 (163, '1'),
-(164, 'PREHAB');
+(164, 'PREHAB'),
+(165, 'REHAB'),
+(166, 'ATHLETIC');
 
 -- --------------------------------------------------------
 
@@ -375,11 +375,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `role`) VALUES
-(0, 'root', '$2y$10$2tEBCFakAlu0/rDQmNZFue/WkvdywFU1PXvZiE0yneWOG3o6LCAf.', 'test@test.com', 0),
-(1, 'Testuser', '$2y$10$ZPv862JyLd4fUgm368KTA.LWZxqabfjRIgD.X68PDCXp2I/m2YJtS', 'if20b105@technikum-wien.at', 0),
-(6, 'Test User', '$2y$10$pV58j7KLclz6no29NOJC1uf433h0HxCvkAAg04iQpHaV90cUQ2cVa', 'testmail@test.com', 0),
-(15, 'testuser2', '$2y$10$N1GR/vLVZOA1yRowafyd3eSA.pC6aQzoJ/WzSo18UmZ/b2KxOBi/q', 'test@mail.com', 0),
-(21, 'Testuser3', '$2y$10$ynpDQ1I/D2ESdspnbbLIMujluVg0CiD441wxBxkJAIluqfuLKVXkS', 'test@gmail.com', 1);
+(0, 'admin', '$2y$10$jKhIMJZq1VsxjG9..TPRxuFhP1CTICIxEdZcEedDLA5.Sn2EmDd7q', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -483,7 +479,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `attribute`
 --
 ALTER TABLE `attribute`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT for table `block`
@@ -531,7 +527,7 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT for table `text_attribute`
 --
 ALTER TABLE `text_attribute`
-  MODIFY `parent` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `parent` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT for table `theme`
@@ -543,7 +539,7 @@ ALTER TABLE `theme`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
