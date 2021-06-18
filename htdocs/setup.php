@@ -5,6 +5,8 @@ function runSetup() {
     $dsn = "mysql:host=" . DBConfig::HOST . ";port=" . DBConfig::PORT . ";dbname=" . "test" . ";charset=" . DBConfig::CHARSET;
     $pdo = new PDO($dsn, "root", "", DBConfig::PDO_OPTIONS);
 
+    // User account and database setup
+
     $userSQL = "CREATE USER '". DBConfig::USER ."'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('". DBConfig::PASSWORD ."')";
     $globalPermsSQL = "GRANT USAGE ON *.* TO '". DBConfig::USER ."'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0";
     $dbSQL = "CREATE DATABASE IF NOT EXISTS `". DBConfig::DATABASE ."`";
@@ -14,6 +16,11 @@ function runSetup() {
     $pdo->exec($globalPermsSQL);
     $pdo->exec($dbSQL);
     $pdo->exec($dbPermsSQL);
+
+    // Import DB dump
+
+    $dumpedSQL = file_get_contents("default.sql");
+    $pdo->exec($dumpedSQL);
 }
 
 $alreadySetup = true;
