@@ -111,11 +111,15 @@ a:hover{
 
 /* === SLIDER === */
 .slider-heading{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .carousel-inner{
     max-height: calc(100vh - 96px) !important;
+}
+
+.carousel-caption{
+    top: 43% !important;
 }
 
 /* === SECTION === */

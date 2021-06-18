@@ -1,5 +1,5 @@
 <?php if($slide->imagePath !== null): ?>
-    <img src="<?=$slide->imagePath?>" class="d-block w-100" alt="...">
+    <img src="<?=$slide->imagePath?>" class="d-block w-100 slider-" alt="...">
 <?php endif; ?>
 <div class="carousel-caption d-none d-md-block slider-heading">
     <h2 style="color: <?=$slide->buttonTextColor?>"><?=$slide->title?></h2>
