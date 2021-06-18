@@ -4,7 +4,7 @@
         foreach($siteTree->nodes as $id => $node) {
             if($node->getAttribute("menu-option", "") !== ""): ?>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: <?=Settings::get(SettingsConfig::FOOTER_FONT_COLOR)?>" href="#<?=$node->getID()?>"><?=$node->getAttribute("title", "Unbenannt")?></a>
+                    <a class="nav-link" style="color: <?=Settings::get(SettingsConfig::FOOTER_FONT_COLOR)?>" href="#<?=$node->getAttribute("selector", "")?>"><?=$node->getAttribute("menu-text", "Unbenannt")?></a>
                 </li>
             <?php endif;
         }
