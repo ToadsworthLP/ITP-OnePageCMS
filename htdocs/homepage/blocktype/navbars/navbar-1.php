@@ -17,7 +17,7 @@
                         if($node->getAttribute("menu-option", "") !== ""): ?>
                         <?php $selector = $node->getAttribute("selector", "") ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="#<?= $selector == "" ? $node->getID() : $selector?>"><?=$node->getAttribute("title", "Unbenannt")?></a>
+                                <a class="nav-link" href="#<?= $selector == "" ? $node->getID() : $selector?>"><?=$node->getAttribute("menu-text", "Unbenannt")?></a>
                             </li>
                         <?php endif;
                     }

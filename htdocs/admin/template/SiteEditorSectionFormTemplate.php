@@ -7,12 +7,20 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-3">
                                 <div class="form-group">
                                     <label title="Geben Sie einen gewünschten Selektor an. Dieser wird zum verlinken verwendet. Achten Sie darauf dass dieser einzigartig ist und keine Sonderzeichen enthält. Geben Sie keinen an so wird automatisch einer erstellt." for="selectorInput<?=$id?>" hidden>#ID-Selektor</label>
                                     <input type="text" class="form-control" id="selectorInput<?=$id?>"
                                            name="selector"
                                            placeholder="#ID-Selektor" value="<?=$attributes->get("selector")?>">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label title="Geben Sie den gewünschten Menütext ein, der in der Navigationsleiste als Text verwendet wird." for="menuTextInput<?=$id?>" hidden>Menütext</label>
+                                    <input type="text" class="form-control" id="menuTextInput<?=$id?>"
+                                           name="menu-text"
+                                           placeholder="Menütext" value="<?=$attributes->get("menu-text")?>">
                                 </div>
                             </div>
                             <div class="col-sm">
