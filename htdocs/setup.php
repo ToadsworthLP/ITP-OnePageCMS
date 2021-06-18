@@ -31,9 +31,12 @@
 <?php
 include "common/utility/DB.php";
 
+const SETUP_USERNAME = "root";
+const SETUP_PASSWORD = "";
+
 function runSetup() {
     $dsn = "mysql:host=" . DBConfig::HOST . ";port=" . DBConfig::PORT . ";dbname=" . "test" . ";charset=" . DBConfig::CHARSET;
-    $pdo = new PDO($dsn, "root", "", DBConfig::PDO_OPTIONS);
+    $pdo = new PDO($dsn, SETUP_USERNAME, SETUP_PASSWORD, DBConfig::PDO_OPTIONS);
 
     // User account and database setup
 
