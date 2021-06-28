@@ -26,6 +26,38 @@ $actionSwitch->include(HomepageActions::NONE);
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <title><?=Settings::get(SettingsConfig::PAGE_TITLE)?></title>
+        <style>
+            a{
+                color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>;
+            }
+
+            a:hover{
+                color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>;
+            }
+
+            .btn-primary {
+                background-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?> !important;
+                border-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?> !important;
+            }
+
+            .btn-primary:focus {
+                background-color: <?=Settings::get(SettingsConfig::SECONDARY_COLOR)?> !important;
+                border-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?> !important;
+            }
+
+            .navbar .nav-link:focus {
+                color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?> !important;
+                border-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?> !important;
+            }
+
+            .footer .nav-link:hover{
+                color: <?=Settings::get(SettingsConfig::LIGHT_BACKGROUND)?> !important;
+            }
+
+            .footer-bottom-link a:hover{
+                color: <?=Settings::get(SettingsConfig::LIGHT_BACKGROUND)?> !important;
+            }
+        </style>
     </head>
     <body>
     <?php

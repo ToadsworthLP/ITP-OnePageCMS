@@ -9,6 +9,6 @@
     <?php endif; ?>
     <p><?=$textarea?></p>
     <?php if($buttontext !== ""): ?>
-        <a class="btn btn-primary" href="<?=$buttonlink?>" role="button" style="background-color: <?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>;" onMouseOver="this.style.backgroundColor='<?=Settings::get(SettingsConfig::SECONDARY_COLOR)?>'" onMouseOut="this.style.backgroundColor='<?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>'"><?=$buttontext?></a>
+        <a class="btn btn-primary" href="<?=$buttonlink?>" role="button" onMouseOver="this.style.backgroundColor='<?=Settings::get(SettingsConfig::SECONDARY_COLOR)?>'" onMouseOut="this.style.backgroundColor='<?=Settings::get(SettingsConfig::PRIMARY_COLOR)?>'"><?=$buttontext?></a>
     <?php endif; ?>
 </div>

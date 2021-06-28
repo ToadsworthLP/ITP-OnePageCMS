@@ -88,7 +88,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label title="Hier können Sie die Buttontext-Farbe anpassen." for="<?=$id?>-button-text-color">Button-Text-Farbe</label>
+                                    <label title="Hier können Sie die Textfarbe anpassen." for="<?=$id?>-button-text-color">Text-Farbe</label>
                                     <input type="color" class="form-control" id="<?=$id?>-button-text-color"
                                            name="buttonTextColor"
                                            value="<?= $buttonTextColor ?>">
